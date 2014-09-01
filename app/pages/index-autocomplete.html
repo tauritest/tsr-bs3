@@ -1,195 +1,186 @@
-{{ include('_topPart.html', { "showHeroBanner":false,"signedIn":false, "signedOut":true}) }}
-
-<!-- content put your content here -->
-    <div class="container">
-        <div class="row">
-          <div class="col-md-12">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
 
             <script type="text/ng-template" id="customTemplate.html">
-              <a>
-                  <img ng-src="http://upload.wikimedia.org/wikipedia/commons/thumb/{{match.model.flag}}" width="16">
-                  <span bind-html-unsafe="match.label | typeaheadHighlight:query"></span>
-              </a>
+                <a>
+                    <img ng-src="http://upload.wikimedia.org/wikipedia/commons/thumb/{{match.model.flag}}" width="16">
+                    <span bind-html-unsafe="match.label | typeaheadHighlight:query"></span>
+                </a>
             </script>
             <div class='container-fluid' ng-controller="TypeaheadCtrl">
 
-              <h4>Static arrays</h4>
-              <pre>Model: {{selected | json}}</pre>
-              <input type="text" ng-model="selected" typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control">
+                <h4>Static arrays</h4>
+                <pre>Model: {{selected | json}}</pre>
+                <input type="text" ng-model="selected" typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control">
 
-              <h4>Asynchronous results</h4>
-              <pre>Model: {{asyncSelected | json}}</pre>
-              <input type="text" ng-model="asyncSelected" placeholder="Locations loaded via $http" typeahead="address for address in getLocation($viewValue)" typeahead-loading="loadingLocations" class="form-control">
-              <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+                <h4>Asynchronous results</h4>
+                <pre>Model: {{asyncSelected | json}}</pre>
+                <input type="text" ng-model="asyncSelected" placeholder="Locations loaded via $http" typeahead="address for address in getLocation($viewValue)" typeahead-loading="loadingLocations" class="form-control">
+                <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
 
-              <h4>Custom templates for results</h4>
-              <pre>Model: {{customSelected | json}}</pre>
-              <input type="text" ng-model="customSelected" placeholder="Custom template" typeahead="state as state.name for state in statesWithFlags | filter:{name:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control">
+                <h4>Custom templates for results</h4>
+                <pre>Model: {{customSelected | json}}</pre>
+                <input type="text" ng-model="customSelected" placeholder="Custom template" typeahead="state as state.name for state in statesWithFlags | filter:{name:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control">
             </div>
 
-          </div>
-        </div> 
+        </div>
+    </div>
 
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
-                
-                <h1 class="page-header">Search autocomplete</h1>
-                <h3>Search autocomplete</h3>
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
 
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs">
-                  <li class="active"><a href="#demo" data-toggle="tab">Demo</a></li>
-                  <li><a href="#code" data-toggle="tab">Code</a></li>
-                </ul>
-                <!-- Tab panes -->
-                <div class="tab-content">
-                  <div class="tab-pane active" id="demo">
+            <h1 class="page-header">Search autocomplete</h1>
+            <h3>Search autocomplete</h3>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#demo" data-toggle="tab">Demo</a></li>
+                <li><a href="#code" data-toggle="tab">Code</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="demo">
 
                     <div class="bs-example">
-                        
+
                         <input type="text" class="form-control" placeholder="Search">
                         <div class="headerSearchResultWrapper list-group" style="display:none;">
-                          <a class="list-group-item " href="javascript:void(0);">
-                            <figure class="search-item-image">
-                              <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
-                            </figure>
-                            <span class="search-item-title">Lenovo IdeaPad Z510 </span>
-                          </a>
-                          
-                          
-                          <a class="list-group-item " href="javascript:void(0);">
-                            <figure class="search-item-image">
-                              <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
-                            </figure>
-                            <span class="search-item-title">Dell Latitude E5440</span>
-                          </a>
-                          
-                          
-                          <a class="list-group-item " href="javascript:void(0);">
-                            <figure class="search-item-image">
-                              <img <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
-                            </figure>
-                            <span class="search-item-title">Lenovo IdeaPad Yoga 2 Pro 13</span>
-                          </a>
-                          
-                          
-                          <a class="list-group-item " href="javascript:void(0);">
-                            <figure class="search-item-image">
-                              <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
-                            </figure>
-                            <span class="search-item-title">HP Pavilion 15-n002so</span>
-                          </a>
-                          
-                          
-                          <a class="list-group-item " href="javascript:void(0);">
-                            <figure class="search-item-image">
-                              <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
-                            </figure>
-                            <span class="search-item-title">Lenovo Idea G505S</span>
-                          </a>
-                          
-                          
-                          <a class="list-group-item active" href="javascript:void(0);">
-                            <figure class="search-item-image">
-                              <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
-                            </figure>
-                            <span class="search-item-title">Asus N550JV</span>
-                          </a>
-                          
-                          
-                          <a class="list-group-item " href="javascript:void(0);">
-                            <figure class="search-item-image">
-                              <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
-                            </figure>
-                            <span class="search-item-title">Asus X75A</span>
-                          </a>
+                            <a class="list-group-item " href="javascript:void(0);">
+                                <figure class="search-item-image">
+                                    <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
+                                </figure>
+                                <span class="search-item-title">Lenovo IdeaPad Z510 </span>
+                            </a>
 
-                          <a class="search-advanced" href="#">
-                            Vaata kõiki
-                          </a>
+
+                            <a class="list-group-item " href="javascript:void(0);">
+                                <figure class="search-item-image">
+                                    <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
+                                </figure>
+                                <span class="search-item-title">Dell Latitude E5440</span>
+                            </a>
+
+
+                            <a class="list-group-item " href="javascript:void(0);">
+                                <figure class="search-item-image">
+                                    <img <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
+                                </figure>
+                                <span class="search-item-title">Lenovo IdeaPad Yoga 2 Pro 13</span>
+                            </a>
+
+
+                            <a class="list-group-item " href="javascript:void(0);">
+                                <figure class="search-item-image">
+                                    <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
+                                </figure>
+                                <span class="search-item-title">HP Pavilion 15-n002so</span>
+                            </a>
+
+
+                            <a class="list-group-item " href="javascript:void(0);">
+                                <figure class="search-item-image">
+                                    <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
+                                </figure>
+                                <span class="search-item-title">Lenovo Idea G505S</span>
+                            </a>
+
+
+                            <a class="list-group-item active" href="javascript:void(0);">
+                                <figure class="search-item-image">
+                                    <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
+                                </figure>
+                                <span class="search-item-title">Asus N550JV</span>
+                            </a>
+
+
+                            <a class="list-group-item " href="javascript:void(0);">
+                                <figure class="search-item-image">
+                                    <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
+                                </figure>
+                                <span class="search-item-title">Asus X75A</span>
+                            </a>
+
+                            <a class="search-advanced" href="#">
+                                Vaata kõiki
+                            </a>
                         </div>
 
                     </div>
 
-                  </div>
-                  <div class="tab-pane" id="code">
+                </div>
+                <div class="tab-pane" id="code">
                     <div class="example-code">
                         <pre class="brush: html">
                             <input type="text" class="form-control" placeholder="Search">
                             <div class="headerSearchResultWrapper list-group">
-                              <a class="list-group-item " href="javascript:void(0);">
-                                <figure class="search-item-image">
-                                  <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
-                                </figure>
-                                <span class="search-item-title">Lenovo IdeaPad Z510 </span>
-                              </a>
-                              
-                              
-                              <a class="list-group-item " href="javascript:void(0);">
-                                <figure class="search-item-image">
-                                  <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
-                                </figure>
-                                <span class="search-item-title">Dell Latitude E5440</span>
-                              </a>
-                              
-                              
-                              <a class="list-group-item " href="javascript:void(0);">
-                                <figure class="search-item-image">
-                                  <img <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
-                                </figure>
-                                <span class="search-item-title">Lenovo IdeaPad Yoga 2 Pro 13</span>
-                              </a>
-                              
-                              
-                              <a class="list-group-item " href="javascript:void(0);">
-                                <figure class="search-item-image">
-                                  <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
-                                </figure>
-                                <span class="search-item-title">HP Pavilion 15-n002so</span>
-                              </a>
-                              
-                              
-                              <a class="list-group-item " href="javascript:void(0);">
-                                <figure class="search-item-image">
-                                  <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
-                                </figure>
-                                <span class="search-item-title">Lenovo Idea G505S</span>
-                              </a>
-                              
-                              
-                              <a class="list-group-item active" href="javascript:void(0);">
-                                <figure class="search-item-image">
-                                  <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
-                                </figure>
-                                <span class="search-item-title">Asus N550JV</span>
-                              </a>
-                              
-                              
-                              <a class="list-group-item " href="javascript:void(0);">
-                                <figure class="search-item-image">
-                                  <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
-                                </figure>
-                                <span class="search-item-title">Asus X75A</span>
-                              </a>
+                                <a class="list-group-item " href="javascript:void(0);">
+                                    <figure class="search-item-image">
+                                        <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
+                                    </figure>
+                                    <span class="search-item-title">Lenovo IdeaPad Z510 </span>
+                                </a>
 
-                              <a class="search-advanced" href="#">
-                                Vaata kõiki
-                              </a>
+
+                                <a class="list-group-item " href="javascript:void(0);">
+                                    <figure class="search-item-image">
+                                        <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
+                                    </figure>
+                                    <span class="search-item-title">Dell Latitude E5440</span>
+                                </a>
+
+
+                                <a class="list-group-item " href="javascript:void(0);">
+                                    <figure class="search-item-image">
+                                        <img <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
+                                    </figure>
+                                    <span class="search-item-title">Lenovo IdeaPad Yoga 2 Pro 13</span>
+                                </a>
+
+
+                                <a class="list-group-item " href="javascript:void(0);">
+                                    <figure class="search-item-image">
+                                        <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
+                                    </figure>
+                                    <span class="search-item-title">HP Pavilion 15-n002so</span>
+                                </a>
+
+
+                                <a class="list-group-item " href="javascript:void(0);">
+                                    <figure class="search-item-image">
+                                        <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
+                                    </figure>
+                                    <span class="search-item-title">Lenovo Idea G505S</span>
+                                </a>
+
+
+                                <a class="list-group-item active" href="javascript:void(0);">
+                                    <figure class="search-item-image">
+                                        <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
+                                    </figure>
+                                    <span class="search-item-title">Asus N550JV</span>
+                                </a>
+
+
+                                <a class="list-group-item " href="javascript:void(0);">
+                                    <figure class="search-item-image">
+                                        <img src="https://pood.elion.ee/pictures/106976_2/75x75/HP%20Pavilion%2015-n213so%20s%C3%BClearvuti%20vasakult%20k%C3%BClgvaatest.jpg">
+                                    </figure>
+                                    <span class="search-item-title">Asus X75A</span>
+                                </a>
+
+                                <a class="search-advanced" href="#">
+                                    Vaata kõiki
+                                </a>
                             </div>
                         </pre>
                     </div>
-                  </div>
                 </div>
-
             </div>
+
         </div>
-
-              
-
     </div>
 
-    <br>
 
-<!-- / content -->
 
-{{ include('_bottomPart.html') }}
+</div>
