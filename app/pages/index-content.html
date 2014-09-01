@@ -1,0 +1,139 @@
+{{ include('_topPart.html', { "showHeroBanner":false,"signedIn":false, "signedOut":true}) }}
+
+<!-- content put your content here -->
+    
+    <div class="alert alert-warning full-size" id="your-uniq-ID" style="width: 1903px; left: -286px; position: relative;">
+        <div class="container">
+            <span class="icon icon-alert"></span>
+            <div>
+                <strong>Work in progress</strong>
+                <span>Do not use it yet</span>
+            </div>
+        </div>
+    </div>
+ 
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="page-header" id="alerts">Layouting content</h1>
+
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-12 col-sm-12">
+                <!-- DEFAULT -->
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo1" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code1" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo1">
+                    <div class="bs-example">
+
+                        <div class="border">
+                            <div class="content">
+                                <p>
+                                    Default paragraph inside <code>content</code> class. 
+                                    <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                                <p>
+                                    Second paragraph with no extra space from previous paragraph. 
+                                    <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    <hr class="space">
+                                    Using <code>hr.spase</code> gives padding width space from previous content. 
+                                    <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    <hr class="space space-condensed">
+                                    Using <code>hr.spase.space-condensed</code> cuts space in half
+                                    <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                            </div>
+                            <div class="content separator">
+                                <p>
+                                   Adding <code>.separator</code> separates content by border and gives moer space.
+                                   <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                            </div>
+                            <div class="content content-condensed separator">
+                                <p>
+                                    <code>.content-condensed</code> cuts off half of padding from top and bottom. Left and right padding remains same.
+                                    <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                            </div>
+                            <div style="background:lightblue">
+                                To place content widthout padding do not use the <code>.content</code> class
+                                <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                        </div> 
+
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="code1">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                        <div class="content">
+                            <p>content ...</p>
+                            <p>content ...</p>
+                        </div>
+                        <div class="content separator">
+                            <p>content ...</p>
+                        </div>
+                        <div class="content content-condensed separator">
+                            <p>content ... </p>
+                        </div>
+                        content ...
+                        </pre>
+                    </div>
+                  </div>
+                </div>
+                
+            
+            </div>
+        </div>       
+
+    </div>
+
+    <br>
+
+<!-- / content -->
+
+{{ include('_bottomPart.html') }}

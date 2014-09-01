@@ -1,0 +1,155 @@
+{{ include('_topPart.html', { "showHeroBanner":false,"signedIn":false, "signedOut":true}) }}
+
+<!-- content 
+    put your content here
+ -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Css</a></li>
+                  <li class="active">Grid</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <h1 class="page-header" id="alerts">Grid</h1>
+                <h3>Containers</h3>
+                <p>Easily center a page's contents by wrapping its contents in a <code>.container</code>. Containers set <code>width</code> at various media query breakpoints to match our grid system.</p>
+                <p>Note that, due to <code>padding</code> and fixed widths, containers are not nestable by default.</p>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo">
+
+                    <div class="bs-example">
+                        <div class="container" style="width:100%;">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4">
+                                    <div style="background-color:#0083BE; color:white;">
+                                        lahter 1
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4">
+                                    <div style="background-color:#00B48C; color:white;">
+                                        lahter 2
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4">
+                                    <div style="background-color:#FF6319; color:white;">
+                                        lahter 3
+                                    </div>
+                                </div>
+                            </div>     
+                        </div> 
+                    </div>
+
+                  </div>
+                  <div class="tab-pane" id="code">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4">
+                                        <div style="background-color:#0083BE; color:white;">
+                                            lahter 1
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                        <div style="background-color:#00B48C; color:white;">
+                                            lahter 2
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                        <div style="background-color:#FF6319; color:white;">
+                                            lahter 3
+                                        </div>
+                                    </div>
+                                </div>     
+                            </div> 
+                        </pre>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>container-no-gutter</h3>
+                <p>Easily center a page's contents by wrapping its contents in a <code>.container-no-gutter</code> without gutter's padding.</p>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo1" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code1" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo1">
+
+                    <div class="bs-example">
+                        <div class="container-no-gutter" style="width:100%;">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4">
+                                    <div style="background-color:#0083BE; color:white;">
+                                        lahter 1
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4">
+                                    <div style="background-color:#00B48C; color:white;">
+                                        lahter 2
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4">
+                                    <div style="background-color:#FF6319; color:white;">
+                                        lahter 3
+                                    </div>
+                                </div>
+                            </div>      
+                        </div> 
+                    </div>
+
+                  </div>
+                  <div class="tab-pane" id="code1">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                            <div class="container-no-gutter">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4">
+                                        <div style="background-color:#0083BE; color:white;">
+                                            lahter 1
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                        <div style="background-color:#00B48C; color:white;">
+                                            lahter 2
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                        <div style="background-color:#FF6319; color:white;">
+                                            lahter 3
+                                        </div>
+                                    </div>
+                                </div>      
+                            </div> 
+                        </pre>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<!-- / content -->
+
+{{ include('_bottomPart.html') }}

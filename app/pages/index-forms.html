@@ -1,0 +1,870 @@
+{{ include('_topPart.html', { "showHeroBanner":false,"signedIn":false, "signedOut":true}) }}
+
+<!-- content 
+    put your content here
+ -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Css</a></li>
+                  <li class="active">Grid</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="page-header" id="alerts">Form's elements</h1>
+                <h3>Default Input</h3>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo1" data-toggle="tab">Demo</a></li> 
+                  <li><a href="#code1" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo1">
+
+                    <div class="bs-example">
+                      <div class="row">
+                        <div  class="col-md-3 col-sm-5">
+                            <div class="form-group">
+                              <label class="control-label" for="input">Default Input</label>
+                              <input type="text" placeholder="Default Input" class="form-control" id="input">
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="inputpassw">Default Input password</label>
+                              <input type="password" placeholder="Default Input" class="form-control" id="inputpassw">
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane" id="code1">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                            <div class="form-group">
+                              <label class="control-label" for="input">Default Input</label>
+                              <input type="text" class="form-control" placeholder="Default Input" id="input">
+                            </div>
+                            <div class="form-group">
+                              <label class="control-label" for="inputpassw">Default Input password</label>
+                              <input type="password" placeholder="Default Input" class="form-control" id="inputpassw">
+                            </div>
+                        </pre>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Search field</h3>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo13" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code13" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo13">
+
+                    <div class="bs-example">
+                        <div class="row">
+                          <div  class="col-md-3 col-sm-5">
+                            <div class="form-group">
+                              <label class="control-label" for="search">Default Input</label>
+                              <input type="search" placeholder="Search Input" class="form-control" id="search">
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane" id="code13">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                            <label class="control-label" for="input">Default Input</label>
+                            <input type="text" placeholder="Default Input" class="form-control" id="input">
+                        </pre>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                
+                <h3><b>Disabled</b> text inputfield</h3>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo2" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code2" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo2">
+
+                    <div class="bs-example">
+                        <div class="row">
+                          <div  class="col-md-3 col-sm-5">
+                            <div class="form-group">
+                                <label>Disabled</label>
+                                <input class="form-control" type="text" placeholder="Disabled input here..." disabled>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane" id="code2">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                            <div class="form-group">
+                                <label>Disabled</label>
+                                <input class="form-control" type="text" placeholder="Disabled input here..." disabled>
+                            </div>
+                        </pre>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Input with error</h3>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo3" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code3" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo3">
+
+                    <div class="bs-example">
+                        <div class="row">
+                          <div  class="col-md-3 col-sm-5">
+                            <div class="form-group has-error">
+                              <label class="control-label" for="inputError1">Input with error</label>
+                              <input type="text" class="form-control" id="inputError1">
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane" id="code3">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                            <div class="form-group has-error">
+                              <label class="control-label" for="inputError1">Input with error</label>
+                              <input type="text" class="form-control" id="inputError1">
+                            </div>
+                        </pre>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Input with success</h3>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo4" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code4" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo4">
+
+                    <div class="bs-example">
+                        <div class="row">
+                          <div  class="col-md-3 col-sm-5">
+                            <div class="form-group has-success">
+                              <label class="control-label" for="inputSuccess">Input with error</label>
+                              <input type="text" class="form-control" id="inputSuccess">
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane" id="code4">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                            <div class="form-group has-success">
+                              <label class="control-label" for="inputSuccess">Input with error</label>
+                              <input type="text" class="form-control" id="inputSuccess">
+                            </div>
+                        </pre>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Default SelectBox</h3>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo5" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code5" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo5">
+
+                    <div class="bs-example">
+                        <div class="row">
+                          <div  class="col-md-3 col-sm-5">
+                            <div class="form-group">
+                                <label>SelectBox</label>
+                                <select class="form-control">
+                                    <option>option 1</option>
+                                    <option>option 2</option>
+                                    <option>option 3</option>
+                                </select>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane" id="code5">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                            <div class="form-group">
+                                <label>SelectBox</label>
+                                <select class="form-control">
+                                    <option>option 1</option>
+                                    <option>option 2</option>
+                                    <option>option 3</option>
+                                </select>
+                            </div>
+                        </pre>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+      </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Disabled SelectBox</h3>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo6" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code6" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo6">
+
+                    <div class="bs-example">
+                        <div class="row">
+                          <div  class="col-md-3 col-sm-5">
+                            <div class="form-group">
+                                <label>SelectBox</label>
+                                <select class="form-control" disabled>
+                                    <option>option 1</option>
+                                    <option>option 2</option>
+                                    <option>option 3</option>
+
+                                </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="tab-pane" id="code6">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                            <div class="form-group">
+                                <label>SelectBox</label>
+                                <select class="form-control" disabled>
+                                    <option>option 1</option>
+                                    <option>option 2</option>
+                                    <option>option 3</option>
+                                </select>
+                            </div>
+                        </pre>
+                    </div>
+                  
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>SelectBox with error</h3>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo7" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code7" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo7">
+
+                    <div class="bs-example">
+                        <div class="row">
+                          <div  class="col-md-3 col-sm-5">
+                            <div class="form-group has-error">
+                                <label>SelectBox</label>
+                                <select class="form-control">
+                                    <option>option 1</option>
+                                    <option>option 2</option>
+                                    <option>option 3</option>
+                                </select>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="code7">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                            <div class="form-group has-error">
+                                <label>SelectBox</label>
+                                <select class="form-control">
+                                    <option>option 1</option>
+                                    <option>option 2</option>
+                                    <option>option 3</option>
+                                </select>
+                            </div>
+                        </pre>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>SelectBox with success</h3>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo8" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code8" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo8">
+
+                    <div class="bs-example">
+                        <div class="row">
+                          <div  class="col-md-3 col-sm-5">
+                            <div class="form-group has-success">
+                                <label>SelectBox</label>
+                                <select class="form-control">
+                                    <option>option 1</option>
+                                    <option>option 2</option>
+                                    <option>option 3</option>
+                                </select>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane" id="code8">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                            <div class="form-group has-success">
+                                <label>SelectBox</label>
+                                <select class="form-control">
+                                    <option>option 1</option>
+                                    <option>option 2</option>
+                                    <option>option 3</option>
+                                </select>
+                            </div>
+                        </pre>
+                    </div>
+                  
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Radio default</h3>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo9" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code9" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo9">
+
+                    <div class="bs-example">
+                        <div class="radio-inline">
+                            <label>
+                                <input type="radio" name="radiosOptionsDefault" checked="" />
+                                joh
+                            </label>
+                        </div>
+                        <div class="radio-inline">
+                            <label>
+                                <input type="radio" name="radiosOptionsDefault" />
+                                ai
+                            </label>
+                        </div>
+                        <div class="radio-inline">
+                            <label>
+                                <input type="radio" name="radiosOptionsDefault" />
+                                di
+                            </label>
+                        </div>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane" id="code9">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="radiosOptionsDefault" checked="" />
+                                    joh
+                                </label>
+                            </div>
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="radiosOptionsDefault" />
+                                    ai
+                                </label>
+                            </div>
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="radiosOptionsDefault" />
+                                    di
+                                </label>
+                            </div>
+                        </pre>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Radio options</h3>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo10" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code10" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo10">
+
+                    <div class="bs-example">
+                        <div class="form-group">
+                            <p>Radio options</p>
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="optionsRadios" disabled="" />
+                                    Disabled
+                                </label>
+                            </div>
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="optionsRadios" checked="" disabled="" />
+                                    Disabled
+                                </label>
+                            </div>
+                            <div class="radio-inline has-error">
+                                <label>
+                                    <input type="radio" name="optionsRadios1" checked="" />
+                                    Invalid
+                                </label>
+                            </div>
+                            <div class="radio-inline has-error">
+                                <label>
+                                    <input type="radio" name="optionsRadios1" />
+                                    Invalid
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane" id="code10">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                            <div class="form-group">
+                                <p>Radio options</p>
+                                <div class="radio-inline">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" disabled="" />
+                                        Disabled
+                                    </label>
+                                </div>
+                                <div class="radio-inline">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" checked="" disabled="" />
+                                        Disabled
+                                    </label>
+                                </div>
+                                <div class="radio-inline has-error">
+                                    <label>
+                                        <input type="radio" name="optionsRadios1" checked="" />
+                                        Invalid
+                                    </label>
+                                </div>
+                                <div class="radio-inline has-error">
+                                    <label>
+                                        <input type="radio" name="optionsRadios1" />
+                                        Invalid
+                                    </label>
+                                </div>
+                            </div>
+                        </pre>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Checkbox options</h3>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo11" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code11" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo11">
+
+                    <div class="bs-example">
+                        <div class="form-group">
+                            <div class="checkbox-inline">  
+                                <label>
+                                    <input id="myCheckbox" type="checkbox" disabled="" />
+                                    Disabled
+                                </label>
+                            </div>
+
+                            <div class="checkbox-inline">  
+                                <label>
+                                    <input type="checkbox" checked="" disabled="" />
+                                    Disabled
+                                </label>
+                            </div>
+
+                            <div class="checkbox-inline has-error">  
+                                <label>
+                                    <input type="checkbox" />
+                                    Invalid
+                                </label>
+                            </div>
+                            <div class="checkbox-inline has-error">  
+                                <label>
+                                    <input type="checkbox" checked=""  />
+                                    Invalid
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane" id="code11">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                            <div class="form-group">
+                                <div class="checkbox-inline">  
+                                    <label>
+                                        <input id="myCheckbox" type="checkbox" disabled="" />
+                                        Disabled
+                                    </label>
+                                </div>
+
+                                <div class="checkbox-inline">  
+                                    <label>
+                                        <input type="checkbox" checked="" disabled="" />
+                                        Disabled
+                                    </label>
+                                </div>
+
+                                <div class="checkbox-inline has-error">  
+                                    <label>
+                                        <input type="checkbox" />
+                                        Invalid
+                                    </label>
+                                </div>
+                                <div class="checkbox-inline has-error">  
+                                    <label>
+                                        <input type="checkbox" checked=""  />
+                                        Invalid
+                                    </label>
+                                </div>
+                            </div>
+                        </pre>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Textarea</h3>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo12" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code12" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo12">
+
+                    <div class="bs-example">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                                <textarea class="form-control">Textarea</textarea>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" disabled="">Disable</textarea>
+                            </div>
+                            <div class="form-group has-error">
+                                <textarea class="form-control">Invalid</textarea>
+                            </div>
+                         </div>
+                       </div>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane" id="code12">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                            <div class="form-group">
+                                <textarea class="form-control">Textarea</textarea>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" disabled="">Disable</textarea>
+                            </div>
+                            <div class="form-group has-error">
+                                <textarea class="form-control">Invalid</textarea>
+                            </div>
+                        </pre>
+                    </div>
+                  </div>
+                </div>
+            </div>
+      </div>
+
+    <div class="row">
+      <div class="col-md-12">
+          <h3>Help text</h3>
+          <p>There are couple of ways how to place help text. Contextual colors are aplyed to </p>
+
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#demo14" data-toggle="tab">Demo</a></li> 
+            <li><a href="#code14" data-toggle="tab">Code</a></li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane active" id="demo14">
+              <div class="bs-example">
+                          
+                 <form>
+                  <div class="form-group">
+                    <label for="inputEmail3" class="control-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    <div class="help-block" >lorem A block of help text that breaks onto a new line and may extend beyond one line. fds fdsa sfdsa fhdisfhdi fhdsh fdhsahfjds fdj khfask Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                      </div>
+                  </div>
+                  <div class="form-group has-error row">
+                    <label class="col-md-12 control-label" for="input12">Default Input</label>
+                    <div class="col-md-5 ">
+                      <input class="form-control" type="text" placeholder="Default Input" id="input12">
+                    </div>
+                    <div class="col-md-5 help-block" >lorem A block of help text that breaks onto a new line and may extend beyond one line. fds fdsa sfdsa fhdisfhdi fhdsh fdhsahfjds fdj khfask Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    </div>
+                  </div>
+                  <div class="form-group has-success row">
+                    <label class="col-md-12 control-label" for="input12">Default Input</label>
+                      <div class="col-md-5">
+                        <input class="form-control" type="text" placeholder="Default Input" id="input12">
+                      </div>
+                    <div class="col-md-5 help-block-inline" >
+                      Lorem A block of help text that breaks onto a new <br> second line of text
+                    </div>
+                  </div>
+                  </form>
+                  
+                  <p><br>  Form-horizontal</p>
+                  <form class="form-horizontal">
+                    <div class="form-group has-success">
+                    <label class="col-sm-2 control-label" for="input12">Default Input</label>
+                      <div class="col-sm-5">
+                        <input class="form-control" type="text" placeholder="Default Input" id="input12">
+                      </div>
+                    <div class="col-sm-5 help-block-inline" >
+                      Lorem A block of help text that breaks onto a new <br> second line of text
+                    </div>
+                  </div>
+                  </form>
+            
+              </div>
+
+            </div>
+            <div class="tab-pane" id="code14">
+              <div class="example-code">
+                  <pre class="brush: html">           
+                  <form>
+                    <div class="form-group">
+                      <label for="inputEmail3" class="control-label">Email</label>
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                      <div class="help-block" >Help text...</div>
+                    </div>
+                    <div class="form-group has-error row">
+                      <label class="col-md-12 control-label" for="input12">Input title</label>
+                      <div class="col-md-5 ">
+                        <input class="form-control" type="text" placeholder="Default Input" id="input12">
+                      </div>
+                      <div class="col-md-5 help-block" >Help text...</div>
+                    </div>
+                  </form>
+
+                  <form class="form-horizontal">
+                    <div class="form-group has-success">
+                      <label class="col-sm-2 control-label" for="input12">Default Input</label>
+                      <div class="col-sm-5">
+                        <input class="form-control" type="text" placeholder="Default Input" id="input12">
+                      </div>
+                      <div class="col-sm-5 help-block-inline" >Help text...</div>
+                    </div>
+                  </form>
+                  </pre>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        
+        <h3><b>Input with loader</b></h3>
+
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#demo15" data-toggle="tab">Demo</a></li>
+                <li><a href="#code15" data-toggle="tab">Code</a></li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="demo15">
+
+                  <div class="bs-example">
+                    <p>Full Size:</p>
+                    <div class="left-inner-addon ">
+                        <span class="spinner spin-spinner-6"></span>
+                        <input type="text" class="form-control" placeholder="Text" />
+                    </div>
+                    <div class="right-inner-addon ">
+                        <span class="spinner spinner--steps2 spin-spinner-7 "></span>
+                        <input type="search" class="form-control" placeholder="Search" />
+                    </div>
+
+
+                    <br/>
+
+                    <p>Smaller:</p>
+                    <div class="row">
+                      <div class="col-xs-6" >
+                        <div class="left-inner-addon">
+                            <span class="spinner spinner--steps spin-spinner"></span>
+                            <input type="text" class="form-control" placeholder="Text" />
+                        </div>
+                      </div>
+                      <div class="col-xs-6" >
+                          <div class="right-inner-addon">
+                              <span class="glyphicon glyphicon-refresh"></span>
+                              <input type="search" class="form-control" placeholder="Search" />
+                          </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+                <div class="tab-pane" id="code15">
+                  <div class="example-code">
+                      <pre class="brush: html">
+                      <p>Full Size:</p>
+                      <div class="left-inner-addon ">
+                          <span class="glyphicon glyphicon-refresh"></span>
+                          <input type="text" class="form-control" placeholder="Text" />
+                      </div>
+
+                      <div class="right-inner-addon ">
+                          <span class="glyphicon glyphicon-refresh"></span>
+                          <input type="search" class="form-control" placeholder="Search" />
+                      </div>
+
+                      <br/>
+
+                      <p>Smaller:</p>
+                      <div class="row">
+                        <div class="col-xs-6" >
+                          <div class="left-inner-addon">
+                              <span class="glyphicon glyphicon-refresh"></span>
+                              <input type="text" class="form-control" placeholder="Text" />
+                          </div>
+                        </div>
+                        <div class="col-xs-6" >
+                            <div class="right-inner-addon">
+                                <span class="glyphicon glyphicon-refresh"></span>
+                                <input type="search" class="form-control" placeholder="Search" />
+                            </div>
+                        </div>
+                      </div>
+                      </pre>
+                  </div>
+                </div>
+              </div>
+
+      </div>
+    </div>
+<!-- / content -->
+
+{{ include('_bottomPart.html') }}

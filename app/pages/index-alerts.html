@@ -1,0 +1,294 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <ol class="breadcrumb">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Components</a></li>
+              <li class="active">Alerts</li>
+            </ol>
+        </div>
+    </div>
+        
+    <div class="row">
+        <div class="col-md-12">
+
+            <h1 class="page-header" id="alerts">Alerts</h1>
+            <h3><b>Tegevus, mis ebaonnestus.</b> Igasugused vead ja haireteated</h3>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#demo1" data-toggle="tab">Demo</a></li>
+              <li><a href="#code1" data-toggle="tab">Code</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div class="tab-pane active" id="demo1">
+
+                <div class="bs-example">
+                    {{>_components/alert/alert-warning}}
+                </div>
+
+              </div>
+              <div class="tab-pane" id="code1">
+                <div class="example-code">
+                    <pre class="brush: html">
+                        {{>_components/alert/alert-warning}}
+                    </pre>
+                </div>
+              </div>
+            </div>
+
+            <h3><b>Tegevused, mis onnestusid.</b> Naiteks ostukorvi lisatud, toode lisatud vordlusesse, teenuse kontrolli jarel teade, et teenused toimivad jne.</h3>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#demo2" data-toggle="tab">Demo</a></li>
+              <li><a href="#code2" data-toggle="tab">Code</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div class="tab-pane active" id="demo2">
+
+                <div class="bs-example">
+                    {{>_components/alert/alert-success}}
+                </div>
+
+              </div>
+              <div class="tab-pane" id="code2">
+                <div class="example-code">
+                    <pre class="brush: html">
+                    {{>_components/alert/alert-success}}
+                    </pre>
+                </div>
+              </div>
+            </div>
+
+            <h3><b>Lihtsalt informatiivsed teated,</b> mille ei pea jargnema mingisugust tegevust.</h3>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#demo3" data-toggle="tab">Demo</a></li>
+              <li><a href="#code3" data-toggle="tab">Code</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div class="tab-pane active" id="demo3">
+
+                <div class="bs-example">
+                    {{>_components/alert/alert-info}}
+                </div>
+
+              </div>
+              <div class="tab-pane" id="code3">
+                <div class="example-code">
+                    <pre class="brush: html">
+                    {{>_components/alert/alert-info}}
+                    </pre>
+                </div>
+              </div>
+            </div>
+
+            <h3>Loe lahemalt viib eraldi lehele</h3>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#demo4" data-toggle="tab">Demo</a></li>
+              <li><a href="#code4" data-toggle="tab">Code</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div class="tab-pane active" id="demo4">
+
+                <div class="bs-example">
+                    {{>_components/alert/alert-info-link-to}}
+                </div>
+
+              </div>
+              <div class="tab-pane" id="code4">
+                <div class="example-code">
+                   <pre class="brush: html">
+                   {{>_components/alert/alert-info-link-to}}
+                    </pre>
+                </div>
+              </div>
+            </div>
+
+            <h3>Loe lahemalt avab samas vaates rohkem teksti</h3>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#demo5" data-toggle="tab">Demo</a></li>
+              <li><a href="#code5" data-toggle="tab">Code</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div class="tab-pane active" id="demo5">
+                <div class="bs-example">
+                    {{>_components/alert/alert-info-read-more}}
+                </div>
+              </div>
+              <div class="tab-pane" id="code5">
+                <div class="example-code">
+                    <pre class="brush: html">
+                    {{>_components/alert/alert-info-read-more}}
+                    </pre>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+            <h3>Servast serva alet akende naited</h3>
+            <p>Kui soovid kuvada alert'i servast servani siis lisa class .full-size</p>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#demo6" data-toggle="tab">Demo</a></li>
+              <li><a href="#code6" data-toggle="tab">Code</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div class="tab-pane active" id="demo6">
+
+                <div class="bs-example">
+                    <div class="alert alert-info full-size" id="your-uniq-ID-130">
+                        <div class="container">
+                            <span class="icon icon-info"></span>
+                            <div>
+                                <strong>Kood:</strong>
+                                <span>23423hjklh345kj34h34kj534h3kj</span>
+                                <a class="read-more" href="#">
+                                    Kopeeri
+                                </a>
+                            </div>
+                            <a href="javascript:$('#your-uniq-ID-130').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info full-size" id="your-uniq-ID-131">
+                        <div class="container">
+                            <span class="icon icon-info"></span>
+                            <div>
+                                <span>Oleme uuendanud mingisugust asja, kui tahad rohkem infot, siis tee omad valikud</span>
+                                <a class="read-more" href="#">
+                                    <span class="icon icon-arrow-right"></span>Loe l&auml;hemalt
+                                </a>
+                            </div>
+                            <a href="javascript:$('#your-uniq-ID-131').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info full-size" id="your-uniq-ID-132" data-toggle="collapse-alert">
+                        <div class="container">
+                            <span class="icon icon-info"></span>
+                            <div>
+                                <h4>Oleme midagi suurt teinud</h4>
+                                <span>Oleme uuendanud mingisugust asja, kui tahad rohkem infot, siis tee omad valikud. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</span>
+                                <a class="read-more" href="#">
+                                    <span class="icon icon-arrow-down"></span>Loe l&auml;hemalt
+                                </a>
+                            </div>
+                            <a href="javascript:$('#your-uniq-ID-132').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+                        </div>
+                    </div>
+                    <div class="alert alert-success full-size" id="your-uniq-ID-133" data-toggle="collapse-alert">
+                        <div class="container">
+                            <span class="icon icon-info"></span>
+                            <div>
+                                <h4>Oleme midagi suurt teinud</h4>
+                                <span>Oleme uuendanud mingisugust asja, kui tahad rohkem infot, siis tee omad valikud. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</span>
+                                <a class="read-more" href="#">
+                                    <span class="icon icon-arrow-down"></span>Loe l&auml;hemalt
+                                </a>
+                            </div>
+                            <a href="javascript:$('#your-uniq-ID-133').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-warning full-size" id="your-uniq-ID-134">
+                        <div class="container">
+                            <span class="icon icon-alert"></span>
+                            <div>
+                                <strong>Sisselogimine ebaonnestus</strong>
+                                <span>Veendu, et sisestasid Mobiili-ID PIN1-koodi, mitte ID-kaardi PIN1-koodi</span>
+                                <a class="read-more" href="#">Proovi uuesti</a>
+                            </div>
+                            <a href="javascript:$('#your-uniq-ID-134').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+                        </div>
+                    </div>
+                </div>
+
+              </div>
+              <div class="tab-pane" id="code6">
+                <div class="example-code">
+                    <p>PS! koodi naite juures inline kood lisatakse scripti poolt, <strong>KUSTUTA INLINE KOOD SEALT KUI SEDA JUPPI KASUTAD!!!!!</strong></p>
+                    <pre class="brush: html">
+                    <div class="alert alert-info full-size" id="your-uniq-ID">
+                            <div class="container">
+                                <span class="icon icon-info"></span>
+                                <div>
+                                    <strong>Kood:</strong>
+                                    <span>23423hjklh345kj34h34kj534h3kj</span>
+                                    <a class="read-more" href="#">
+                                        Kopeeri
+                                    </a>
+                                </div>
+                                <a href="javascript:$('#your-uniq-ID').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info full-size" id="your-uniq-ID">
+                            <div class="container">
+                                <span class="icon icon-info"></span>
+                                <div>
+                                    <span>Oleme uuendanud mingisugust asja, kui tahad rohkem infot, siis tee omad valikud</span>
+                                    <a class="read-more" href="#">
+                                        <span class="icon icon-arrow-right"></span>Loe l&auml;hemalt
+                                    </a>
+                                </div>
+                                <a href="javascript:$('#your-uniq-ID').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info full-size" id="your-uniq-ID" data-toggle="collapse-alert">
+                            <div class="container">
+                                <span class="icon icon-info"></span>
+                                <div>
+                                <h4>Oleme midagi suurt teinud</h4>
+                                <span>Oleme uuendanud mingisugust asja, kui tahad rohkem infot, siis tee omad valikud. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</span>
+                                <a class="read-more" href="#">
+                                    <span class="icon icon-arrow-down"></span>Loe l&auml;hemalt
+                                </a>
+                            </div>
+                                <a href="javascript:$('#your-uniq-ID').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-success full-size" id="your-uniq-ID">
+                            <div class="container">
+                                <span class="icon icon-info"></span>
+                                <div>
+                                    <span>Kontrollige, et SMS-ga saabunud kontrollkood yhtiks antud numbriga <span class="h3">2561</span> ja sisestage Mobiil-ID PIN1-kood.</span>
+                                </div>
+                                <a href="javascript:$('#your-uniq-ID').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-warning full-size" id="your-uniq-ID">
+                            <div class="container">
+                                <span class="icon icon-alert"></span>
+                                <div>
+                                    <strong>Sisselogimine ebaonnestus</strong>
+                                    <span>Veendu, et sisestasid Mobiili-ID PIN1-koodi, mitte ID-kaardi PIN1-koodi</span>
+                                    <a class="read-more" href="#">Proovi uuesti</a>
+                                </div>
+                                <a href="javascript:$('#your-uniq-ID').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+                            </div>
+                        </div>
+                    </pre>
+                </div>
+              </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

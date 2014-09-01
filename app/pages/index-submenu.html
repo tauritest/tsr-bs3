@@ -1,0 +1,66 @@
+{{ include('_topPart.html', { "showHeroBanner":false,"signedIn":false, "signedOut":true}) }}
+
+<!-- content put your content here -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h1 class="page-header">Submenu</h1>
+                <h3>submenu component</h3>
+                <p><code>.active</code> for active link</p>
+
+                <p>level 2 menu aktiveerimisel lisada klass <code>.active</code> li tagile lisaks nendele <code>.dropdown .menu-large</code> ja a tagile lisada lisaks neile klassidele <code>.dropdown-toggle</code> klass <code>.stoppropagation</code></p>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo" data-toggle="tab" >Demo</a></li>
+                  <li class=""><a href="#code" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo">
+
+                    <div class="bs-example">
+                        <nav class="sub-menu hidden-xs">
+                            <div class="container">
+                                <h3 class="sr-only">Alamlehed</h3>
+                                <ul class="list-inline">
+                                    <li><a href="#">level 3 link 1</a></li>
+                                    <li class="active"><a href="#">level 3 link 2</a></li>
+                                    <li><a href="#">level 3 link 3</a></li>
+                                    <li><a href="#">level 3 link 4</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane" id="code">
+                    <div class="example-code">
+                        <pre class="brush: html">
+
+                            <nav class="sub-menu hidden-xs">
+                                <div class="container">
+                                    <h3 class="sr-only">Alamlehed</h3>
+                                    <ul class="list-inline">
+                                        <li><a href="#">level 3 link 1</a></li>
+                                        <li class=""><a href="#">level 3 link 2</a></li>
+                                        <li><a href="#">level 3 link 3</a></li>
+                                        <li><a href="#">level 3 link 4</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+
+                        </pre>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+        </div>       
+
+    </div>
+
+    <br>
+
+<!-- / content -->
+
+{{ include('_bottomPart.html') }}

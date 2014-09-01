@@ -1,0 +1,313 @@
+{{ include('_topPart.html', { "showHeroBanner":false,"signedIn":false, "signedOut":true}) }}
+
+<!-- content 
+    put your content here
+ -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Css</a></li>
+                  <li class="active">Buttons</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <h1 class="page-header">Buttons</h1>
+                <h2 id="buttons-options">Options</h2>
+                <p>Use any of the available button classes to quickly create a styled button.</p>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo1" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code1" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo1">
+                    <div class="bs-example">
+                      <button class="btn btn-default" type="button">Default</button>
+                      <button class="btn btn-primary" type="button">Primary</button>
+                      <button class="btn btn-success" type="button">Success</button>
+                      <button class="btn btn-info" type="button">Info</button>
+                      <button class="btn btn-warning" type="button">Warning</button>
+                      <button class="btn btn-danger" type="button">Danger</button>
+                      <button class="btn btn-pink" type="button">Pink</button>
+                      <button class="btn btn-link" type="button">Link</button>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane" id="code1">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                          <button class="btn btn-default" type="button">Default</button>
+                          <button class="btn btn-primary" type="button">Primary</button>
+                          <button class="btn btn-success" type="button">Success</button>
+                          <button class="btn btn-info" type="button">Info</button>
+                          <button class="btn btn-warning" type="button">Warning</button>
+                          <button class="btn btn-danger" type="button">Danger</button>
+                          <button class="btn btn-pink" type="button">Pink</button>
+                          <button class="btn btn-link" type="button">Link</button>
+                        </pre>
+                    </div>
+                  </div>
+                </div>
+
+
+                <h2>Sizes</h2>
+                <p>Fancy larger or smaller buttons? Add <code>.btn-lg</code>, <code>.btn-sm</code>, or <code>.btn-xs</code> for additional sizes.</p>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo2" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code2" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo2">
+
+                    <div class="bs-example">
+                        <p>
+                          <button class="btn btn-primary btn-lg" type="button">Large button</button>
+                          <button class="btn btn-default btn-lg" type="button">Large button</button>
+                        </p>
+                        <p>
+                          <button class="btn btn-primary" type="button">Default button</button>
+                          <button class="btn btn-default" type="button">Default button</button>
+                        </p>
+                        <p>
+                          <button class="btn btn-primary btn-sm" type="button">Small button</button>
+                          <button class="btn btn-default btn-sm" type="button">Small button</button>
+                        </p>
+                        <p>
+                          <button class="btn btn-primary btn-xs" type="button">Extra small button</button>
+                          <button class="btn btn-default btn-xs" type="button">Extra small button</button>
+                        </p>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane" id="code2">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                          <button class="btn btn-primary btn-lg" type="button">Large button</button>
+                          <button class="btn btn-default btn-lg" type="button">Large button</button>
+
+                          <button class="btn btn-primary" type="button">Default button</button>
+                          <button class="btn btn-default" type="button">Default button</button>
+
+                          <button class="btn btn-primary btn-sm" type="button">Small button</button>
+                          <button class="btn btn-default btn-sm" type="button">Small button</button>
+
+                          <button class="btn btn-primary btn-xs" type="button">Extra small button</button>
+                          <button class="btn btn-default btn-xs" type="button">Extra small button</button>
+                        </pre>
+                    </div>
+                  </div>
+                </div>
+
+                <h3>Create block level buttons&mdash;those that span the full width of a parent&mdash; by adding <code>.btn-block</code>.</h3>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo3" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code3" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo3">
+
+                    <div class="bs-example">
+                        <button class="btn btn-primary btn-lg btn-block" type="button">Block level button</button>
+                        <button class="btn btn-default btn-lg btn-block" type="button">Block level button</button>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane" id="code3">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                          <button class="btn btn-primary btn-lg btn-block" type="button">Block level button</button>
+                          <button class="btn btn-default btn-lg btn-block" type="button">Block level button</button>
+                        </pre>
+                    </div>
+                  </div>
+                </div>
+
+
+                <h2 id="buttons-active">Active state</h2>
+                <p>Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. For <code>&lt;button&gt;</code> elements, this is done via <code>:active</code>. For <code>&lt;a&gt;</code> elements, it's done with <code>.active</code>. However, you may use <code>.active</code> on <code>&lt;button&gt;</code>s should you need to replicate the active state progammatically.</p>
+                <h3>Button element</h3>
+                <p>No need to add <code>:active</code> as it's a pseudo-class, but if you need to force the same appearance, go ahead and add <code>.active</code>.</p>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo4" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code4" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo4">
+
+                    <div class="bs-example">
+                        <button class="btn btn-primary btn-lg active" type="button">Primary button</button>
+                        <button class="btn btn-default btn-lg active" type="button">Button</button>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane" id="code4">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                          <button class="btn btn-primary btn-lg active" type="button">Primary button</button>
+                          <button class="btn btn-default btn-lg active" type="button">Button</button>
+                        </pre>
+                    </div>
+                  </div>
+                </div>
+
+                <h3>Anchor element</h3>
+                <p>Add the <code>.active</code> class to <code>&lt;a&gt;</code> buttons.</p>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo5" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code5" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo5">
+
+                    <div class="bs-example">
+                        <a role="button" class="btn btn-primary btn-lg active" href="#">Primary link</a>
+                        <a role="button" class="btn btn-default btn-lg active" href="#">Link</a>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane" id="code5">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                          <a role="button" class="btn btn-primary btn-lg active" href="#">Primary link</a>
+                          <a role="button" class="btn btn-default btn-lg active" href="#">Link</a>
+                        </pre>
+                    </div>
+                  </div>
+                </div>
+
+                <h2 id="buttons-disabled">Disabled state</h2>
+                <p>Make buttons look unclickable by fading them back 50%.</p>
+                <h3>Button element</h3>
+                <p>Add the <code>disabled</code> attribute to <code>&lt;button&gt;</code> buttons.</p>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#demo6" data-toggle="tab">Demo</a></li>
+                  <li><a href="#code6" data-toggle="tab">Code</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="demo6">
+
+                    <div class="bs-example">
+                        <button disabled="disabled" class="btn btn-primary btn-lg" type="button">Primary button</button>
+                        <button disabled="disabled" class="btn btn-default btn-lg" type="button">Button</button>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane" id="code6">
+                    <div class="example-code">
+                        <pre class="brush: html">
+                          <button disabled="disabled" class="btn btn-primary btn-lg" type="button">Primary button</button>
+                          <button disabled="disabled" class="btn btn-default btn-lg" type="button">Button</button>
+                        </pre>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="bs-callout bs-callout-danger">
+                <h4>Cross-browser compatibility</h4>
+                <p>If you add the <code>disabled</code> attribute to a <code>&lt;button&gt;</code>, Internet Explorer 9 and below will render text gray with a nasty text-shadow that we cannot fix.</p>
+              </div>
+              <h3>Anchor element</h3>
+              <p>Add the <code>.disabled</code> class to <code>&lt;a&gt;</code> buttons.</p>
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#demo7" data-toggle="tab">Demo</a></li>
+                <li><a href="#code7" data-toggle="tab">Code</a></li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="demo7">
+
+                  <div class="bs-example">
+                      <a role="button" class="btn btn-primary btn-lg disabled" href="#">Primary link</a>
+                      <a role="button" class="btn btn-default btn-lg disabled" href="#">Link</a>
+                  </div>
+
+                </div>
+                <div class="tab-pane" id="code7">
+                  <div class="example-code">
+                      <pre class="brush: html">
+                        <a role="button" class="btn btn-primary btn-lg disabled" href="#">Primary link</a>
+                        <a role="button" class="btn btn-default btn-lg disabled" href="#">Link</a>
+                      </pre>
+                  </div>
+                </div>
+              </div>
+
+              <p>We use <code>.disabled</code> as a utility class here, similar to the common <code>.active</code> class, so no prefix is required.</p>
+              <div class="bs-callout bs-callout-warning">
+                <h4>Link functionality not impacted</h4>
+                <p>This class will only change the <code>&lt;a&gt;</code>'s appearance, not its functionality. Use custom JavaScript to disable links here.</p>
+              </div>
+
+              <div class="bs-callout bs-callout-warning">
+                <h4>Context-specific usage</h4>
+                <p>While button classes can be used on <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements, only <code>&lt;button&gt;</code> elements are supported within our nav and navbar components.</p>
+              </div>
+              <h2 id="buttons-tags">Button tags</h2>
+              <p>Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#demo8" data-toggle="tab">Demo</a></li>
+                <li><a href="#code8" data-toggle="tab">Code</a></li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="demo8">
+
+                  <div class="bs-example">
+                    <form>
+                      <a role="button" href="#" class="btn btn-default">Link</a>
+                      <button type="submit" class="btn btn-default">Button</button>
+                      <input type="button" value="Input" class="btn btn-default">
+                      <input type="submit" value="Submit" class="btn btn-default">
+                    </form>
+                  </div>
+
+                </div>
+                <div class="tab-pane" id="code8">
+                  <div class="example-code">
+                      <pre class="brush: html">
+                        <form>
+                          <a role="button" href="#" class="btn btn-default">Link</a>
+                          <button type="submit" class="btn btn-default">Button</button>
+                          <input type="button" value="Input" class="btn btn-default">
+                          <input type="submit" value="Submit" class="btn btn-default">
+                        </form>
+                      </pre>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bs-callout bs-callout-warning">
+                <h4>Cross-browser rendering</h4>
+                <p>As a best practice, <strong>we highly recommend using the <code>&lt;button&gt;</code> element whenever possible</strong> to ensure matching cross-browser rendering.</p>
+                <p>Among other things, there's <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=697451">a Firefox bug</a> that prevents us from setting the <code>line-height</code> of <code>&lt;input&gt;</code>-based buttons, causing them to not exactly match the height of other buttons on Firefox.</p>
+              </div>
+
+            </div>
+        </div>
+    </div>
+<!-- / content -->
+
+{{ include('_bottomPart.html') }}

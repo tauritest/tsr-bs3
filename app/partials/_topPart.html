@@ -1,0 +1,119 @@
+<!--[if IE ]><![endif]-->
+<!doctype html>
+<!--[if IE 7]><html class="lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+        <meta charset="utf-8">
+        <title>elion ui-framework</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <link rel="shortcut icon" href="assets/img/ico/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- for development -->
+        <script src="assets/scripts/angular.min.js"></script>
+        <!-- / end -->
+
+        <!-- Automatically generated style file -->
+        <link rel="stylesheet" href="assets/styles/Elion.min.css">
+
+        <!-- less than ie9 -->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script type="text/javascript" scr="assets/scripts/ltIE9/modernizr.js"></script>
+            <script type="text/javascript" scr="assets/scripts/ltIE9/css3-mediaqueries.js"></script>
+            <script type='text/javascript' src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+        <![endif]-->
+        <!-- / end -->
+
+    </head>
+    <body>
+
+    <header>
+        <!-- signed in -->
+        {{ if signedIn }}
+           {{ include('../_components/_nav-top-menu-signed-in.html') }}
+        {{ endif }}
+        
+        <!-- signed out -->
+        {{ if signedOut }}
+           {{ include('../_components/_nav-top-menu.html') }}
+        {{ endif }}
+        
+        <div class="alert alert-info" id="browserAlert">
+            <div class="container">
+                <span class="icon icon-info"></span>
+                <div>
+                    <strong>Käesoleva lehe töös võib esineda tõrkeid, sest kasutad aegunud veebilehitsejat.</strong>
+                    <span><a href="http://browsehappy.com/">Palun uuenda oma veebilehitsejat.</a></span>
+                </div>
+                <a href="javascript:$('#your-uniq-ID-120').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+            </div>
+        </div>
+
+        {{ include('../_components/_nav-main-menu-new.html') }}
+    </header>
+{{ if showHeroBanner }}
+    <!-- hero banner -->
+    <section class="hero">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="0">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+          <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="http://lorempixel.com/1393/480/sports/1/" alt="hero 1">
+                    <div class="content">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h3>A Channel for Everyone</h3>
+                                <p>The quick brown fox jumps over the lazy Pontu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="http://lorempixel.com/1393/480/sports/2/" alt="hero 2">
+                    <div class="content">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h3>A Channel for Everyone</h3>
+                                <p>The quick brown fox jumps over the lazy Pontu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="http://lorempixel.com/1393/480/sports/3/" alt="hero 3">
+                    <div class="content">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h3>A Channel for Everyone</h3>
+                                <p>The quick brown fox jumps over the lazy Pontu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+          <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="icon icon-arrow-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="icon icon-arrow-right"></span>
+            </a>
+        </div>
+    </section>
+    <!-- /end hero banner -->
+{{ endif }}
+
+<!-- CONTENT -->
+<section class="content">

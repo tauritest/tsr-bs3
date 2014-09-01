@@ -1,0 +1,32 @@
+{
+  "name": "Elion-tsr",
+  "version": "1.1.0",
+  "authors": [
+    "viljar <viljar.salu@elion.ee>"
+  ],
+  "description": "elion's new theme",
+  "main": [
+    "Elion/assets/scripts/Elion.min.js",
+    "Elion/assets/styles/Elion.min.css"
+  ],
+  "keywords": [
+    "elion",
+    "new",
+    "theme"
+  ],
+  "license": "MIT",
+  "homepage": "www.elion.ee",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap-sass-official": "~3.2.0",
+    "modernizr": "~2.8.3"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
