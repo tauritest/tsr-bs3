@@ -1,129 +1,113 @@
 //
-// Scaffolding
+// elion custom styles
+// --------------------------------------------------
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  min-width: 320px;
+  letter-spacing: $letter-spacing-base;
+  line-height: $line-height-base;
+  margin-bottom: 60px;
+}
+header{display: block; margin-bottom: -1px;}
+section.content { padding: 0;
+  .container {
+    margin-top: $containerTopMargin;
+  }
+}
+#browserAlert {
+  display: none;
+}
+.lt-ie8 #browserAlert {
+  display: block;
+}
+//
+// close button bar styles
+// --------------------------------------------------
+.btn-close{
+  background-color: $mainnavigation-submenu-bg-color;
+  text-align: center;
+  cursor: pointer;
+  border-top: 1px solid $mainnavigation-bg-color;
+}
+
+//
+// back to top button visible in mobile devices
+// --------------------------------------------------
+.close-up-btn-bar {
+  display: block;
+  background-color:$brand-primary;
+  text-align: center;
+  color: #fff;
+  font-size: ceil($font-size-base * 1.35);
+  padding:13px;
+  border-top: 1px solid darken($brand-primary,7%);
+  margin: 0;
+  &:hover{
+    background-color: darken($brand-primary, 7%);
+  }
+}
+
+//
+// justified element
+// --------------------------------------------------
+.justified{
+  width: 100%;
+  display: table;
+  border-collapse: separate;
+  table-layout: fixed;
+  margin:0;
+  padding:0;
+
+  > li {
+    display: table-cell;
+    width: 1%;
+    float: none;
+    @media (max-width: $screen-xxs-max) {
+      width:100%;
+      display: table-row;
+    }
+  }
+}
+@media (max-width: $screen-sm ) {
+  .justified {
+    > li {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+//
+// Reset class's
+// --------------------------------------------------
+.reset-margin {
+  margin: 0!important;
+}
+.reset-padding {
+  padding: 0!important;
+}
+
+//
+// elion new alert
 // --------------------------------------------------
 
-
-// Reset the box-sizing
-
-*,
-*:before,
-*:after {
-  @include box-sizing(border-box);
+// primary
+// TODO: need update
+.alert-primary {
+  @include alert-variant($alert-primary-bg, $alert-primary-border, $alert-primary-text);
 }
 
 
-// Body reset
-
-html {
-  font-size: 62.5%;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-body {
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  color: $text-color;
-  background-color: $body-bg;
-
-  > header{
-    background-color:$body-bg;
-  }
-  
-}
-
-// Reset fonts for relevant elements
-input,
-button,
-select,
-textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-
-// Links
-
-a {
-  color: $link-color;
-  text-decoration: none;
-  letter-spacing: $letter-spacing-base;
-  line-height: (($line-height-base * 120) / 100);
-  &:hover,
-  &:focus {
-    color: $link-hover-color;
-    text-decoration: underline;
-  }
-
-  &:focus {
-    @include tab-focus();
-  }
-  small {
-    letter-spacing: inherit;
-    line-height: ceil($font-size-base * 1);
-  }
-}
-
-
-// Images
-
-img {
-  vertical-align: middle;
-}
-
-// Responsive images (ensure images don't scale beyond their parents)
-.img-responsive {
-  @include img-responsive();
-}
-
-// Rounded corners
-.img-rounded {
-  border-radius: $border-radius-large;
-}
-
-// Image thumbnails
 //
-// Heads up! This is mixin-ed into thumbnails.less for `.thumbnail`.
-.img-thumbnail {
-  padding: $thumbnail-padding;
-  line-height: $line-height-base;
-  background-color: $thumbnail-bg;
-  border: 1px solid $thumbnail-border;
-  border-radius: $thumbnail-border-radius;
-  @include transition(all .2s ease-in-out);
-
-  // Keep them at most 100% wide
-  @include img-responsive(inline-block);
+// border-top
+// --------------------------------------------------
+.border{
+  border: 1px solid $gray-lighter;
 }
 
-// Perfect circle
-.img-circle {
-  border-radius: 50%; // set radius in percents
-}
-
-
-// Horizontal rules
-
-hr {
-  margin-top:    $line-height-computed;
-  margin-bottom: $line-height-computed;
-  border: 0;
-  border-top: 1px solid $hr-border;
-}
-
-
-// Only display content to screen readers
-//
-// See: http://a11yproject.com/posts/how-to-hide-content/
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
+.border-right-0 {
+  border: 0!important;
 }

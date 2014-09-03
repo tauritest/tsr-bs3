@@ -1,57 +1,38 @@
+
+// Core variables and mixins
+@import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
+//TODO: variables need update
+//@import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+
 /* // Core variables and mixins*/
 @import "variables";
-@import "mixins";
+//TODO: mixins-tsr need update
+@import "mixins-tsr";
 
 // Core CSS
-/*@import "scaffolding";*/
-@import "type";
-//@import "code";
-@import "grid";
-@import "tables";
-@import "forms";
-@import "buttons";
+@import "scaffolding";
 
 // BS3 Components
-//@import "component-animations";
-//@import "glyphicons";
-//@import "dropdowns";
-//@import "button-groups";
-//@import "input-groups";
-//@import "navs";
+//// TODO: these files needs to be update
 @import "navbar";
-//@import "breadcrumbs";
-//@import "pagination";
-//@import "pager";
-//@import "labels";
-//@import "badges";
-//@import "jumbotron";
-//@import "thumbnails";
-@import "alerts";
-//@import "progress-bars";
-//@import "media";
-//@import "list-group";
-//@import "panels";
-//@import "wells";
-//@import "close";
-@import "megamenu";
+@import "header-navigation";
+@import "footer-navigation";
 @import "submenu";
 
-// Components w/ JavaScript
-//@import "modals";
-//@import "tooltip"; 
-//@import "popovers";
-@import "carousel";
+// TODO: these files needs to be update
+//@import "tables";
+//@import "forms";
+//@import "buttons";
 
-// Utility classes
-//@import "utilities";
-@import "responsive-utilities";
+// TODO: these files needs to be update
+//@import "alerts";
 
-// elion classes
-@import "elion";
+// TODO: these files needs to be update
+//@import "carousel";
+
+// TODO: these files needs to be update
 @import "icons";
 @import "badges";
-@import "header";
-@import "footer";
 @import "progress-steps";
 @import "content";
 @import "accordion";
@@ -59,7 +40,6 @@
 @import "ddl";
 
 // from elion-e-pood
-//@import "ee-sidemenu";// old side menu
 @import "ee-autocomplete";
 @import "sidenavigation";// new side menu
 
