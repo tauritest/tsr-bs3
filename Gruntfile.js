@@ -4,7 +4,7 @@ module.exports = function (grunt) {
   grunt.initConfig(configuration);
 
   // load custom tasks
-  grunt.loadTasks("grunt/task");
+  //grunt.loadTasks("grunt/task");
 
   // load installed npm tasks
   require("load-grunt-tasks")(grunt);
