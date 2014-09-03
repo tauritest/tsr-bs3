@@ -1,0 +1,102 @@
+// ELION MIXINS
+//------------------------------------------------------------
+
+// Centered container element
+@mixin container-fixed() {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  ($grid-gutter-width / 2);
+  padding-right: ($grid-gutter-width / 2);
+  @include clearfix();
+}
+
+// Creates a wrapper for a series of columns
+@mixin make-row-reset-gutter($gutter: $grid-gutter-width) {
+
+  @media (max-width: $screen-sm-min) {
+    margin-left:  ($gutter / -2);
+    margin-right: ($gutter / -2);
+  }
+  margin-left:  0;
+  margin-right: 0;
+
+  @include clearfix();
+}
+
+// reset gutter
+@mixin reset-gutter($columns, $class){
+
+  @for $i from 0 through $columns {
+    .col-#{$class}-#{$i} {
+      padding-left: 0;
+      padding-right: 0;
+      width: percentage(($i / $grid-columns));
+    }
+
+    .col-#{$class}-#{$i}:first-child {
+      //
+    }
+
+    .col-#{$class}-#{$i}:last-child {
+      //
+    }
+  }
+}
+//------------------------------------------------------------
+
+
+
+
+
+// list variants
+@mixin ts-list-variant($check-text-color:$text-color) {
+  > li:before {
+    color: $check-text-color;
+  }
+  /*@media (max-width: $screen-xs-max) {
+    .close-btn {
+      border-radius: 30px;
+      background-color: #fff;
+      color: $background;
+      font-size: 22px;
+    }
+  }*/
+}
+
+// footer icons
+@mixin setFooterIcons($backgroundColor:transparent, $textSize:$font-size-base) {
+  background-color: $backgroundColor;
+  color: $brand-white;
+  display: table-cell;
+  height: 30px;
+  line-height: 2px;
+  width: 30px;
+  border-radius: $border-radius-base;
+  text-align: center;
+  vertical-align: middle;
+  font-size: $textSize;
+}
+
+// Helper mixins
+
+// Convert px to em
+/*@function em($px, $base: $font-size-base) {
+    @return ($px / $base) * 1em;
+}*/
+
+@mixin setIconFonts() {
+  font-family: 'tsr-icons-all';
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin setAsH4() {
+  font-size: $font-size-base + 7;
+}
+@mixin setAsBodyText() {
+  font-size: $font-size-base;
+}
