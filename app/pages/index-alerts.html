@@ -11,9 +11,13 @@
         
     <div class="row">
         <div class="col-md-12">
+            <h1 class="page-header">Alerts</h1>
+            <!--<h3>Header navigation</h3>-->
 
-            <h1 class="page-header" id="alerts">Alerts</h1>
-            <h3><b>Tegevus, mis ebaonnestus.</b> Igasugused vead ja haireteated</h3>
+            <div class="bs-callout bs-callout-info">
+                <h4>Tegevus, mis ebaonnestus</h4>
+                <p>Igasugused vead ja haireteated</p>
+            </div>
 
             <!-- Nav tabs -->
             <ul class="nav nav-tabs">
@@ -38,7 +42,13 @@
               </div>
             </div>
 
-            <h3><b>Tegevused, mis onnestusid.</b> Naiteks ostukorvi lisatud, toode lisatud vordlusesse, teenuse kontrolli jarel teade, et teenused toimivad jne.</h3>
+
+
+            <div class="bs-callout bs-callout-info">
+                <h4>Tegevused, mis onnestusid</h4>
+                <p>Naiteks ostukorvi lisatud, toode lisatud vordlusesse, teenuse kontrolli jarel teade, et teenused toimivad jne.</p>
+            </div>
+
             <!-- Nav tabs -->
             <ul class="nav nav-tabs">
               <li class="active"><a href="#demo2" data-toggle="tab">Demo</a></li>
@@ -62,7 +72,10 @@
               </div>
             </div>
 
-            <h3><b>Lihtsalt informatiivsed teated,</b> mille ei pea jargnema mingisugust tegevust.</h3>
+            <div class="bs-callout bs-callout-info">
+                <h4>Lihtsalt informatiivsed teated</h4>
+                <p>ei pea jargnema mingisugust tegevust</p>
+            </div>
             <!-- Nav tabs -->
             <ul class="nav nav-tabs">
               <li class="active"><a href="#demo3" data-toggle="tab">Demo</a></li>
@@ -86,7 +99,10 @@
               </div>
             </div>
 
-            <h3>Loe lahemalt viib eraldi lehele</h3>
+            <div class="bs-callout bs-callout-info">
+                <h4>Lihtsalt informatiivsed teated</h4>
+                <p>Loe lahemalt viib eraldi lehele</p>
+            </div>
             <!-- Nav tabs -->
             <ul class="nav nav-tabs">
               <li class="active"><a href="#demo4" data-toggle="tab">Demo</a></li>
@@ -110,7 +126,10 @@
               </div>
             </div>
 
-            <h3>Loe lahemalt avab samas vaates rohkem teksti</h3>
+            <div class="bs-callout bs-callout-info">
+                <h4>Lihtsalt informatiivsed teated</h4>
+                <p>Loe lahemalt avab samas vaates rohkem teksti</p>
+            </div>
             <!-- Nav tabs -->
             <ul class="nav nav-tabs">
               <li class="active"><a href="#demo5" data-toggle="tab">Demo</a></li>
@@ -136,9 +155,10 @@
 
 
 
-
-            <h3>Servast serva alet akende naited</h3>
-            <p>Kui soovid kuvada alert'i servast servani siis lisa class .full-size</p>
+            <div class="bs-callout bs-callout-info">
+                <h4>Servast serva alet akende naited</h4>
+                <p>Kui soovid kuvada alert'i servast servani siis lisa class .full-size</p>
+            </div>
             <!-- Nav tabs -->
             <ul class="nav nav-tabs">
               <li class="active"><a href="#demo6" data-toggle="tab">Demo</a></li>
@@ -286,6 +306,27 @@
                     </pre>
                 </div>
               </div>
+            </div>
+
+
+            <!-- Dependensies -->
+            <div class="bs-callout bs-callout-danger">
+                <h4>Dependensies</h4>
+                <p>The component requires the <code>alerts.css</code> to be included (not yet generated)</p>
+            </div>
+            <div class="bs-callout bs-callout-info">
+                <h4>SCSS file dependensies for developers</h4>
+                <p>Header navigation component main style file is <code>app/assets/styles/_alerts.scss</code></p>
+                <p>Header navigation component dependency</p>
+                <ul>
+                    <li>bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/bootstrap.scss(original bootstrap file)</li>
+                    <li>app/assets/styles/mixins/_mixins.scss</li>
+                    <li>app/assets/styles/_variables.scss</li>
+                    <li>app/assets/styles/_alerts.scss</li>
+                    <li>app/assets/styles/mixins/_transitions.scss</li>
+                    <li>app/assets/styles/mixins/_alerts.scss</li>
+                </ul>
+
             </div>
 
         </div>

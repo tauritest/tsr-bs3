@@ -3,11 +3,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12">
-                <h1 class="page-header">Submenu</h1>
-                <h3>submenu component</h3>
-                <p><code>.active</code> for active link</p>
 
-                <p>level 2 menu aktiveerimisel lisada klass <code>.active</code> li tagile lisaks nendele <code>.dropdown .menu-large</code> ja a tagile lisada lisaks neile klassidele <code>.dropdown-toggle</code> klass <code>.stoppropagation</code></p>
+                <h1 class="page-header">Submenu</h1>
+                <!--<h3>Header navigation</h3>-->
+
+                <div class="bs-callout bs-callout-info">
+                    <h4>Info title</h4>
+                    <p>level 2 menu aktiveerimisel lisada klass <code>.active</code> li tagile lisaks nendele <code>.dropdown .menu-large</code> ja a tagile lisada lisaks neile klassidele <code>.dropdown-toggle</code> klass <code>.stoppropagation</code></p>
+                </div>
+
+
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs">
                   <li class="active"><a href="#demo" data-toggle="tab" >Demo</a></li>
@@ -53,11 +58,25 @@
                   </div>
                 </div>
 
+                <!-- Dependensies -->
+                <div class="bs-callout bs-callout-danger">
+                    <h4>Dependensies</h4>
+                    <p>The component requires the <code>submenu.css</code> to be included (not yet generated)</p>
+                </div>
+                <div class="bs-callout bs-callout-info">
+                    <h4>SCSS file dependensies for developers</h4>
+                    <p>Header navigation component main style file is <code>app/assets/styles/_submenu.scss</code></p>
+                    <p>Header navigation component dependency</p>
+                    <ul>
+                        <li>bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/bootstrap.scss(original bootstrap file)</li>
+                        <li>app/assets/styles/_variables.scss</li>
+                        <li>app/assets/styles/_submenu.scss</li>
+                    </ul>
+                </div>
+
             </div>
         </div>       
 
     </div>
-
-    <br>
 
 <!-- / content -->

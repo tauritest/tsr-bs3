@@ -1,0 +1,33 @@
+// Alerts
+// -------------------------
+@mixin alert-variant($background, $border, $text-color) {
+  background-color: $background;
+  color: $text-color;
+  border:0;
+  border-top: 4px solid darken($border, 7%);
+  border-bottom: 4px solid darken($border, 7%);
+  &:hover{
+    background-color: lighten($background, 5%);
+    border-top: 4px solid $border;
+    border-bottom: 4px solid $border;
+  }
+  hr {
+    border-top-color: darken($border, 5%);
+  }
+  .alert-link {
+    color: darken($text-color, 10%);
+  }
+  .close-btn {
+    &:hover{
+      color:darken($border, 7%);
+    }
+  }
+  /*@media (max-width: $screen-xs-max) {
+  .close-btn {
+  border-radius: 30px;
+  background-color: #fff;
+  color: $background;
+  font-size: 22px;
+  }
+  }*/
+}
