@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-12" >
+
+            <h1 class="page-header">Side menu</h1>
+            <!--<h3>Side menu</h3>-->
+
+            <div class="bs-callout bs-callout-info">
+                <h4>Good to know!</h4>
+                <p>Use <code>.active</code> to indicate the current page</p>
+            </div>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#demo" data-toggle="tab">Demo</a></li>
+              <li><a href="#code" data-toggle="tab">Code</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div class="tab-pane active" id="demo">
+
+                <div class="bs-example">
+
+                    <aside style="width:300px;" class="sidemenu">
+                      <ul class="nav" role="navigation">
+                        <li>
+                          <a href="#">sample Common Link</a>
+                        </li>
+                        <li class="active">
+                          <a data-toggle="collapse" data-target="#myChild">sample Active Link with child</a>
+                          <ul class="collapse in" id="myChild">
+                            <li><a href="#">Child link</a></li>
+                            <li><a href="#">Child link</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a data-toggle="collapse" data-target="#mySecondChild">sample Common Link with child</a>
+                          <ul class="collapse" id="mySecondChild">
+                            <li><a href="#">Child link</a></li>
+                            <li><a href="#">Child link</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </aside>
+
+                </div>
+
+              </div>
+              <div class="tab-pane" id="code">
+                <div class="example-code">
+                    <pre class="brush: html">
+                        <aside class="sidemenu">
+                          <ul class="nav" role="navigation">
+                            <li class="active">
+                              <a href="put-you-link-here">sample Active Link</a>
+                            </li>
+                            <li>
+                              <a data-toggle="collapse" data-target="#put-your-target-id-here">sample Active Link with child</a>
+                              <ul class="collapse in" id="put-your-target-id-here">
+                                <li><a href="put-you-link-here">Child link</a></li>
+                                <li><a href="put-you-link-here">Child link</a></li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a data-toggle="collapse" data-target="#put-your-target-id-here">sample Common Link with child</a>
+                              <ul class="collapse" id="put-your-target-id-here">
+                                <li><a href="#">Child link</a></li>
+                                <li><a href="#">Child link</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </aside>
+                    </pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dependensies -->
+            <div class="bs-callout bs-callout-danger">
+                <h4>Dependensies</h4>
+                <p>The component requires the <code>_sidemenu.css</code> to be included (not yet generated)</p>
+            </div>
+            <div class="bs-callout bs-callout-info">
+                <h4>SCSS file dependensies for developers</h4>
+                <p>Header navigation component main style file is <code>app/assets/_sidemenu.scss</code></p>
+                <p>Header navigation component dependency</p>
+                <ul>
+                    <li>bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/bootstrap.scss(original bootstrap file)</li>
+                    <li>app/assets/styles/_variables.scss</li>
+                    <li>app/assets/styles/_sidemenu.scss</li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</div>

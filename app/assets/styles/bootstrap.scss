@@ -1,35 +1,30 @@
 
-// Core variables and mixins
-@import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
-//TODO: variables need update
-//@import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+// import original bootstrap
+@import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/bootstrap";
 
 /* // Core variables and mixins*/
 @import "variables";
-//TODO: mixins need update
 @import "mixins";
 
 // Core CSS
+// TODO:
 @import "scaffolding";
 
 // BS3 Components
-//// TODO: these files needs to be update
+// TODO: these files needs to be update
 @import "navbar";
 @import "header-navigation";
 @import "footer-navigation";
-@import "submenu";
-
+@import "sidemenu";
+@import "bottom-close-button";
 // TODO: these files needs to be update
 //@import "tables";
 //@import "forms";
 //@import "buttons";
-
 // TODO: these files needs to be update
 //@import "alerts";
-
 // TODO: these files needs to be update
 //@import "carousel";
-
 // TODO: these files needs to be update
 @import "icons";
 @import "badges";
@@ -38,6 +33,9 @@
 @import "accordion";
 @import "upgrade-steps";
 @import "ddl";
+
+// Utility classes
+@import "utilities";
 
 // from elion-e-pood
 @import "ee-autocomplete";

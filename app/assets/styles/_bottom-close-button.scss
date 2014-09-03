@@ -1,0 +1,19 @@
+//
+// Back to top / Bottom close button
+// --------------------------------------------------
+
+//
+// -------------------------
+.close-up-btn-bar {
+  display: block;
+  background-color:$brand-primary;
+  text-align: center;
+  color: #fff;
+  font-size: ceil($font-size-base * 1.35);
+  padding:13px;
+  border-top: 1px solid darken($brand-primary,7%);
+  margin: 0;
+  &:hover{
+    background-color: darken($brand-primary, 7%);
+  }
+}

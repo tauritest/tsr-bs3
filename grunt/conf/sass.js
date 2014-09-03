@@ -7,8 +7,9 @@ module.exports = {
 	      	sourceMap:true
 	    },
 	    files: {
-	      'dev-build/assets/styles/bootstrap.css': 'bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap.scss',
-	      'dev-build/assets/styles/bootstrap-tsr.css': 'app/assets/styles/bootstrap.scss'
+	      /*'dev-build/assets/styles/bootstrap.css': 'bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap.scss',
+	      'dev-build/assets/styles/bootstrap-tsr.css': 'app/assets/styles/bootstrap.scss',*/
+	      'dev-build/assets/styles/bootstrap.merged.css': 'app/assets/styles/bootstrap.scss'
 	    }
 	},
 
