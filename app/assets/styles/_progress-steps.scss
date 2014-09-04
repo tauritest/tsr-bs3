@@ -10,7 +10,7 @@ $clr-done: #00b48c ;
 $clr-active: #652d86;
 $clr-gray: #c7c2ba;
 
-/*
+
 @mixin stp-badge {
 	box-sizing: border-box;
 	vertical-align: middle;
@@ -26,7 +26,7 @@ $clr-gray: #c7c2ba;
 	font-family: 'tsr-icons-all';
 	color: $clrNrBg;
 }
-*/
+
 
 @mixin stp-badge-content($color){
 	border-color: $color;

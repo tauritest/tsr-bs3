@@ -1,0 +1,22 @@
+@mixin stp-badge($borderColor,$borderSize,$bgColor,$badgeSize) {
+  box-sizing: border-box;
+  vertical-align: middle;
+  text-align: center;
+  counter-increment:step;
+  height: $badgeSize;
+  width: $badgeSize;
+  border: $borderSize solid $borderColor;
+  background-color: $bgColor;
+  line-height: $badgeSize - 2*$borderSize;
+  border-radius: $badgeSize;
+  display: inline-block;
+  font-weight: bold;
+}
+
+@mixin badge-done($borderColor,$borderSize,$bgColor,$contentColor,$badgeSize) {
+  @include stp-badge($borderColor,$borderSize,$bgColor,$badgeSize);
+  content:"\e017";
+  font-family: 'tsr-icons-all';
+  font-size: $badgeSize/2;
+  color: $contentColor;
+}
