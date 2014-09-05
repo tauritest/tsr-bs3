@@ -1,7 +1,77 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            {{>_components/_select-block}}
+
+            <h1 class="page-header">Select Block</h1>
+            <h2>Examples </h2>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#demo1 " data-toggle="tab">Demo</a></li>
+                <li><a href="#code1" data-toggle="tab">Code</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="demo1">
+
+                    <div class="bs-example">
+                        {{>_components/_select-block}}
+                    </div>
+
+                </div>
+                <div class="tab-pane" id="code1">
+                    <div class="example-code">
+                           <pre class="brush: html">
+                                {{>_components/_select-block}}
+                           </pre>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Usage</h2>
+            <p>
+                Via data attribute or JavaScript, the select block plugin toggles the <code>.selected</code> class on the trigger item.
+            </p>
+
+            <h3>Data attributes</h3>
+            <table class="table table-striped">
+                <tr>
+                    <th>data option</th>
+                    <th>value</th>
+                    <th>requirements</th>
+                    <th>description</th>
+                </tr>
+                <tr>
+                    <td><code>data-toggle</code></td>
+                    <td>"sb"</td>
+                    <td>required</td>
+                    <td>toggles the select bloks states</td>
+                </tr>
+                <tr>
+                    <td><code>data-default</code></td>
+                    <td>any string</td>
+                    <td>Optional</td>
+                    <td>Set a value what is returned when nothing is selected. When not specified <strong>default return value</strong> is <code>null</code> </td>
+                </tr>
+                <tr>
+                    <td><code>data-value</code></td>
+                    <td>any string</td>
+                    <td>required</td>
+                    <td>Set a value of current item. </td>
+                </tr>
+            </table>
+
+            <h3>Methods</h3>
+            <p><strong>$('#element').sb('value')</strong>
+                Returns a selected option value if not selected reurns default value (see data-default)
+            </p>
+
+            <h3>Events</h3>
+            <!-- todo: add and descripe events -->
+            <p>TODO...</p>
         </div>
     </div>
+
+
 </div>

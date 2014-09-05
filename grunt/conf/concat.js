@@ -15,7 +15,8 @@ module.exports = {
             'app/assets/scripts/alert.js',
             'app/assets/scripts/ddl.js',
             'app/assets/scripts/sidemenu.js',
-            'app/assets/scripts/sidenavigation.js'
+            'app/assets/scripts/sidenavigation.js',
+            'app/assets/scripts/select-block.js'
 			//place your Scripts files here
 		],
 
