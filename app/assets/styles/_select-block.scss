@@ -1,3 +1,4 @@
+
 //TODO: COLOURS use global color codes!
 //TODO: ? integtae justified class
 $green:       #00b48c;
@@ -5,7 +6,6 @@ $blue:        #0083be;
 $white:       #f6f6f6;
 $border:      #dbdbdb;
 $font:        #333333;
-
 $number-size:40px;
 $border-size:4px;
 
@@ -85,6 +85,63 @@ $border-size:4px;
     >p{
       padding-left: 25px;
       padding-right: 25px;
+    }
+  }
+
+  ///////////////////////////////////////
+  &.select-action{
+    &:hover {
+      background-color: $brand-white;
+      > * {
+        color: inherit;
+      }
+      >var{
+        color: $blue;
+      }
+      .success{
+        color: $green;
+      }
+
+      .toggle-hover {
+        .hover-on {
+          display: block;
+        }
+        .hover-off {
+          display: none;
+        }
+      }
+
+    }
+    .toggle-hover {
+      min-height: 42px;
+      margin-bottom: 10px;
+      .hover-on {
+        display: none;
+      }
+      .hover-off {
+        display: block;
+      }
+    }
+  }
+  &.selected {
+    .toggle-hover {
+      .hover-on {
+        display: none;
+      }
+      .hover-off {
+        display: block;
+      }
+    }
+
+    &:hover {
+      .toggle-hover {
+        .hover-on {
+          display: none;
+        }
+        .hover-off {
+          display: block;
+        }
+      }
     }
   }
 }
