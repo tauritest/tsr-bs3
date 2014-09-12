@@ -1,0 +1,28 @@
+{
+    "services":[
+        {
+            "title": "Telli uus teenus pikema pealkirjaga",
+            "icon":"icon-plus",
+            "description":"Lorem ipsum dolor",
+            "badge": false
+        },
+        {
+            "title": "Teenustase",
+            "icon": " icon-default",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, eos.",
+            "badge": true
+        },
+        {
+            "title": "Ärilahendus 2.0 Liiga pikk pealkiri ei peagi ära mahtuma!",
+            "icon": " icon-default",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, eos.",
+            "badge": true
+        },
+        {
+            "title": "20M/20M",
+            "icon": "icon-internet",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, eos.",
+            "badge": true
+        }
+    ]
+}

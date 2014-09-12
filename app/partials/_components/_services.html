@@ -1,0 +1,61 @@
+<div class="row no-gutter">
+	<div class="col-sm-4 col-lg-3">
+
+		<div class="product">
+			<figure>
+				<a href="detail.html">
+					<span class="icon icon-plus"></span>
+				</a>
+			</figure>
+
+			<div class="content">
+				<h6 class="tsr-product-header" style="height: 57px;"><a href="detail.html">mobiiltelefon Samsung Galaxy Young 2 (hall)</a></h6>
+				<!--<p class="tsr-product-price ee-product-price-md" style="height: 27px;"><span>  79 €</span></p>
+				<a href="#" class="ee-compare"> Võrdle </a>
+				<a href="#" class="ee-buy"> Osta </a>
+-->			</div>
+
+			<div class="favorite-dropdown">
+				<button class="ee-favorite btn btn-link dropdown-toggle" data-toggle="dropdown">X</button>
+				<ul class="dropdown-menu dropdown-menu-right" role="menu">
+					<li><a href="favorite-page.html"><span class="ee-favorite active"></span>Favs0 </a></li>
+					<li><a href=""><span class="ee-favorite"></span>Favs1</a></li>
+					<li><a href=""><span class="ee-favorite"></span>Favs2</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</div>
+    <div class="row no-gutter-grid">
+        {{#services}}
+        <div class="col-sm-4 col-lg-3">
+            <div class="service-block">
+                <figure>
+                    <span class="icon {{icon}}"></span>
+	                {{#badge}}
+	                <figure class="badge">
+		                <span class="icon icon-plus"> </span>
+	                </figure>
+	                {{/badge}}
+	                {{^badge}}
+	                <figure class="badge">
+		                <var class="info">5</var>
+	                </figure>
+	                {{/badge}}
+                </figure>
+                <div class="content">
+
+                    <h3>
+                        {{title}}
+                    </h3>
+                    <p>
+                        {{description}}
+                    </p>
+                    <span class="status bottom success">Tellitud</span>
+                </div>
+
+            </div>
+        </div>
+        {{/services}}
+    </div>
