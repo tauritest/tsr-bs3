@@ -1,25 +1,25 @@
-console.log('\'Hello\' Elion webpage!');
 var reCallFuncs = [];
 (function() {
 
     'use strict';
     function main() {
-        console.log('main js');
+        console.log('main js loaded');
 
         scrollPageTop();
         createCustomElement(['header','footer']);
         stopPropagation();
-        fullSizeElement();
 
-        reDrawVisual();//if screen changed redraw visual
+        //reDrawVisual();//if screen changed redraw visual
+        var oR = new OnResize();
+        oR.init();
 
         //iframeResizer
-        try {
+        /*try {
             $('iframe').iFrameResize([]);
 
         } catch(e) {
             console.debug(e); 
-        }
+        }*/
 
     }
 
@@ -31,3 +31,7 @@ function reDrawVisual() {
     var oR = new OnResize();
     oR.init();
 }
+jQuery(document).ready(function(){
+    reCallFuncs.push(detectScreen);
+});
+

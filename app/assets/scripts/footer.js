@@ -3,7 +3,7 @@
     'use strict';
     
     function footer() {
-        console.log('footer js');
+        console.log('footer js loaded');
 
         // social block
 		$('.social-block .media > a , footer .list-group > .list-group-item > a').each(function(i, el){
