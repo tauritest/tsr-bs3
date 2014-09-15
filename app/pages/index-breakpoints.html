@@ -1,0 +1,45 @@
+
+
+<!-- content put your content here -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Css</a></li>
+                <li class="active">Breakpoints</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">Breakpoints</h1>
+            <!--<h3>Header navigation</h3>-->
+
+            <div class="bs-callout bs-callout-warning">
+                <h4>Kasutatavad breakpointid</h4>
+                <p>veebijuppide juures erivaadete eihitamisel kasutada breakpoint klassifikaatoreid, mis lisatakse ekraani muutumisel <code>html</code> tag'i</p>
+                <ul>
+                    <li>extra small devices, portrait mode in phones (max width 767px and portrait) <code>screen__xs--portrait</code></li>
+                    <li>extra small devices, landscape mode in phones (max width 767px and landscape) <code>screen__xs--landscape</code></li>
+                    <li>extra small devices, default (max-width: 768px) <code>screen__xs</code></li>
+                    <li>small device ,landscape mode in tablets (min width  768px and landscape) <code>screen__sm--landscape</code></li>
+                    <li>small device ,tablets (min width  768px) <code>screen__sm</code></li>
+                    <li>medium devices, desktops (min width  992px)<code>screen__md</code></li>
+                    <li>large devices, large desktops (min width  1200px) <code>screen__lg</code></li>
+                </ul>
+            </div>
+
+            <div class="bs-callout bs-callout-info">
+                <h4>Usage</h4>
+                <p>Kui soovid luua komponenti extra small screeni jaoks ilma portrait ja landscape juhtumita siis void defineerida selle nii:</p>
+                <p><code>[class*="screen__xs"] { ... }</code></p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- / content -->

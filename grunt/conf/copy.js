@@ -3,7 +3,7 @@ module.exports = {
         expand:true,
         cwd:'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/',
         src:'**',
-        dest:'dev-build/assets/fonts/',
+        dest:'dev-build/assets/fonts/bootstrap/',
         flatten:false,
         filter:'isFile'
     },

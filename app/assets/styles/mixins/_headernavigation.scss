@@ -1,0 +1,124 @@
+@mixin set-main-menu-link($activeClass:""){
+  @if $activeClass == "active" {
+    > a {
+      color: $brand__link;
+      padding: 33px 8px 28px 9px;
+
+      &:before {
+        background-color: #4e2369;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 4px;
+        left: 0;
+        position: absolute;
+        top: auto;
+        width: 100%;
+      }
+    }
+  }
+  @else {
+    > a {
+      color: $brand__link;
+      padding: 33px 8px 28px 9px;
+
+      &:hover,
+      &:focus {
+        &:before {
+          background-color: #4e2369;
+          bottom: 0;
+          content: "";
+          display: block;
+          height: 4px;
+          left: 0;
+          position: absolute;
+          top: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+}
+
+@mixin headernavigationAnimation() {
+
+  /* small screen */
+  html[class*="screen__xs"] {
+    header.nav-up {
+      > div {
+        background-color: transparent;
+      }
+      // hide top and main navigation
+      top:-45px;
+      .menu__main {
+        opacity: 0;
+        top: -25px;
+      }
+    }
+    header.nav-down {
+      // hide top navigation
+      // show main navigation
+      top:-45px;
+      .menu__main {
+        opacity: 1;
+        top: 0px;
+      }
+    }
+    header.nav-top {
+      // show top and main navigation
+
+    }
+  }
+
+  /* medium and large screen */
+  html.screen__md,
+  html.screen__lg {
+
+    header.nav-top {
+      // show top navigation
+      // show main navigation
+      top:0;
+
+      /* main menu */
+      .menu__top .navbar-nav > .active {
+        > a,
+        > a:hover,
+        > a:focus {
+          @include topMenuActivBg(show);
+        }
+      }
+    }
+    header.nav-up {
+      // hide top navigation
+      // show main navigation
+      top: -45px;
+    }
+    header.nav-down {
+      // show main navigation
+      top: -45px;
+    }
+
+    header.nav-up,
+    header.nav-down {
+      /* main menu */
+      .menu__top .navbar-nav > .active {
+        > a,
+        > a:hover,
+        > a:focus {
+          @include topMenuActivBg(hide);
+        }
+      }
+    }
+  }
+}
+
+@mixin topMenuActivBg($position:"show"){
+  @if $position == "show" {
+    background-color: #fff;
+  }
+  @else if($position == "hide") {
+    background-color: transparent;
+  }
+
+}
