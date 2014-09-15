@@ -23,9 +23,8 @@ module.exports = {
 	},
 
 	html: {
-		files: ['app/{,*/}*.html','app/partials/_components/{,*/}*.html'],
+
+        files: ['app/{,*/}*.html', 'app/{,*/}*.json', 'app/partials/_components/{,*/}*.html'],
 		tasks: ['mustatic']
 	}
 };
-
-//'app/*.html','app/pages{,*/}*.html','app/partials{,*/}*.html','app/partials/_components{,*/}*.html'
