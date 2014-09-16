@@ -1,110 +1,20 @@
 $component: "service-block";
+
 @import "imports/_responsive-block-base";
 @include responsive-block-base($component);
+
 $font-size: 26px ;
-
-@mixin ellipsis($font-size, $line-height, $lines-to-show){
-  display: block; // Fallback for non-webkit
-  display: -webkit-box;
-  max-width: 100%;
-  min-height: $font-size*$line-height*$lines-to-show; //Fallback for non-webkit
-  font-size: $font-size;
-  line-height: $line-height;
-  -webkit-line-clamp: $lines-to-show;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-@mixin hoverStripe($bg-color){
-  &:before{
-    content: '\00ad';
-    display: block;
-    width: 100%;
-    height: 4px;
-    background: $brand-primary;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
-  background-color: $bg-color;
-  border-bottom-color: $brand-primary;
-}
-
-/* Generates warning, success, info and
-primary classes to given css parameter.
-EXAMPLE:
-p { @include colorStates(color));}
-outcome:
-p.warning{color:#FF6319;}
-p.success{color:#00B48C;}
-p.info{color:#0083BE;}
-p.primary{color:#652d86;}
-*/
-
-@mixin colorStates($parameter){
-  &.warning{
-    #{$parameter}: $brand-warning;
-  }
-  &.success{
-    #{$parameter}: $brand-success;
-  }
-  &.info{
-    #{$parameter}: $brand-info;
-  }
-  &.primary{
-    #{$parameter}: $brand-primary;
-  }
-}
-
-@mixin seviceBadge($border-color,$background-color,$border-width,$height){
-  .badge{
-    background: none;
-    border:none;
-    position: absolute;
-    display: block;
-    left:50%;
-    top:0;
-    margin:0;
-    padding: 0;
-    margin-top: -24px;
-    margin-left:9px;
-    width: auto;
-    min-width: 20px;
-    .icon,
-    var{
-      background: $border-color;
-      border: $border-width solid $border-color;
-      @include border-radius($height);
-      font-size: $height;
-      line-height: $height;
-      min-width: 0;
-      width:  $height;
-      height :$height;
-      display: block;
-      box-sizing: content-box;
-    }
-    var{
-      background: $background-color;
-      color:$background-color ;
-      font-size: $height/2;
-      @include colorStates(background-color);
-    }
-  }
-}
-
-
-
-//Mobile
 $bg-color: lighten(#000, 96.5%); //#F6F6F6
 $bg-color-hover: $brand-white;
+
+//Mobile
 .#{$component}{
   background-color: $bg-color;
   border: 1px solid $input-border;
   padding:2em .33333em 1.33333em 1em;
   &:hover{
     @include hoverStripe($bg-color-hover);
-    @include seviceBadge(
+    @include serviceBadge(
     $border-color: $bg-color-hover,
     $background-color: $bg-color-hover,
     $border-width: 8px,
@@ -119,7 +29,7 @@ $bg-color-hover: $brand-white;
       min-width: 100%;
     }
 
-    @include seviceBadge(
+    @include serviceBadge(
       $border-color: $bg-color,
       $background-color: $bg-color,
       $border-width: 8px,
@@ -154,7 +64,7 @@ $bg-color-hover: $brand-white;
     }
   }
 }
-/*  block klick*/
+/*  block click*/
 a.#{$component}{
   &:hover{
     text-decoration: none;
@@ -171,16 +81,15 @@ a.#{$component}{
       padding-bottom:30px;
       position: relative;
     }
-
     .content{
       >h3 {
         $line-height: 1.2;
-       @include ellipsis($font-size, $line-height , 2);
+       @include multilineElipsis($font-size, $line-height , 2);
        margin-top:20px;
         min-height: $line-height;
       }
       p{
-        @include ellipsis($font-size-base, $line-height-base, 2);
+        @include multilineElipsis($font-size-base, $line-height-base, 2);
       }
     }
   }

@@ -146,3 +146,19 @@
   @include border-top-radius($radius);
   @include border-bottom-radius($radius);
 }
+
+/*generates default colour states to given parameter*/
+@mixin colorStates($parameter){
+  &.warning{
+    #{$parameter}: $brand-warning;
+  }
+  &.success{
+    #{$parameter}: $brand-success;
+  }
+  &.info{
+    #{$parameter}: $brand-info;
+  }
+  &.primary{
+    #{$parameter}: $brand-primary;
+  }
+}
