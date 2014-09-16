@@ -1,13 +1,13 @@
 $component: "service-block";
-
-@import "imports/_responsive-block-base";
+@import "mixins/_responsive-block-base";
 @include responsive-block-base($component);
-
 $font-size: 26px ;
-$bg-color: lighten(#000, 96.5%); //#F6F6F6
-$bg-color-hover: $brand-white;
+
+
 
 //Mobile
+$bg-color: lighten(#000, 96.5%); //#F6F6F6
+$bg-color-hover: $brand-white;
 .#{$component}{
   background-color: $bg-color;
   border: 1px solid $input-border;
@@ -63,8 +63,29 @@ $bg-color-hover: $brand-white;
       text-align: center;
     }
   }
+  //sm.min and up
+  @media (min-width: $screen-sm-min) {
+      padding: 30px 10px 20px 10px;
+      figure{
+        margin-top: 30px;
+        padding-bottom:30px;
+        position: relative;
+      }
+
+      .content{
+        >h3 {
+          $line-height: 1.2;
+          @include multilineElipsis($font-size, $line-height , 2);
+          margin-top:20px;
+          min-height: $line-height;
+        }
+        p{
+          @include multilineElipsis($font-size-base, $line-height-base, 2);
+        }
+      }
+  }
 }
-/*  block click*/
+/*  block klick*/
 a.#{$component}{
   &:hover{
     text-decoration: none;
@@ -72,25 +93,3 @@ a.#{$component}{
   }
 }
 
-//sm.min and up
-@media (min-width: $screen-sm-min) {
-  .#{$component} {
-    padding: 30px 10px 20px 10px;
-    figure{
-      margin-top: 30px;
-      padding-bottom:30px;
-      position: relative;
-    }
-    .content{
-      >h3 {
-        $line-height: 1.2;
-       @include multilineElipsis($font-size, $line-height , 2);
-       margin-top:20px;
-        min-height: $line-height;
-      }
-      p{
-        @include multilineElipsis($font-size-base, $line-height-base, 2);
-      }
-    }
-  }
-}

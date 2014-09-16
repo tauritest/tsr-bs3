@@ -16,15 +16,16 @@
 .#{$component} {
   figure{}
   .content{}
-}
-//mobile up
-@media (min-width: $screen-sm-min) {
-  .#{$component} {
+
+  //mobile up
+  @media (min-width: $screen-sm-min) {
     figure{}
     .content{}
   }
 }
 */
+
+
 @mixin responsive-block-base($component){
   .#{$component} {
     width: 100%;
@@ -32,7 +33,7 @@
     position: relative;
     figure,
     .content,
-    >*{
+    > * {
       display: table-cell;
       vertical-align: top;
     }
@@ -43,7 +44,7 @@
       float: none;
       margin-right: 5px;
       text-align: center;
-      a{
+      a {
         text-decoration: none;
       }
     }
@@ -52,26 +53,24 @@
       vertical-align: top;
       padding-left: 4%;
     }
-  }
 
-  //sm.min and up
-  @media (min-width: $screen-sm-min) {
-    .#{$component}{
+    //sm.min and up
+    @media (min-width: $screen-sm-min) {
       text-align: center;
 
       figure,
-      .content{
+      .content {
         display: block;
         width: 100%;
         max-width: 100%;
       }
-      .content{
+      .content {
         //padding-left:0;
       }
-      >*{
+      > * {
         display: block;
       }
+
     }
   }
-
 }
