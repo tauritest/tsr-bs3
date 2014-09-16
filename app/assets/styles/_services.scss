@@ -93,25 +93,7 @@ p.primary{color:#652d86;}
   }
 }
 
-//TODO: add no gutter to grid!
-.row{
-  &.no-gutter,
-  &.no-gutter-grid {
-    padding-left: $grid-gutter-width/2;
-    padding-right: $grid-gutter-width/2;
-    > div {
-      padding-right: 0;
-      padding-left: 0;
-    }
-  }
-  /*use with 1px border blocks*/
-  &.no-gutter-grid{
-    > div {
-      margin-right:-1px;
-      margin-bottom:-1px;
-    }
-  }
-}
+
 
 //Mobile
 $bg-color: lighten(#000, 96.5%); //#F6F6F6
