@@ -19,7 +19,7 @@ var navbarHeight = $('header').outerHeight();
         });
 
         //console.log($('#bigtext').bigtext());
-        $('.font__size--scaling > li > a').fontFlex(14, 20, 19);
+        //$('#menu__main > ul > li > a').fontFlex(14, 24, 19);
     }
 
     headernavigation();
