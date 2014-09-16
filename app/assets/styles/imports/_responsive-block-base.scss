@@ -1,11 +1,4 @@
-/*import file
-
-# USAGE
-//define component name
-$component: "componentClass";
-//import base styles
-@import "imports/_responsive-block-base";
-
+/*
 # HTML template
 ---------------
 <div class="componentClass">
@@ -32,50 +25,53 @@ $component: "componentClass";
   }
 }
 */
-.#{$component} {
-  width: 100%;
-  display: table;
-  position: relative;
-  figure,
-  .content,
-  >*{
-    display: table-cell;
-    vertical-align: top;
-  }
-  figure {
-    height: auto;
-    min-width: 110px;
-    max-width: 25%;
-    float: none;
-    margin-right: 5px;
-    text-align: center;
-    a{
-      text-decoration: none;
-    }
-  }
-  .content {
-    width: 75%;
-    vertical-align: top;
-    padding-left: 4%;
-  }
-}
-
-//sm.min and up
-@media (min-width: $screen-sm-min) {
-  .#{$component}{
-    text-align: center;
-
+@mixin responsive-block-base($component){
+  .#{$component} {
+    width: 100%;
+    display: table;
+    position: relative;
     figure,
-    .content{
-      display: block;
-      width: 100%;
-      max-width: 100%;
-    }
-    .content{
-      //padding-left:0;
-    }
+    .content,
     >*{
-      display: block;
+      display: table-cell;
+      vertical-align: top;
+    }
+    figure {
+      height: auto;
+      min-width: 110px;
+      max-width: 25%;
+      float: none;
+      margin-right: 5px;
+      text-align: center;
+      a{
+        text-decoration: none;
+      }
+    }
+    .content {
+      width: 75%;
+      vertical-align: top;
+      padding-left: 4%;
     }
   }
+
+  //sm.min and up
+  @media (min-width: $screen-sm-min) {
+    .#{$component}{
+      text-align: center;
+
+      figure,
+      .content{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+      }
+      .content{
+        //padding-left:0;
+      }
+      >*{
+        display: block;
+      }
+    }
+  }
+
 }

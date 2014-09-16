@@ -1,6 +1,6 @@
 $component: "service-block";
 @import "imports/_responsive-block-base";
-
+@include responsive-block-base($component);
 $font-size: 26px ;
 
 @mixin ellipsis($font-size, $line-height, $lines-to-show){
@@ -31,17 +31,29 @@ $font-size: 26px ;
   border-bottom-color: $brand-primary;
 }
 
+/* Generates warning, success, info and
+primary classes to given css parameter.
+EXAMPLE:
+p { @include colorStates(color));}
+outcome:
+p.warning{color:#FF6319;}
+p.success{color:#00B48C;}
+p.info{color:#0083BE;}
+p.primary{color:#652d86;}
+*/
 
-/*generates states bg classes to element*/
-@mixin states-bg(){
+@mixin colorStates($parameter){
   &.warning{
-    background-color: $brand-warning;
+    #{$parameter}: $brand-warning;
   }
   &.success{
-    background-color: $brand-success;
+    #{$parameter}: $brand-success;
   }
   &.info{
-    background-color: $brand-info;
+    #{$parameter}: $brand-info;
+  }
+  &.primary{
+    #{$parameter}: $brand-primary;
   }
 }
 
@@ -76,7 +88,7 @@ $font-size: 26px ;
       background: $background-color;
       color:$background-color ;
       font-size: $height/2;
-      @include states-bg();
+      @include colorStates(background-color);
     }
   }
 }
@@ -145,6 +157,7 @@ $bg-color-hover: $brand-white;
   //TODO: status
   .status{
     font-weight: bold;
+    @include colorStates(color);
     &.bottom {
       margin-top: 20px;
       display: inline-block;
@@ -156,9 +169,6 @@ $bg-color-hover: $brand-white;
       left: 0;
       margin-top: 10px;
       text-align: center;
-    }
-    &.success{
-      color: $brand-success;
     }
   }
 }

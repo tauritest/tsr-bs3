@@ -97,6 +97,52 @@
 @mixin setAsH4() {
   font-size: $font-size-base + 7;
 }
+
 @mixin setAsBodyText() {
   font-size: $font-size-base;
+}
+
+/** BORDER RADIUS **/
+// Single corners
+@mixin border-top-left-radius($radius){
+  -webkit-border-top-left-radius: $radius;
+  -moz-border-radius-topleft: $radius;
+  border-top-left-radius: $radius;
+}
+@mixin border-top-right-radius($radius){
+  -webkit-border-top-right-radius: $radius;
+  -moz-border-radius-topright: $radius;
+  border-top-right-radius: $radius;
+}
+@mixin border-bottom-left-radius($radius){
+  -webkit-border-bottom-left-radius: $radius;
+  -moz-border-radius-bottomleft: $radius;
+  border-bottom-left-radius: $radius;
+}
+@mixin border-bottom-right-radius($radius){
+  -webkit-border-bottom-right-radius: $radius;
+  -moz-border-radius-bottomright: $radius;
+  border-bottom-right-radius: $radius;
+}
+// Single side border-radius
+@mixin border-top-radius($radius) {
+  @include border-top-right-radius($radius);
+  @include border-top-left-radius($radius);
+}
+@mixin border-right-radius($radius) {
+  @include border-bottom-right-radius($radius);
+  @include border-top-right-radius($radius);
+}
+@mixin border-bottom-radius($radius) {
+  @include border-bottom-right-radius($radius);
+   @include border-bottom-left-radius($radius);
+}
+@mixin border-left-radius($radius) {
+  @include border-bottom-left-radius($radius);
+     @include border-top-left-radius($radius);
+}
+// All corners
+@mixin border-radius($radius){
+  @include border-top-radius($radius);
+  @include border-bottom-radius($radius);
 }
