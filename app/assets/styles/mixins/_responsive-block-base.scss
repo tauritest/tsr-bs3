@@ -1,0 +1,76 @@
+/*
+# HTML template
+---------------
+<div class="componentClass">
+    <figure>...</figure>
+    <div class="content">...</div>
+
+    <!-- OPTIONAL! you can add any other blocs if needed -->
+    <div class="my custom block">... </div>
+    <!-- end OPTIONAL -->
+</div>
+
+#scss template
+--------------
+//Mobile
+.#{$component} {
+  figure{}
+  .content{}
+
+  //mobile up
+  @media (min-width: $screen-sm-min) {
+    figure{}
+    .content{}
+  }
+}
+*/
+
+
+@mixin responsive-block-base($component){
+  .#{$component} {
+    width: 100%;
+    display: table;
+    position: relative;
+    figure,
+    .content,
+    > * {
+      display: table-cell;
+      vertical-align: top;
+    }
+    figure {
+      height: auto;
+      min-width: 110px;
+      max-width: 25%;
+      float: none;
+      margin-right: 5px;
+      text-align: center;
+      a {
+        text-decoration: none;
+      }
+    }
+    .content {
+      width: 75%;
+      vertical-align: top;
+      padding-left: 4%;
+    }
+
+    //sm.min and up
+    @media (min-width: $screen-sm-min) {
+      text-align: center;
+
+      figure,
+      .content {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+      }
+      .content {
+        //padding-left:0;
+      }
+      > * {
+        display: block;
+      }
+
+    }
+  }
+}

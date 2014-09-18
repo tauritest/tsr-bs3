@@ -2,8 +2,108 @@
     <div class="row">
         <div class="col-sm-12">
 
-            <h1>SERVICE</h1>
-            {{>_components/_services}}
+            <h1>Service</h1>
+	        <h2>Example</h2>
+	        <p>This is responsive block with icon or image. The width of the block is defined by grid. You should use <code>.col-sm-4 .col-lg-3</code> but it is possible to change them as needed. </p>
+			<p>Service block is defined by <code>.service-block</code> class. </p>
+	        <!-- Nav tabs -->
+	        <ul class="nav nav-tabs">
+		        <li class="active"><a href="#demo2" data-toggle="tab">Demo</a></li>
+		        <li><a href="#code2" data-toggle="tab">Code</a></li>
+	        </ul>
+
+	        <!-- Tab panes -->
+	        <div class="tab-content">
+		        <div class="tab-pane active" id="demo2">
+			        <div class="bs-example">
+				        {{>_components/service/service}}
+			        </div>
+		        </div>
+
+		        <div class="tab-pane" id="code2">
+			        <div class="example-code">
+	                <pre class="brush: html">
+	                     {{>_components/service/service}}
+	                </pre>
+			        </div>
+		        </div>
+	        </div>
+
+	        <h3>Using With Grid</h3>
+	        <p>To get grid layout with 1px border around add <code>.no-gutter-grid</code> to row class. </p>
+	        <!-- Nav tabs -->
+	        <ul class="nav nav-tabs">
+		        <li class="active"><a href="#demo1" data-toggle="tab">Demo</a></li>
+		        <li><a href="#code1" data-toggle="tab">Code</a></li>
+	        </ul>
+
+	        <!-- Tab panes -->
+	        <div class="tab-content">
+		        <div class="tab-pane active" id="demo1">
+			        <div class="bs-example">
+				        {{>_components/service/_services}}
+			        </div>
+		        </div>
+
+		        <div class="tab-pane" id="code1">
+			        <div class="example-code">
+	              <pre class="brush: html">
+	                   {{>_components/service/_services}}
+	              </pre>
+			        </div>
+		        </div>
+	        </div>
+
+
+	        <h3>Badges</h3>
+	        <p>You can use icon as a badge or add some extra information on it </p>
+
+	        <!-- Nav tabs -->
+	        <ul class="nav nav-tabs">
+		        <li class="active"><a href="#demo3" data-toggle="tab">Demo</a></li>
+		        <li><a href="#code3" data-toggle="tab">Code</a></li>
+	        </ul>
+
+	        <!-- Tab panes -->
+	        <div class="tab-content">
+		        <div class="tab-pane active" id="demo3">
+			        <div class="bs-example">
+				        {{>_components/service/services-badge}}
+			        </div>
+		        </div>
+
+		        <div class="tab-pane" id="code3">
+			        <div class="example-code">
+	                <pre class="brush: html">
+	                     {{>_components/service/services-badge}}
+	                </pre>
+			        </div>
+		        </div>
+	        </div>
+
+	        <h3>Status</h3>
+	        <p>Status colors can be changed by common class names <code>.primary .info .warning .success</code> </p>
+
+	        <h2>Note</h2>
+
+	        <div class="bs-callout bs-callout-danger">
+		        <h4>Dependencies</h4>
+		        <p>The component requires the <code>_services.css</code> to be included (not yet generated)</p>
+	        </div>
+	        <div class="bs-callout bs-callout-info">
+		        <h4>SCSS file dependensies for developers</h4>
+		        <p>Main style file <code>app/assets/_icons.scss</code> </p>
+		        <p>Required files</p>
+		        <ul>
+			        <li>app/assets/styles/_variables.scss</li>
+			        <li>app/assets/styles/_services.scss</li>
+			        <li>app/assets/styles/mixins/_mixins.scss</li>
+			        <li>app/assets/styles/mixins/_responsive-block-base</li>
+			        ---
+			        <li>app/assets/_icons.scss</li>
+		        </ul>
+	        </div>
+
         </div>
     </div>
 </div>

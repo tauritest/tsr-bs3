@@ -10,19 +10,19 @@
             "title": "Teenustase",
             "icon": " icon-default",
             "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, eos.",
-            "badge": true
+            "badge": "info"
         },
         {
             "title": "Ärilahendus 2.0 Liiga pikk pealkiri ei peagi ära mahtuma!",
             "icon": " icon-default",
             "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, eos.",
-            "badge": true
+            "badge": "warning"
         },
         {
             "title": "20M/20M",
             "icon": "icon-internet",
             "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, eos.",
-            "badge": true
+            "badge": "success"
         }
     ]
 }
