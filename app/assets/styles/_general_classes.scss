@@ -10,6 +10,7 @@ body {
   letter-spacing: $letter-spacing-base;
   line-height: $line-height-base;
   margin-bottom: 60px;
+  font-size: $font-size-base;
 }
 
 header{
@@ -26,11 +27,6 @@ section.content { padding: 0;
 #browserAlert { display: none; }
 .lt-ie8 #browserAlert { display: block; }
 
-
-
-
-
-
 // close button bar styles
 .btn-close{
   background-color: $mainnavigation-submenu-bg-color;
@@ -39,6 +35,11 @@ section.content { padding: 0;
   border-top: 1px solid $mainnavigation-bg-color;
 }
 
+.closeNavigation__button {
+  clear:both;
+  display: block;
+  padding: 10px;
+}
 
 
 

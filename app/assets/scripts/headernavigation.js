@@ -17,9 +17,6 @@ var navbarHeight = $('header').outerHeight();
         jQuery(window).on("scroll", function() {
             newStickies.scroll();
         });
-
-        //console.log($('#bigtext').bigtext());
-        //$('#menu__main > ul > li > a').fontFlex(14, 24, 19);
     }
 
     headernavigation();

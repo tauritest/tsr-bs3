@@ -11,6 +11,7 @@ body > .container {
 }
 
 
+
 /* header */
 header {
   position: fixed;
@@ -44,21 +45,20 @@ header {
       border-radius: 0;
       z-index:2;
       border: 0;
-      margin-bottom: 0px;
+      margin-bottom: 12px;
 
       .navbar-nav {
         > li {
           &.active {
             > a {
+              font-size: $font-size-base - 2;
+
               &:hover,
               &:focus {
                 background-color: #fff;
                 color: $brand__link;
               }
             }
-          }
-          > a {
-            color: #fff;
           }
           &.open {
             > a {
@@ -70,8 +70,11 @@ header {
             }
           }
           > a {
+            color: $white;
             font-size: 13px;
             font-weight: bold;
+
+            @include transition(all 0.3s ease);
 
             &:hover,
             &:focus {
@@ -90,7 +93,7 @@ header {
       z-index:1;
       border:0;
       border-bottom: 1px solid $brand__gray;
-      //background-color: #ffff00;
+      border-radius: 0;
 
       @include transition(all 0.3s ease);
 
@@ -106,19 +109,46 @@ header {
 
       .navbar-nav {
         > li {
-          //border-right: 1px solid $brand__gray;
-          &:before {
-            background-color: $brand__gray;
-            content: "";
-            display: block;
-            height: 35%;
-            left: 0;
-            position: absolute;
-            right: auto;
-            top: 35%;
-            width: 1px;
+          > a {
+            @include transition(all 0.3s ease);
+
+            &.navbar-brand {
+              /* icon */
+              // TODO: extend broken column layout ;
+              //@extend .icon;
+              font-family: 'tsr-icons-all';
+              speak: none;
+              font-style: normal;
+              font-weight: normal;
+              font-variant: normal;
+              text-transform: none;
+              /* Better Font Rendering =========== */
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+
+              font-size: $font-size-base + 25;
+
+              &:empty {
+                width: 1em;
+              }
+              &:before {
+                content: "\e02c";
+              }
+              &:hover:after {
+                background-color: transparent;
+              }
+              /* / icon */
+            }
           }
+
           @include set-main-menu-link();
+
+          /*> a:hover,*/
+          > a:focus {
+            background-color: $brand__violet;
+            color: $white;
+          }
+
 
           &.open {
             > a,
@@ -140,33 +170,80 @@ header {
 
         .dropdown-menu {
           width: 100%;
-          background-color: $brand__violet;
-          margin-top: -1px;
+          background-color: darken($brand__violet, 9%);
+          margin-top: 0px;
+          border: 0;
+          border-radius: 0;
+          //min-height: 200px;
+          padding: 0;
 
-          > li {
-            float: left;
-            color: $white;
+          > .container {
+            background-color: $brand__violet;
+            //min-height: inherit;
+            padding:30px 40px;
 
-            a {
-              color: $white;
-            }
-            ul li {
-              list-style: none;
-              color: $white;
+            > div {
+              > ul {
+                list-style: none;
+                padding: 0 0 10px 0;
+                width: 100%;
+                background-color: #ff0000;
 
-              > a {
-                color: $white;
-                font-size: $font-size-base+3;
+                > li {
+                  margin-bottom:25px;
+
+                  > a {
+                    display: block;
+                    background-color: #008000;
+                    font-size: $font-size-base + 3;
+                    margin-bottom: 5px;
+
+                    /* icon */
+                    // TODO: extend broken column layout ;
+                    //@extend .icon;
+                    font-family: 'tsr-icons-all';
+                    speak: none;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-variant: normal;
+                    text-transform: none;
+                    /* Better Font Rendering =========== */
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+
+                    &:empty {
+                      width: 1em;
+                    }
+                    &:after {
+                      content: "\e668";
+                      margin-left: 10px;
+                    }
+                    /* / icon */
+
+                  }
+
+                  > ul {
+                    list-style: none;
+                    padding: 0 0 10px 0;
+
+                    a {
+                      font-size: $font-size-base;
+                    }
+                  }
+                }
               }
             }
           }
         }
       }
       /* / end megamenu */
-
     }
+
   }
 }
+
+@include headernavigationAnimation();
+@include responsiveNavigationText();
 
 header {
   .menu__top .navbar-nav > .active {
@@ -178,63 +255,6 @@ header {
     }
   }
 }
-/* NAVIGATION ACTION LOGIC */
-/*header {
-
-  &.nav-top {
-    top: 0px;
-
-    .navbar-nav {
-      > .active {
-        > a,
-        > a:hover,
-        > a:focus {
-          background-color: #fff;
-          color: $brand__link ;
-        }
-      }
-    }
-    .hide__scroll--top {
-      display: none;
-    }
-    .show__scroll--top {
-      display: inline-block;
-    }
-  }
-
-  &.nav-up {
-    top: -45px;
-
-    > div {
-      background-color: transparent;
-
-      > nav.navbar-default {
-        top:-25px;
-        opacity: 0;
-      }
-      > nav.navbar-inverse .navbar-nav .active a {
-        background-color: transparent;
-      }
-
-    }
-  }
-
-  &.nav-down {
-    top: -45px;
-
-    > div {
-      > nav.navbar-default {
-        top:0px;
-        opacity: 1;
-      }
-      > nav.navbar-inverse .navbar-nav .active a {
-        background-color: transparent;
-      }
-
-  }
-}}*/
-
-@include headernavigationAnimation();
 
 /* main navigation on mobile devices */
 [class*="screen__xs"] {
@@ -303,3 +323,38 @@ header {
   }
 }
 /* / end main navigation on mobile devices */
+
+.four-col {
+  -moz-column-count: 4;
+  -moz-column-gap: 95px;
+  -moz-column-rule-color:  darken($brand__violet, 9%);
+  -moz-column-rule-style:  solid;
+  -moz-column-rule-width:  1px;
+
+  -webkit-column-count: 4;
+  -webkit-column-gap : 95px;
+  -webkit-column-rule-color:  darken($brand__violet, 9%);
+  -webkit-column-rule-style: solid ;
+  -webkit-column-rule-width:  1px;
+
+  column-count:4;
+  column-gap:95px;
+  column-rule-color:  darken($brand__violet, 9%);
+  column-rule-style: solid ;
+  column-rule-width:  1px;
+
+  > ul {
+    > li {
+      ul {
+        > li {
+          -webkit-column-break-inside:avoid-column;
+          -moz-column-break-inside:avoid-column;
+          -o-column-break-inside:avoid-column;
+          -ms-column-break-inside:avoid-column;
+          column-break-inside:avoid-column;
+          background-color: #ffff00;
+        }
+      }
+    }
+  }
+}

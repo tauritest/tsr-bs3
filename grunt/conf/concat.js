@@ -7,9 +7,7 @@ module.exports = {
             'bower_components/jquery/dist/jquery.js',
             'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js',
             'bower_components/modernizr/modernizr.js',
-            //'bower_components/bigtext/dist/bigtext.js',
 
-            'app/assets/scripts/jQuery.fontFlex.js',
             'app/assets/scripts/funcs.js',
             'app/assets/scripts/main.js',
             'app/assets/scripts/headernavigation.js',

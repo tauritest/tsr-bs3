@@ -32,6 +32,7 @@ function reDrawVisual() {
     oR.init();
 }
 jQuery(document).ready(function(){
+    detectScreen();
     reCallFuncs.push(detectScreen);
 });
 
