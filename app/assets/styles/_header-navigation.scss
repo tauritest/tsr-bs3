@@ -125,27 +125,8 @@ header {
             @include transition(all 0.3s ease);
 
             &.navbar-brand {
-              /* icon */
-              // TODO: extend broken column layout ;
-              //@extend .icon;
-              font-family: 'tsr-icons-all';
-              speak: none;
-              font-style: normal;
-              font-weight: normal;
-              font-variant: normal;
-              text-transform: none;
-              /* Better Font Rendering =========== */
-              -webkit-font-smoothing: antialiased;
-              -moz-osx-font-smoothing: grayscale;
-
               font-size: $font-size-base + 25;
 
-              &:empty {
-                width: 1em;
-              }
-              &:before {
-                content: "\e02c";
-              }
               &:hover:after {
                 background-color: transparent;
               }
@@ -171,6 +152,16 @@ header {
           }
           &.active {
             @include set-main-menu-link(active);
+          }
+        }
+
+        &.menu__main--additional {
+          > li {
+            > a {
+              &:hover:after {
+                background-color: transparent;
+              }
+            }
           }
         }
       }
@@ -221,25 +212,25 @@ header {
                       background-color: darken($brand__violet, 9%);
                     }
 
-                    /* icon */
-                    // TODO: extend broken column layout ;
-                    //@extend .icon;
-                    font-family: 'tsr-icons-all';
-                    speak: none;
-                    font-style: normal;
-                    font-weight: normal;
-                    font-variant: normal;
-                    text-transform: none;
-                    /* Better Font Rendering =========== */
-                    -webkit-font-smoothing: antialiased;
-                    -moz-osx-font-smoothing: grayscale;
-
-                    &:empty {
-                      width: 1em;
-                    }
                     &:after {
+                      /* icon */
+                      // TODO: extend broken column layout ;
+                      //@extend .icon;
+                      font-family: 'tsr-icons-all';
+                      speak: none;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-variant: normal;
+                      text-transform: none;
+                      /* Better Font Rendering =========== */
+                      -webkit-font-smoothing: antialiased;
+                      -moz-osx-font-smoothing: grayscale;
+
                       content: "\e668";
                       margin-left: 10px;
+                    }
+                    &:empty {
+                      width: 1em;
                     }
                     /* / icon */
 

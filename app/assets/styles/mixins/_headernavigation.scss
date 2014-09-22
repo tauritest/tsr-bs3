@@ -154,7 +154,11 @@
               height: 37px;
 
               > span {
-                display: none;
+                //display: block;
+                font-size: $font-size-base + 15;
+                width: 33px;
+                display: inline-block;
+                overflow: hidden;
               }
             }
             &:before {

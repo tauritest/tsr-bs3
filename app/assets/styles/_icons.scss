@@ -1,19 +1,12 @@
-//
-// Glyphicons for Bootstrap
-//
-// Since icons are fonts, they can be placed anywhere text is placed and are
-// thus automatically sized to match the surrounding child. To use, create an
-// inline element with the appropriate classes, like so:
-//
 // <a href="#"><span class="icon icon-star"></span> Star</a>
 // Import the fonts
 @font-face {
-  font-family: 'tsr-icons-all';
-  src:url('#{$icon-font-path}#{$icon-font-name}.eot');
-  src:url('#{$icon-font-path}#{$icon-font-name}.eot?#iefix') format('embedded-opentype'),
-  url('#{$icon-font-path}#{$icon-font-name}.svg#tsr-icons-all') format('svg'),
-  url('#{$icon-font-path}#{$icon-font-name}.woff') format('woff'),
-  url('#{$icon-font-path}#{$icon-font-name}.ttf') format('truetype');
+  font-family:  $icon-font-name;
+  src:url('#{$icon-font-path}#{$icon-font-name}.eot?-fmvi66');
+  src:url('#{$icon-font-path}#{$icon-font-name}.eot?#iefix-fmvi66') format('embedded-opentype'),
+  url('#{$icon-font-path}#{$icon-font-name}.woff?-fmvi66') format('woff'),
+  url('#{$icon-font-path}#{$icon-font-name}.ttf?-fmvi66') format('truetype'),
+  url('#{$icon-font-path}#{$icon-font-name}.svg?-fmvi66#tsr-icons-all') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +19,7 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,74 +29,137 @@
   }
 }
 
-.icon-compare:before {
-  content: "\e6d1";
+.icon-microsoft-logo:before {
+  content: "\e682";
 }
-.icon-volume:before {
-  content: "\e6d2";
+.icon-elion-logo:before {
+  content: "\e683";
 }
-.icon-transport:before {
-  content: "\e6d4";
+.icon-service:before {
+  content: "\e684";
 }
-.icon-phone_2:before {
-  content: "\e6d5";
+.icon-color-palette:before {
+  content: "\e685";
 }
-.icon-close:before {
-  content: "\e6d8";
+.icon-mTv-plus:before {
+  content: "\e66f";
 }
-.icon-router_device:before {
-  content: "\e6dc";
+.icon-start-records:before {
+  content: "\e676";
 }
-.icon-private_services:before {
-  content: "\e6dd";
+.icon-start-alert:before {
+  content: "\e677";
 }
-.icon-plus:before {
-  content: "\e6de";
+.icon-mTv-minus:before {
+  content: "\e678";
 }
-.icon-buy_2:before {
-  content: "\e6e1";
+.icon-stop-records:before {
+  content: "\e679";
 }
-.icon-minus:before {
-  content: "\e6e3";
+.icon-stop-alert:before {
+  content: "\e67a";
 }
-.icon-list_view:before {
-  content: "\e6e5";
+.icon-minuTv:before {
+  content: "\e67b";
 }
-.icon-virtualserver:before {
-  content: "\e6e6";
+.icon-mTv-play:before {
+  content: "\e67c";
 }
-.icon-block_view:before {
-  content: "\e6e7";
+.icon-increase-volume:before {
+  content: "\e67d";
 }
-.icon-hammer:before {
-  content: "\e6ea";
+.icon-decrease-volume:before {
+  content: "\e67e";
 }
-.icon-full_screen:before {
-  content: "\e6eb";
+.icon-mute-sound:before {
+  content: "\e67f";
 }
-.icon-favourites_normal:before {
-  content: "\e6ec";
+.icon-icon-680:before {
+  content: "\e680";
 }
-.icon-favourites_active:before {
-  content: "\e6ed";
+.icon-mTv-wifi:before {
+  content: "\e681";
 }
-.icon-domain:before {
-  content: "\e6ef";
+.icon-digitark:before {
+  content: "\e670";
 }
-.icon-delete_big:before {
-  content: "\e6f0";
+.icon-elamus:before {
+  content: "\e671";
 }
-.icon-checkmark:before {
-  content: "\e6f1";
+.icon-elionika:before {
+  content: "\e672";
 }
-.icon-business_services:before {
-  content: "\e6f2";
+.icon-lahendus:before {
+  content: "\e673";
 }
-.icon-opinions:before {
-  content: "\e6f3";
+.icon-employees:before {
+  content: "\e675";
 }
-.icon-add_my_list:before {
-  content: "\e6f4";
+.icon-leasing:before {
+  content: "\e674";
+}
+.icon-monitor:before {
+  content: "\e714";
+}
+.icon-menu-vertical:before {
+  content: "\e713";
+}
+.icon-toinside:before {
+  content: "\e712";
+}
+.icon-switched-off:before {
+  content: "\e711";
+}
+.icon-single-stripe:before {
+  content: "\e710";
+}
+.icon-playback:before {
+  content: "\e70f";
+}
+.icon-narrow-left:before {
+  content: "\e70e";
+}
+.icon-day-mode:before {
+  content: "\e70d";
+}
+.icon-remotecontrol:before {
+  content: "\e70c";
+}
+.icon-home-ok:before {
+  content: "\e70b";
+}
+.icon-night-mode:before {
+  content: "\e70a";
+}
+.icon-close-status:before {
+  content: "\e709";
+}
+.icon-open-status:before {
+  content: "\e708";
+}
+.icon-devices-manager:before {
+  content: "\e707";
+}
+.icon-counter:before {
+  content: "\e706";
+}
+.icon-motion-detector:before {
+  content: "\e705";
+}
+.icon-door-is-open:before {
+  content: "\e704";
+}
+.icon-smoke-detector:before {
+  content: "\e703";
+}
+.icon-plug:before {
+  content: "\e702";
+}
+.icon-questionmark:before {
+  content: "\e701";
+}
+.icon-check-ok-ring:before {
+  content: "\e700";
 }
 .icon-twitter:before {
   content: "\e015";
@@ -114,7 +171,7 @@
   content: "\e017";
 }
 .icon-comment:before {
-  content: "\e016";
+  content: "\e018";
 }
 .icon-teliasonera:before {
   content: "\e02c";
@@ -308,7 +365,7 @@
 .icon-like:before {
   content: "\e63e";
 }
-.icon-internet:before {
+.icon-internet2:before {
   content: "\e63f";
 }
 .icon-info:before {
@@ -398,8 +455,14 @@
 .icon-chat:before {
   content: "\e65c";
 }
+.icon-compare:before {
+  content: "\e6d1";
+}
 .icon-camera:before {
   content: "\e65d";
+}
+.icon-volume:before {
+  content: "\e6d2";
 }
 .icon-calendar:before {
   content: "\e65e";
@@ -407,8 +470,14 @@
 .icon-buy:before {
   content: "\e65f";
 }
+.icon-transport:before {
+  content: "\e6d4";
+}
 .icon-broadband:before {
   content: "\e660";
+}
+.icon-phone_2:before {
+  content: "\e6d5";
 }
 .icon-ball:before {
   content: "\e661";
@@ -418,6 +487,9 @@
 }
 .icon-alert:before {
   content: "\e663";
+}
+.icon-close:before {
+  content: "\e6d8";
 }
 .icon-adressbook:before {
   content: "\e664";
@@ -431,11 +503,20 @@
 .icon-square-tilted:before {
   content: "\e667";
 }
+.icon-router_device:before {
+  content: "\e6dc";
+}
 .icon-arrow-right:before {
   content: "\e668";
 }
+.icon-private_services:before {
+  content: "\e6dd";
+}
 .icon-arrow-down:before {
   content: "\e669";
+}
+.icon-plus:before {
+  content: "\e6de";
 }
 .icon-arrow-left:before {
   content: "\e66a";
@@ -446,130 +527,54 @@
 .icon-youtube:before {
   content: "\e66c";
 }
+.icon-buy_2:before {
+  content: "\e6e1";
+}
 .icon-google-plus:before {
   content: "\e66d";
 }
 .icon-breadcrumb-arrow:before {
   content: "\e66e";
 }
-
-.icon-monitor:before {
-  content: "\e714";
+.icon-minus:before {
+  content: "\e6e3";
 }
-.icon-menu-vertical:before {
-  content: "\e713";
+.icon-list_view:before {
+  content: "\e6e5";
 }
-.icon-toinside:before {
-  content: "\e712";
+.icon-virtualserver:before {
+  content: "\e6e6";
 }
-.icon-switched-off:before {
-  content: "\e711";
+.icon-block_view:before {
+  content: "\e6e7";
 }
-.icon-single-stripe:before {
-  content: "\e710";
+.icon-hammer:before {
+  content: "\e6ea";
 }
-.icon-playback:before {
-  content: "\e70f";
+.icon-full_screen:before {
+  content: "\e6eb";
 }
-.icon-narrow-left:before {
-  content: "\e70e";
+.icon-favourites_normal:before {
+  content: "\e6ec";
 }
-.icon-day-mode:before {
-  content: "\e70d";
+.icon-favourites_active:before {
+  content: "\e6ed";
 }
-.icon-remotecontrol:before {
-  content: "\e70c";
+.icon-domain:before {
+  content: "\e6ef";
 }
-.icon-home-ok:before {
-  content: "\e70b";
+.icon-delete_big:before {
+  content: "\e6f0";
 }
-.icon-night-mode:before {
-  content: "\e70a";
+.icon-checkmark:before {
+  content: "\e6f1";
 }
-.icon-close-status:before {
-  content: "\e709";
+.icon-business_services:before {
+  content: "\e6f2";
 }
-.icon-open-status:before {
-  content: "\e708";
+.icon-opionens:before {
+  content: "\e6f3";
 }
-.icon-devices-manager:before {
-  content: "\e707";
-}
-.icon-counter:before {
-  content: "\e706";
-}
-.icon-motion-detector:before {
-  content: "\e705";
-}
-.icon-door-is-open:before {
-  content: "\e704";
-}
-.icon-smoke-detector:before {
-  content: "\e703";
-}
-.icon-plug:before {
-  content: "\e702";
-}
-.icon-questionmark:before {
-  content: "\e701";
-}
-.icon-check-ok-ring:before {
-  content: "\e700";
-}
-.icon-digitark:before {
-  content: "\e670";
-}
-.icon-elamus:before {
-  content: "\e671";
-}
-.icon-elionika:before {
-  content: "\e672";
-}
-.icon-lahendus:before {
-  content: "\e673";
-}
-.icon-employees:before {
-  content: "\e675";
-}
-.icon-leasing:before {
-  content: "\e674";
-}
-.icon-mTv-plus:before {
-  content: "\e66f";
-}
-.icon-start-records:before {
-  content: "\e676";
-}
-.icon-start-alert:before {
-  content: "\e677";
-}
-.icon-mTv-minus:before {
-  content: "\e678";
-}
-.icon-stop-records:before {
-  content: "\e679";
-}
-.icon-stop-alert:before {
-  content: "\e67a";
-}
-.icon-minuTv:before {
-  content: "\e67b";
-}
-.icon-mTv-play:before {
-  content: "\e67c";
-}
-.icon-increase-volume:before {
-  content: "\e67d";
-}
-.icon-decrease-volume:before {
-  content: "\e67e";
-}
-.icon-mute-sound:before {
-  content: "\e67f";
-}
-.icon-icon-680:before {
-  content: "\e680";
-}
-.icon-mTv-wifi:before {
-  content: "\e681";
+.icon-add_my_list:before {
+  content: "\e6f4";
 }
