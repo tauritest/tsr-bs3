@@ -12,7 +12,7 @@
  });
 
  */
-(function ($) {
+;(function ($) {
   'use strict';
   
   // DDL CLASS DEFINITION
@@ -41,7 +41,7 @@
         'padding':'100px 0',
         'text-align': 'center'
       },
-      image:"/img/loaders/transparent_big.gif"
+      image:"https://www.elion.ee/img/loaders/transparent_big.gif"
     },
     activeClass: "in",      //todo: chande "in" -> "open"
     blockedClass: "blocked",
@@ -193,9 +193,7 @@
 
       //last element do not have the nex sibling
       function nextTop(t) {
-          var el = $(t);
           var nxt;
-          var i = 0;
         try {
           nxt = $(t).next();
 
@@ -219,7 +217,7 @@
 
     /*Remoove active state */
     function activeOff() {
-      var active, blocked;
+      var active;
       if (that.options.parent) {
         active = $(that.options.parent).find("." + that.options.activeClass);
         //blocked = $(e.el).children(":not(."+e.options.activeClass+")").removeClass("."+e.options.blockedClass);

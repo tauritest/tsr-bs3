@@ -1,0 +1,29 @@
+{
+    "steps":[
+        {
+            "title":"Step one",
+            "class":"",
+            "content": "STATIC CONTENT"
+        },
+        {
+            "title":"Step two",
+            "class":"progress-active",
+            "content": "STATIC CONTENT"
+        },
+        {
+            "title":" Step three",
+            "class":"",
+            "content": "STATIC CONTENT"
+        },
+        {
+            "title":"Step four",
+            "class":"",
+            "content": "STATIC CONTENT"
+        },
+        {
+            "title":"Step five",
+            "class":"last-child ",
+            "content": "STATIC CONTENT"
+        }
+    ]
+}
