@@ -83,6 +83,10 @@
 .disabled{
   @include button-variant($btn-disabled-color, $btn-disabled-bg, $btn-disabled-border);
 }
+// search
+.btn-search{
+  @include search-button(#fff, transparent, transparent);
+}
 
 // Link buttons
 // -------------------------
