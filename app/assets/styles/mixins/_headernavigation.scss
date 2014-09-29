@@ -215,9 +215,16 @@
   html[class*="screen__xs"] {
     .menu__main .navbar-nav {
       > li {
+        border-bottom: 1px solid darken($brand__violet, 9%);
+
+        &:before {
+          background-color: transparent;
+          width: 0;
+        }
+
         > a {
           font-size: $font-size-base;
-          padding: 22px 8px 40px 9px;
+          padding: 10px 8px 10px 9px;
         }
       }
     }

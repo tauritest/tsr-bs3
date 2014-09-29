@@ -1,46 +1,48 @@
 <nav class="navbar navbar-inverse menu__top" role="navigation">
+    <h1 class="sr-only">Top menu</h1>
     <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu__top">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <!-- <a class="navbar-brand" href="#">Brand</a> -->
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="menu__top">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Eraklient</a></li>
-                <li><a href="#">&Auml;riklient</a></li>
-                <li><a href="#">E-pood</a></li>
-            </ul>
 
-            <form class="navbar-form form-inline navbar-right" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-search"><span class="glyphicon glyphicon-search"></span></button>
-            </form>
+        <ul class="nav navbar-nav hidden-xs">
+            <li class="active"><a href="#">Eraklient</a></li>
+            <li><a href="#">&Auml;riklient</a></li>
+            <li><a href="#">E-pood</a></li>
+        </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">EST <span class="icon icon-arrow-down"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">ENG</a></li>
-                        <li><a href="#">RUS</a></li>
-                    </ul>
-                </li>
-                <li><a href="#modal-user" data-toggle="modal" data-target="#modal-user">Sisene</a></li>
-                <li>
+        <ul class="nav navbar-nav visible-xs">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eraklient <span class="icon icon-arrow-down"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">&Auml;riklient</a></li>
+                    <li><a href="#">E-pood</a></li>
+                </ul>
+            </li>
+            <li class="hidden-xs"><a href="#modal-user" data-toggle="modal" data-target="#modal-user">Sisene</a></li>
+            <li>
 
-                </li>
-            </ul>
+            </li>
+        </ul>
 
+        <form class="navbar-form form-inline navbar-right hidden-xs" role="search">
+            <div class="form-group">
+                <label for="search" class="sr-only">Search</label>
+                <input type="text" class="form-control" placeholder="Search" name="searh" id="search">
+            </div>
+            <button type="submit" class="btn btn-search"><span class="glyphicon glyphicon-search"></span></button>
+        </form>
 
-        </div><!-- /.navbar-collapse -->
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">EST <span class="icon icon-arrow-down"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">ENG</a></li>
+                    <li><a href="#">RUS</a></li>
+                </ul>
+            </li>
+            <li class="hidden-xs"><a href="#modal-user" data-toggle="modal" data-target="#modal-user">Sisene</a></li>
+            <li>
 
-    </div><!-- /.container-fluid -->
+            </li>
+        </ul>
+
+    </div>
 </nav>

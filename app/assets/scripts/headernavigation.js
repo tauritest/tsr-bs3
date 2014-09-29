@@ -3,6 +3,7 @@ var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
 var navbarHeight = $('header').outerHeight();
+var interval;
 
 (function() {
 
@@ -17,6 +18,15 @@ var navbarHeight = $('header').outerHeight();
         jQuery(window).on("scroll", function() {
             newStickies.scroll();
         });
+        
+        // check is main menu open
+        $('#menu__main').on('show.bs.collapse', function () {
+            stopCheck();
+        })
+
+        $('#menu__main').on('hide.bs.collapse', function () {
+            startCheck();
+        })
     }
 
     headernavigation();
@@ -28,12 +38,19 @@ $(window).scroll(function(event){
     didScroll = true;
 });
 
-setInterval(function() {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
-    }
-}, 250);
+startCheck();
+
+function startCheck(){
+    interval = setInterval(function() {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+}
+function stopCheck(){
+    clearInterval(interval);
+}
 
 function hasScrolled() {
     var st = $(this).scrollTop();
@@ -46,6 +63,8 @@ function hasScrolled() {
     // This is necessary so you never see what is "behind" the navbar.
     if (st > lastScrollTop && st > navbarHeight){
         // Scroll Down
+        /*if( navbarMenuIsOpen == 0 )$('header').removeClass('nav-down').removeClass('nav-top').addClass('nav-up');
+        else $('header').removeClass('nav-down').removeClass('nav-top').addClass('nav-up');*/
         $('header').removeClass('nav-down').removeClass('nav-top').addClass('nav-up');
     }
     else {
