@@ -2,28 +2,32 @@
     "steps":[
         {
             "title":"Step one",
-            "class":"",
-            "content": "STATIC CONTENT"
+            "class":"progress-active",
+            "content": "STATIC CONTENT",
+            "id":"id1"
         },
         {
             "title":"Step two",
-            "class":"progress-active",
+            "class":"",
             "content": "STATIC CONTENT"
         },
         {
             "title":" Step three",
             "class":"",
-            "content": "STATIC CONTENT"
+            "content": "STATIC CONTENT",
+            "id":"id3"
         },
         {
             "title":"Step four",
             "class":"",
-            "content": "STATIC CONTENT"
+            "content": "STATIC CONTENT",
+            "id":"id4"
         },
         {
             "title":"Step five",
             "class":"last-child ",
-            "content": "STATIC CONTENT"
+            "content": "STATIC CONTENT",
+            "id":"id5"
         }
     ]
 }
