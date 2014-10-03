@@ -1,5 +1,3 @@
-$prefix : "progress-steps";
-
 $number-size:40px;
 $border-size:4px;
 $mb-left-sp: 38px;
@@ -36,27 +34,32 @@ $clr-gray: #c7c2ba;
 }
 
 
-.#{$prefix} {
+.progress-steps {
+
   .progress-tabs{
     width:100%;
-
-    ol{
+    margin-bottom:20px;
+    >ol{
       counter-reset: step;
       list-style-type: none;
       margin: 0;
       padding:0;
-      li{
+      >li{
         border: 1px solid $clr-gray;
         margin-top: -1px;
         position:relative;
 
         &:before{
-          @include stp-badge;
-          float:left;
-          top:50%;
-          margin-top: -$number-size/2;
+          content: '\00ad';
+          height: 105%;
+          background-color: $clr-done;
+          width: 4px;
+          display: inline-block;
+          height: 100%;
           position: absolute;
-          margin-left:$mb-left-sp - ($number-size + $border-size)/2 + $border-size;
+          left: $mb-left-sp;
+          top: -1px;
+
         }
 
         h4{
@@ -66,30 +69,28 @@ $clr-gray: #c7c2ba;
           color: $clr-done;
           margin-left: $mb-left-sp;
           padding: 15px 15px 15px 47px;
+
           &:before{
-            z-index: -1;
-            content: '\00ad';
-            height: 105%;
-            background-color: $clr-done;
-            width: 4px;
-            display: inline-block;
-            height: 100%;
+            @include stp-badge;
+            float:left;
+            top:50%;
+            left: 0;
+            margin-top: -$number-size/2;
             position: absolute;
-            left: $mb-left-sp;
-            top: -1px;
+            margin-left:$mb-left-sp - ($number-size + $border-size)/2 + $border-size;
           }
         }
 
         //alignment
         &:first-child{
-          h4:before{
+          &:before{
             height: 50%;
             top:50%;
           }
         }
         &:last-child,
         &.last-child{
-          h4:before{
+          &:before{
             height: 50%;
             bottom:50%;
           }
@@ -97,27 +98,26 @@ $clr-gray: #c7c2ba;
 
         //colors
         &.progress-active {
-        border-bottom:none;
-
+          border-bottom-width:0;
           &:before{
-            @include stp-badge-content($clr-active);
+            background-color: $clr-active;
           }
           h4{
             color:$clr-active;
             margin-bottom:0;
             &:before{
-              background-color: $clr-active;
+              @include stp-badge-content($clr-active);
             }
           }
 
           ~ li{
             &:before{
-              @include stp-badge-content($clr-gray);
+              background-color: $clr-gray;
             }
             h4{
               color:$clr-gray;
               &:before{
-                background-color: $clr-gray;
+                @include stp-badge-content($clr-gray);
               }
             }
           }
@@ -128,9 +128,8 @@ $clr-gray: #c7c2ba;
       .progress-content{
         border-style: solid;
         border-color: $clr-gray;
-        border-width: 0 1px;
+        border-width: 0 1px 1px 1px;
         padding: 20px;
-
 
         &:before{
           content: '';
@@ -175,7 +174,6 @@ $clr-gray: #c7c2ba;
             }
           }
 
-
           // alignment
           &:first-child{
             text-align: left;
@@ -195,7 +193,6 @@ $clr-gray: #c7c2ba;
             }
           }
 
-
           // colors
           &.progress-active {
             h4{
@@ -205,7 +202,7 @@ $clr-gray: #c7c2ba;
 
               &:after{
                 @include stp-badge-content($clr-active);
-                font-family: Arial, Helvetica, sans-serif;
+                font-family: Helvetica Neue, Helvetica, Arial, Sans-Serif;
               }
             }
 
@@ -215,7 +212,7 @@ $clr-gray: #c7c2ba;
 
               &:after{
                 @include stp-badge-content($clr-gray);
-                font-family: Arial, Helvetica, sans-serif;
+                font-family: Helvetica Neue, Helvetica, Arial, Sans-Serif;
               }
             }
           }
@@ -235,7 +232,6 @@ $clr-gray: #c7c2ba;
         "[data-progress-steps='9']";
 
         @for $i from 2 through 9{
-
           @if $i <= 2 {
             $width :100%/$i;
 
@@ -256,11 +252,15 @@ $clr-gray: #c7c2ba;
               }
             }
           }
-
-
         }
 
       }//end-ol
+    }
+  }
+  .progress-pane{
+    display: none;
+    &.active{
+      display: block;
     }
   }
 }
