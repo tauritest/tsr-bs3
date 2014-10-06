@@ -7,6 +7,3 @@ how to start?
 2. bower update
 3. grunt init-project
 4. grunt servee
-
-
-.
