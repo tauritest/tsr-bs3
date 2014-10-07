@@ -18,7 +18,8 @@ module.exports = {
             'app/assets/scripts/sidemenu.js',
             'app/assets/scripts/sidenavigation.js',
             'app/assets/scripts/select-block.js',
-            'app/assets/scripts/progress.js'
+            'app/assets/scripts/progress.js',
+            'app/assets/scripts/example.js'
 			//place your Scripts files here
 		],
 

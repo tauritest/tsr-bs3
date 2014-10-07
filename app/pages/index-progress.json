@@ -2,20 +2,21 @@
     "steps":[
         {
             "title":"Step one",
-            "class":"progress-active",
+            "class":"",
             "content": "STATIC CONTENT",
             "id":"id1"
         },
         {
             "title":"Step two",
             "class":"",
-            "content": "STATIC CONTENT"
+            "content": "STATIC CONTENT",
+            "id":"id2"
         },
         {
             "title":" Step three",
-            "class":"",
+            "class":"progress-active",
             "content": "STATIC CONTENT",
-            "id":"id3"
+            "id":"dynamic"
         },
         {
             "title":"Step four",
@@ -29,5 +30,32 @@
             "content": "STATIC CONTENT",
             "id":"id5"
         }
+    ],
+    "steps2":[
+        {
+            "title":"Step one",
+            "class":"progress-active",
+            "content": "STATIC CONTENT",
+            "id":"id1"
+        },
+        {
+            "title":"Step two",
+            "class":"",
+            "content": "STATIC CONTENT",
+            "id":"id2"
+        },
+        {
+            "title":" Step three",
+            "class":"",
+            "content": "STATIC CONTENT",
+            "id":"id3"
+        },
+        {
+            "title":"Step five",
+            "class":"last-child ",
+            "content": "STATIC CONTENT",
+            "id":"id5"
+        }
     ]
+
 }

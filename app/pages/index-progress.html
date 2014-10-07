@@ -4,7 +4,8 @@
 			<h1 class="page-header" id="alerts">Progress steps</h1>
 
 			<h2>Example</h2>
-			<p><code>.progress-steps>ol>li</code></p>
+			<p>Basic Progress Steps (PS) component just replaces content area in mobile view  <code>les than $screen-sm-min</code>. In Desktop it acts like "Tabs"  in mobile like "accordion".  </p>
+			<p><code>data-progress-steps="5"</code> is required fore layout. The value represents the number of steps you got. Content must be inside <code>.progress-content</code> container. The container is placed right after <code>.progress-active</code> step. </p>
 			<!-- Nav tabs -->
 			<ul class="nav nav-tabs">
 				<li class="active"><a href="#demo1" data-toggle="tab">Demo</a></li>
@@ -15,11 +16,38 @@
 			<div class="tab-content">
 				<div class="tab-pane active" id="demo1">
 					<div class="bs-example">
-						{{>_components/progress-steps/_progress-steps}}
+						{{>_components/progress-steps/_progress-steps-basic}}
 					</div>
 				</div>
 
 				<div class="tab-pane" id="code1">
+					<div class="example-code">
+			        <pre class="brush: html">
+			             {{>_components/progress-steps/_progress-steps-basic}}
+			        </pre>
+					</div>
+				</div>
+			</div>
+
+			<h2>Usage</h2>
+			<h3>Preloaded static content</h3>
+			<p>Using PS on one page without refreshing a page add each step content into <code>.progress-content</code> and add <code>data-target="#id"</code> to li  </p>
+
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#demo2" data-toggle="tab">Demo</a></li>
+				<li><a href="#code2" data-toggle="tab">Code</a></li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div class="tab-pane active" id="demo2">
+					<div class="bs-example">
+						{{>_components/progress-steps/_progress-steps}}
+					</div>
+				</div>
+
+				<div class="tab-pane" id="code2">
 					<div class="example-code">
 			        <pre class="brush: html">
 			             {{>_components/progress-steps/_progress-steps}}
@@ -28,13 +56,44 @@
 				</div>
 			</div>
 
-			<p>Explanation</p>
+			<p>To move between steps add button with data argument <code>data-action="prev"</code> and <code>data-action="next"</code> </p>
 
-			<h3>Sub Example</h3>
-			<p>Explanation</p>
+			<h3>Dynamic content</h3>
 
-			<h2>Usage</h2>
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#demo3" data-toggle="tab">Demo</a></li>
+				<li><a href="#code3" data-toggle="tab">Code</a></li>
+			</ul>
 
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div class="tab-pane active" id="demo3">
+					<div class="bs-example">
+						{{>_components/progress-steps/_progress-steps-dynamic}}
+					</div>
+				</div>
+
+				<div class="tab-pane" id="code3">
+					<div class="example-code">
+			        <pre class="brush: html">
+			             {{>_components/progress-steps/_progress-steps-dynamic}}
+			        </pre>
+					</div>
+				</div>
+			</div>
+
+			<p>Dynamic content loading requires manual javascript. It is important to define function what provides dynamic content via callback function  </p>
+			<div class="example-code">
+			        <pre class="brush: html">
+			             $('#demo3 .progress-steps[data-update="progress"]').progress({
+						    loadContent: function(id,callback){
+						        //do your work...
+						        callback('Loading step '+id+' data'); //returns data, when ready
+						    }
+						});
+			        </pre>
+			</div>
 			<h3>Markup</h3>
 			<h3>Options</h3>
 			<h3>Data attributes</h3>
@@ -61,4 +120,3 @@
 		</div>
 	</div>
 </div>
-

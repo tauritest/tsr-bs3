@@ -92,7 +92,7 @@
     Progress.prototype.activateContent = function(){
         var selector = this.$active.data('target');
         //if no data try dynamic loading
-        if(selector === undefined){
+        if(selector === "dynamic"){
             loadDynamicContent(this);
         }
 
@@ -112,6 +112,7 @@
 
     /* Laod content with callback function */
     var loadDynamicContent = function(that){
+        console.log("test:laodDyn",that.options);
         that.$element.trigger("content.load.ts.progress");
         var id = that.tabs.activeIndex;
         that.options.loadContent.call(this, id, loadContentReady);
@@ -168,12 +169,12 @@
     // DATA API
     // ========
     //Auto initialing
-
-    $('.progress-steps[data-update="progress"]').progress({
-        loadContent: function(id,callback){
-            callback('Laadisid ID'+id+' andmeid'); //returns data, when ready
-        }
-    });
+   $('.progress-steps[data-update="progress"]').each(function(){
+       console.log(this);
+      if(! $(this).find('li[data-target="dynamic"]').length){
+          $(this).progress();
+      }
+   })
 
     $(document).on('click.ts.progress.data-api', '[data-action="next"]', function(e){
         e.preventDefault();

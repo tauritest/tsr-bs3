@@ -1,18 +1,18 @@
 <div class="progress-steps" data-update="progress" >
 	<div class="progress-tabs">
 		<ol data-progress-steps="5">
-			{{#steps}}
+			{{#steps2}}
 			<li class="{{class}}" {{#id}}data-target="#{{id}}" {{/id}} >
 				<h4>{{title}}</h4>
 			</li>
-			{{/steps}}
+			{{/steps2}}
 		</ol>
 	</div>
 
 	<div class="progress-content">
-		{{#steps}}
-		<div id="{{id}}" class="progress-pane">{{title}} CONTENT <br>  ... </div>
-		{{/steps}}
+		{{#steps2}}
+		<div id="{{id}}" class="progress-pane">{{title}}  </div>
+		{{/steps2}}
 		<button data-action="prev">PREV</button> <button data-action="next">NEXT</button>
 	</div>
 </div>
