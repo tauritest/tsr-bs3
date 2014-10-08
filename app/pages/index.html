@@ -1,26 +1,118 @@
-<div class="container" style="height:1000px; margin-top: 500px;">
+<div class="container grid" style="height:1000px; margin-top: 500px;">
     <h1>Avaleht</h1>
-    <div class="row">
-        <div class="col-md-4 col-sm-4">
-            <div style="background-color:green;">
-                lahter 1
-            </div>
+
+    <div class="row list__block--border">
+        <div class="col-xxxs-12 col-xxs-6 col-xs-4 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+            <section>
+                <figure><span class="glyphicon glyphicon-tree-deciduous"></span></figure>
+                <h3>heading 3</h3>
+                <p>VOIP Telefon</p>
+                <p><strong>Soodushind 0 <abbr title="EUR">&euro;</abbr> / kuu</strong></p>
+            </section>
         </div>
-        <div class="col-md-4 col-sm-4">
-            <div style="background-color:blue;">
-                lahter 2
-                <div style="border:1px solid red;">
-                </div>
-            </div>
+        <div class="col-xxxs-12 col-xxs-6 col-xs-4 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+            <section>
+                <figure><span class="glyphicon glyphicon-tree-deciduous"></span></figure>
+                <h3>heading 3</h3>
+                <p>VOIP Telefon</p>
+                <p><strong>Soodushind 0 <abbr title="EUR">&euro;</abbr> / kuu</strong></p>
+            </section>
         </div>
-        <div class="col-md-4 col-sm-4">
-            <div style="background-color:red;">
-                lahter 3
-                <script>
-                    document.write(screen.width);
-                </script>
-            </div>
+        <div class="col-xxxs-12 col-xxs-6 col-xs-4 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+            <section>
+                <figure><span class="glyphicon glyphicon-tree-deciduous"></span></figure>
+                <h3>heading 3</h3>
+                <p>VOIP Telefon</p>
+                <p><strong>Soodushind 0 <abbr title="EUR">&euro;</abbr> / kuu</strong></p>
+            </section>
+        </div>
+        <div class="col-xxxs-12 col-xxs-6 col-xs-4 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+            <section>
+                <figure><span class="glyphicon glyphicon-tree-deciduous"></span></figure>
+                <h3>heading 3</h3>
+                <p>VOIP Telefon</p>
+                <p><strong>Soodushind 0 <abbr title="EUR">&euro;</abbr> / kuu</strong></p>
+            </section>
+        </div>
+        <div class="col-xxxs-12 col-xxs-6 col-xs-4 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+            <section>
+                <figure><span class="glyphicon glyphicon-tree-deciduous"></span></figure>
+                <h3>heading 3</h3>
+                <p>VOIP Telefon</p>
+                <p><strong>Soodushind 0 <abbr title="EUR">&euro;</abbr> / kuu</strong></p>
+            </section>
+        </div>
+        <div class="col-xxxs-12 col-xxs-6 col-xs-4 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+            <section>
+                <figure><span class="glyphicon glyphicon-tree-deciduous"></span></figure>
+                <h3>heading 3</h3>
+                <p>VOIP Telefon</p>
+                <p><strong>Soodushind 0 <abbr title="EUR">&euro;</abbr> / kuu</strong></p>
+            </section>
         </div>
     </div>
 
 </div>
+
+<style>
+    .list__block--border section {
+        padding:5px;
+        text-align: center;
+    }
+    .list__block--border section figure {
+        font-size: 80px;
+        height: 120px;
+        line-height: 65px;
+        display: table;
+        width: 100%;
+    }
+    .list__block--border section figure > span {
+        display: table-cell;
+        vertical-align: bottom;
+    }
+    .list__block--border section figure,
+    .list__block--border section p {
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition:all 0.3s ease;
+        -o-transition: all 0.3s ease;
+    }
+    .list__block--border section p {
+
+    }
+    .list__block--border section p strong {
+        color: blue;
+    }
+    .list__block--border section p abbr {
+        border: 0;
+        cursor: text;
+    }
+
+    @media (max-width: 479px) {
+        .list__block--border section {
+            padding:5px;
+            text-align: left;
+        }
+        .list__block--border section figure {
+            font-size: 80px;
+            float:left;
+            width: 25%;
+        }
+        .list__block--border section figure > span {
+            vertical-align: middle;
+        }
+        .list__block--border section h3 {
+            margin-left: 25%;
+        }
+        .list__block--border section p {
+            margin-left: 25%;
+        }
+        .list__block--border section p strong {
+            color: blue;
+        }
+        .list__block--border section p abbr {
+            border: 0;
+            cursor: text;
+        }
+    }
+</style>

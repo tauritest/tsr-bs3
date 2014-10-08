@@ -1,5 +1,13 @@
 // Eesti Telekom page\s styles
 // --------------------------------------------------
+/* windows phone fix */
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}
+
+
 html {
   min-height: 100%;
   position: relative;

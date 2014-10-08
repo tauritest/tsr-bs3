@@ -1,4 +1,4 @@
-.row{
+/*.row{
   &.no-gutter,
   &.no-gutter-grid {
     padding-left: $grid-gutter-width/2;
@@ -8,11 +8,143 @@
       padding-left: 0;
     }
   }
-  /*use with 1px border blocks*/
+  *//*use with 1px border blocks*//*
   &.no-gutter-grid{
     > div {
       margin-right:-1px;
       margin-bottom:-1px;
     }
   }
+}*/
+
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+  @include container-fixed();
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+  @media (min-width: $screen-xl-min) {
+    width: $container-xl;
+  }
+  @media (min-width: $screen-xxl-min) {
+    width: $container-xxl;
+  }
+}
+
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid {
+  @include container-fixed();
+}
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.row {
+  @include make-row();
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@include make-grid-columns();
+@include make-grid-columns-lg();
+@include make-grid-columns-xl-xxl();
+
+
+// XXXS grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// small smartphones.
+@include make-grid(xxxs);
+
+// XXs grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// small smartphones.
+@media (min-width: $screen-xxs-min) {
+  @include make-grid(xxs);
+}
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+@media (min-width: $screen-xs-min) {
+  @include make-grid(xs);
+}
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: $screen-sm-min) {
+  @include make-grid(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: $screen-md-min) {
+  @include make-grid(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-lg-min) {
+  @include make-grid(lg);
+}
+
+// Extra Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-xl-min) {
+  @include make-grid(xl);
+}
+
+// Super Extra Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-xxl-min) {
+  @include make-grid(xxl);
+}
+
+.list__block {
+  @include make-grid-columns-no-gutter();
+}
+.list__block--border {
+  @include make-grid-bordered-columns();
 }
