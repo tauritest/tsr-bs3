@@ -1,0 +1,26 @@
+nav{display:none;}
+.carousel-inner img{
+
+
+  .container{
+    height: 200x;
+    border: 5px solid red;
+  }
+}
+
+
+$cropWidth: 448; //(imgWidth - maxContainerWidth) /2
+$imgMaxWidth: 1920;
+.hero-banner{
+  .item{
+    figure{
+      $contentWidth: ($imgMaxWidth - 2 * $cropWidth);
+      width: #{($imgMaxWidth* 100) / $contentWidth}+"%" ;// 126.31%;
+      text-align: center;
+      margin-left:-#{($cropWidth * 100) / $contentWidth}+"%";// -13.16%;
+      img{
+        max-width: 100%;
+    }
+    }
+  }
+}

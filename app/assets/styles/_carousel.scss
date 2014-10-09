@@ -43,7 +43,7 @@
     left:0; 
     right:0; 
     top:0; 
-    right:0; 
+    right:0;
     height:100%; 
     max-height:480px;
 
@@ -257,7 +257,7 @@
     width: 600%;
     z-index: -1;
   }
-  @include border-right-top-radius($carousel-caption-radius);
+  @include border-top-right-radius($carousel-caption-radius);
 }
 .carousel-speach-bubble {
   position: absolute;
