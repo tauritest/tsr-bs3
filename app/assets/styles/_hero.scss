@@ -1,17 +1,11 @@
-nav{display:none;}
-.carousel-inner img{
+nav{display: none}
 
-
-  .container{
-    height: 200x;
-    border: 5px solid red;
-  }
-}
 
 
 $cropWidth: 448; //(imgWidth - maxContainerWidth) /2
 $imgMaxWidth: 1920;
 .hero-banner{
+  .container-fluid{padding:0};
   .item{
     figure{
       $contentWidth: ($imgMaxWidth - 2 * $cropWidth);
@@ -20,7 +14,92 @@ $imgMaxWidth: 1920;
       margin-left:-#{($cropWidth * 100) / $contentWidth}+"%";// -13.16%;
       img{
         max-width: 100%;
+      }
     }
+
+  }
+  .carousel-caption{
+    position: relative;
+    left:0;
+    right:0;
+    bottom: 0;
+    text-align: left;
+    text-shadow: none;
+    color:#000000;
+  }
+
+  @media (min-width: $screen-md-min){
+    .container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+    .carousel-caption {
+      $captionBgColor: $brand-primary;
+
+      @include border-top-right-radius(25px);
+      background-color: $captionBgColor;
+      float: left;
+      max-width: #{2/3 *100}+"%";
+      min-width: #{1/3 *100}+"%";
+      color: #FFFFFF;
+      padding-right: 20px;
+      &:before {
+        background-color: $captionBgColor;
+        content: "";
+        height: 100%;
+        position: absolute;
+        right: 100%;
+        top: 0;
+        width: 100%;
+      }
+
+      > h3 {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  $list:  "xxxs", "xxs", "xs", "md", "lg", "xl", "xxl";
+  $bp:    $screen-xxxs-min, $screen-xxs-min, $screen-xs-min, $screen-md-min,$screen-lg-min, $screen-xl-min, $screen-xxl-min;
+  @each $var in $list {
+
+      @media (min-width: #{nth($bp,index($list,$var))} ){
+        .desktop-view-#{$var}{
+          .container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+          }
+          .carousel-caption {
+            $captionBgColor: $brand-primary;
+
+            @include border-top-right-radius(25px);
+            background-color: $captionBgColor;
+            float: left;
+            max-width: #{2/3 *100}+"%";
+            min-width: #{1/3 *100}+"%";
+            color: #FFFFFF;
+            padding-right: 20px;
+            &:before {
+              background-color: $captionBgColor;
+              content: "";
+              height: 100%;
+              position: absolute;
+              right: 100%;
+              top: 0;
+              width: 100%;
+            }
+
+            > h3 {
+              margin-right: 20px;
+            }
+          }
+        }
     }
   }
 }
