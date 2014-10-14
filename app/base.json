@@ -1,0 +1,49 @@
+{
+    "footer-nav":{
+        "main":[
+            {
+                "title":"Elion",
+                "elements":[
+                    {"title":"Ettevõttest","url":"https://www.elion.ee/elion/ettevottest"},
+                    {"title":"TeliaSonera","url":"https://www.elion.ee/elion/ettevottest#teliaSonera"},
+                    {"title":"Tule tööle","url":"https://www.elion.ee/elion/tule-toole"},
+                    {"title":"Lepingud ja tingimused","url":"https://www.elion.ee/elion/lepingud-ja-tingimused"},
+                    {"title":"Hinnakirjad","url":"https://www.elion.ee/kontakt/hinnakirjad"}
+                ],
+                "id":"1"
+            },
+
+            {
+                "title": "Infoportaal",
+                "elements":[
+                    {"title":"Uudised ja artiklid","url":"https://www.elion.ee/infoportaal/uudised"},
+                    {"title":"Pressinurk","url":"https://www.elion.ee/infoportaal/pressinurk"},
+                    {"title":"Foorum","url":"http://foorum.elion.ee/foorum/index.php"},
+                    {"title":"Digitark","url":"https://www.elion.ee/infoportaal/digitark"}
+                ],
+                "id":"2"
+            },
+
+            {"title":"Kontakt",
+                "elements":[
+                    {"title":"Kontaktinfo","url":"https://www.elion.ee/kontakt/kontaktinfo"},
+                    {"title":"E-poe info","url":"https://pood.elion.ee/category/list/132/abi-ja-info-kontaktid"},
+                    {"title":"Projektide kooskõlastamine","url":"https://www.elion.ee/ariklient/arendajale"},
+                    {"title":"Liinirajatiste järelvalve","url":"https://www.elion.ee/ariklient/arendajale/liinirajatiste-j%C3%A4relevalve"}
+                ],
+                "id":"3"
+            },
+
+            {"title":"Elion soovitab ",
+                "elements":[
+                    {"title":"Leiunurk","url":"http://leiunurk.elion.ee/"},
+                    {"title":"MinuTV","url":"http://www.minutv.ee/"},
+                    {"title":"Ilmataat","url":"http://www.ilmataat.ee/"},
+                    {"title":"NETI","url":"http://www.neti.ee/"},
+                    {"title":"Hot","url":"http://live.hot.ee/"}
+                ],
+                "id":"4"
+            }
+        ]
+    }
+}
