@@ -47,6 +47,10 @@ header {
       border: 0;
       margin-bottom: 12px;
 
+      .navbar-form {
+        margin: 5px 0 0 0;
+      }
+
       .navbar-nav {
         &:last-child {
           > li {
@@ -56,6 +60,7 @@ header {
           }
         }
         > li {
+
           .icon-arrow-down {
             font-size: $font-size-base + 4;
             vertical-align: middle;

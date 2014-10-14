@@ -52,10 +52,11 @@
 
 }
 
+/*html[class*="screen__xs"]*/
 @mixin headernavigationAnimation() {
 
   /* small screen */
-  html[class*="screen__xs"] {
+  @media (max-width: $screen-xs){
     header.nav-up {
       > div {
         background-color: transparent;
@@ -83,8 +84,9 @@
   }
 
   /* medium and large screen */
-  html.screen__md,
-  html.screen__lg {
+  /*html.screen__md,
+  html.screen__lg*/
+  @media (min-width: $screen-md) {
 
     header.nav-top {
       // show top navigation
@@ -212,7 +214,8 @@
 }
 
 @mixin responsiveNavigationText(){
-  html[class*="screen__xs"] {
+  /*html[class*="screen__xs"]*/
+  @media (max-width: $screen-xs) {
     .menu__main .navbar-nav {
       > li {
         border-bottom: 1px solid darken($brand__violet, 9%);
@@ -229,7 +232,8 @@
       }
     }
   }
-  html[class*="screen__sm"] {
+  /*html[class*="screen__sm"]*/
+  @media (min-width: $screen-sm) {
     .menu__main .navbar-nav {
       > li {
         > a {
@@ -239,7 +243,8 @@
       }
     }
   }
-  .screen__md {
+  /*.screen__md*/
+  @media (min-width: $screen-md) {
     .menu__main .navbar-nav {
       > li {
         > a {
@@ -250,7 +255,8 @@
       }
     }
   }
-  .screen__lg {
+  /*.screen__lg*/
+  @media (min-width: $screen-lg){
     .menu__main .navbar-nav {
       > li {
         > a {
