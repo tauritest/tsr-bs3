@@ -9,7 +9,9 @@ footer {
     color: $link-color-on-dark-bg;
     text-decoration: none;
   }
-
+  a{
+    border-bottom: 1px solid darken($brand-primary,15%);
+  }
   @media(max-width: $mobile-max-with) {
     //rewrite default styles
     .container {
@@ -27,24 +29,34 @@ footer {
   }
 
   h2{
-    border-bottom: 1px solid darken($brand-primary,15%);
     font-size: $font-size-base + 3;
     font-weight: normal;
     margin: 0;
+    background-color: $brand-primary;
 
-    a{
+    >a{
       display: block;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      padding-left: 10px;
+      padding: 15px 10px;
       &:hover, &:active, &:focus  {
         background-color: lighten($brand-primary, 7.6%);
       }
+
+      &:after{
+        @include setIconFonts();
+        position: relative;
+        top: 6px;
+        float: right;
+        content: "\e66b";
+      }
+      &.collapsed:after{
+        content: "\e669";
+      }
     }
+
   }
 
-  .list-group
-  {
+  .list-group {
+    margin-bottom:0;
     .list-group-item {
       background: none;
       border:none;
@@ -52,7 +64,7 @@ footer {
       padding:0;
       a{
         display: block;
-        padding: 15px 10px;
+        padding: 8px 10px;
 
           &:hover, &:active, &:focus  {
           background-color: lighten($brand-primary, 7.6%);
@@ -71,11 +83,13 @@ footer {
           display: block !important;
           height: 100% !important;
         }
-
     }
     h2{
       a{
         cursor: default;
+        &:after{
+          display: none;
+        }
       }
     }
   }

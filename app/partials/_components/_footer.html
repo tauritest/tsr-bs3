@@ -1,13 +1,11 @@
 
-
-
 <div class="container">
 	<div class="row">
 		{{#footer-nav.main}}
 
 		<div class="col-sm-3">
 			<h2>
-				<a data-toggle="collapse" href="#menu-{{id}}">{{title}}</a></h2>
+				<a data-toggle="collapse" class="collapsed" href="#menu-{{id}}">{{title}}</a></h2>
 			<ul id="menu-{{id}}" class="list-group collapse">
 				{{#elements}}
 				<li class="list-group-item"><a href="{{url}}">{{title}}</a></li>
