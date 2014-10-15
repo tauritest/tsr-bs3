@@ -21,19 +21,35 @@ var reCallFuncs = [];
             console.debug(e); 
         }*/
 
+        /* test start */
+       /* $('#myModal').on('show.bs.modal', centerModal);
+        $(window).on("resize", function () {
+            $('.modal:visible').each(centerModal);
+        });*/
+        /* end / test start */
+
     }
 
     main();
 
 }());
 
+
+/*function centerModal() {
+    $(this).css('display', 'block');
+    var $dialog = $(this).find(".modal-dialog");
+    var offset = ($(window).height() - $dialog.height()) / 2;
+    // Center modal vertically in window
+    $dialog.css("margin-top", offset);
+}*/
+
 function reDrawVisual() {
     var oR = new OnResize();
     oR.init();
 }
 jQuery(document).ready(function(){
-    detectScreen();
-    reCallFuncs.push(detectScreen);
+    //detectScreen();
+    //reCallFuncs.push(detectScreen);
 
     /*windows phone fix */
     if (navigator.userAgent.match(/IEMobile\/10\.0/)) {

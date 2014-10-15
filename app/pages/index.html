@@ -1,6 +1,29 @@
 <div class="container grid" style="height:1000px; margin-top: 500px;">
     <h1>Avaleht</h1>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog vertical-align-center">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+
+                    </div>
+                    <div class="modal-body">...</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / end grid layer -->
+
+    <br />
     <div class="row list__block--border">
         <div class="col-xxxs-12 col-xxs-6 col-xs-4 col-sm-4 col-md-3 col-lg-2 col-xl-2">
             <section>
@@ -52,9 +75,38 @@
         </div>
     </div>
 
+    <br><br>
+
+    <div class="row list__block">
+        <div class="col-xxxs-6 col-xxs-4 col-xs-4 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+            <figure><img src="http://lorempixel.com/480/580/nature/1/" alt="poster"/></figure>
+        </div>
+        <div class="col-xxxs-6 col-xxs-4 col-xs-4 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+            <figure><img src="http://lorempixel.com/480/580/nature/2/" alt="poster"/></figure>
+        </div>
+        <div class="col-xxxs-6 col-xxs-4 col-xs-4 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+            <figure><img src="http://lorempixel.com/480/580/nature/3/" alt="poster"/></figure>
+        </div>
+        <div class="col-xxxs-6 col-xxs-4 col-xs-4 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+            <figure><img src="http://lorempixel.com/480/580/nature/4/" alt="poster"/></figure>
+        </div>
+        <div class="col-xxxs-6 col-xxs-4 col-xs-4 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+            <figure><img src="http://lorempixel.com/480/580/nature/5/" alt="poster"/></figure>
+        </div>
+        <div class="col-xxxs-6 col-xxs-4 col-xs-4 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+            <figure><img src="http://lorempixel.com/480/580/nature/8/" alt="poster"/></figure>
+        </div>
+    </div>
+
 </div>
 
 <style>
+
+    .list__block figure img {
+        width: 100%;
+    }
+
+    /* list block bordered styles */
     .list__block--border section {
         padding:5px;
         text-align: center;

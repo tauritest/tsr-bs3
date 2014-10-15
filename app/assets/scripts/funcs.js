@@ -1,32 +1,32 @@
 console.log('func.js loaded');
 
-function detectScreen() {
+/*function detectScreen() {
     var _removeClasses = 'screen__xs--portrait screen__xs--landscape screen__sm--portrait screen__sm--landscape screen__md screen__lg';
-    /* screen xs portrait */
+    *//* screen xs portrait *//*
     if ( Modernizr.mq('(max-device-width:767px) and (orientation:portrait)')){
         $('html').removeClass(_removeClasses).addClass('screen__xs--portrait');
     }
-    /* screen xs landscape */
+    *//* screen xs landscape *//*
     if ( Modernizr.mq('(max-device-width:767px) and (orientation:landscape)')){
         $('html').removeClass(_removeClasses).addClass('screen__xs--landscape');
     }
-    /* tablet portrait */
+    *//* tablet portrait *//*
     if ( Modernizr.mq('(min-device-width:768px) and (orientation:portrait)')){
         $('html').removeClass(_removeClasses).addClass('screen__sm--portrait');
     }
-    /* tablet landscape */
+    *//* tablet landscape *//*
     if ( Modernizr.mq('(min-device-width:768px) and (orientation:landscape)')){
         $('html').removeClass(_removeClasses).addClass('screen__sm--landscape');
     }
-    /* screen md */
+    *//* screen md *//*
     if ( Modernizr.mq('(min-width: 992px)')){
         $('html').removeClass(_removeClasses).addClass('screen__md');
     }
-    /* screen lg */
+    *//* screen lg *//*
     if ( Modernizr.mq('(min-width: 1200px)')){
         $('html').removeClass(_removeClasses).addClass('screen__lg');
     }
-}
+}*/
 
 // applay function screen onchanged
 function OnResize() {

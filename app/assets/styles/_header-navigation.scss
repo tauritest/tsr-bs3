@@ -45,7 +45,11 @@ header {
       border-radius: 0;
       z-index:2;
       border: 0;
-      margin-bottom: 12px;
+      margin-bottom: 0px;
+
+      .navbar-form {
+        margin: 5px 0 0 0;
+      }
 
       .navbar-nav {
         &:last-child {
@@ -56,6 +60,7 @@ header {
           }
         }
         > li {
+
           .icon-arrow-down {
             font-size: $font-size-base + 4;
             vertical-align: middle;
@@ -95,6 +100,7 @@ header {
             }
           }
         }
+
       }
 
     }
@@ -126,6 +132,7 @@ header {
 
             &.navbar-brand {
               font-size: $font-size-base + 25;
+              padding-top: 15px;
 
               &:hover:after {
                 background-color: transparent;
@@ -156,8 +163,14 @@ header {
         }
 
         &.menu__main--additional {
+          margin-top: -12px;
+
           > li {
             > a {
+              &:hover {
+                background-color: $brand__violet;
+                color: $white;
+              }
               &:hover:after {
                 background-color: transparent;
               }
@@ -261,6 +274,17 @@ header {
         }
       }
       /* / end megamenu */
+
+      .menu__main--additional-content {
+        clear: both;
+        position: fixed;
+        top: 53px;
+        left: 0;
+        right: 0;
+        background-color: $brand__violet;
+
+        color: $white;
+      }
     }
 
   }
@@ -281,16 +305,24 @@ header {
 }
 
 /* main navigation on mobile devices */
-[class*="screen__xs"] {
+/*[class*="screen__xs"]*/
+@media (max-width: 767px) { //$screen-sm
   .menu__top {
     .navbar-nav {
-      float: left;
+      margin: 0;
+
+      &.visible-xs,
+      &.navbar-right{
+        display: inline-block!important;
+      }
+
       &.nav {
 
         > li {
           float: left;
         }
       }
+
       &.navbar-right {
         float: right;
         right: 0;
@@ -299,6 +331,10 @@ header {
         .dropdown-menu {
           left: auto;
           right: 0;
+
+          a {
+            color:$brand__link;
+          }
         }
       }
 
@@ -315,7 +351,7 @@ header {
 
         > li {
           > a {
-            color: $brand__link;
+            color: $brand__link!important;
           }
           > a:hover,
           > a:focus {
@@ -329,6 +365,12 @@ header {
   }
 
   .menu__main {
+    .navbar-brand,
+    .navbar-brand:hover {
+      color: $brand__link;
+      font-size: $font-size-base + 15;
+      padding-top: 8px;
+    }
     .navbar-header {
 
       .mobile-icons {
