@@ -20,9 +20,8 @@
                 </div>
 
                 <div class="bs-callout bs-callout-info">
-                    <h4>Info title</h4>
-                    <p>Put your text here</p>
-                    Put your text here <code>@code text</code>
+                    <h4>Elion heade</h4>
+                    <p>Elion header koosneb top ja main menyyst.</p>
                 </div>
 
                 <!-- Nav tabs -->
@@ -35,16 +34,19 @@
                   <div class="tab-pane active" id="demo">
 
                     <div class="bs-example">
-                        rendered code here
+                        rendered code here. live sample
                     </div>
 
                   </div>
                   <div class="tab-pane" id="code">
                     <div class="example-code">
                         <pre class="brush: html">
-
-                           source code here
-
+                         <header class="nav-top">
+                             <div>
+                                {{>_components/headernavigation/_header-top-navigation}}
+                                {{>_components/headernavigation/_header-main-navigation}}
+                             </div>
+                         </header>
                         </pre>
                     </div>
                   </div>
@@ -61,10 +63,14 @@
                     <ul>
                         <li>bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/bootstrap.scss(original bootstrap file)</li>
                         <li>app/assets/styles/mixins/_mixins.scss</li>
+                        <li>app/assets/styles/mixins/_headernavigation.scss</li>
                         <li>app/assets/styles/_variables.scss</li>
                         <li>app/assets/styles/_scaffolding.scss</li>
                         <li>app/assets/styles/_header-navigation.scss</li>
                         <li>app/assets/styles/_bottom-close-button.scss</li>
+                        <li>app/assets/scripts/funcs.js</li>
+                        <li>app/assets/scripts/main.js</li>
+                        <li>app/assets/scripts/headernavigation.js</li>
                     </ul>
                     Put your text here <code>@code text</code>
                 </div>
