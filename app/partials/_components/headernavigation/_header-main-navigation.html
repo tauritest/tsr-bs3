@@ -12,12 +12,12 @@
             <div class="mobile-icons visible-xs">
                 <div class="pull-left">
                     <a class="navbar-brand" href="#">
-                        <span class="glyphicon glyphicon-tree-deciduous"></span>
-                        <span class="show__scroll--top">Elion</span>
+                        <span class="icon icon-elion-logo"></span>
+                        <!--<span class="show__scroll--top">Elion</span>-->
                     </a>
                 </div>
                 <div class="pull-right">
-                    <a href="#modal-user" data-toggle="modal" data-target="#modal-user"><span class="glyphicon glyphicon-user"></span></a>
+                    <a href="#menu__personal" data-toggle="collapse" data-target="#menu__personal"><span class="glyphicon glyphicon-user"></span></a>
                     <a href="#"><span class="glyphicon glyphicon glyphicon-euro"></span></a>
                     <a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
                     <a href="#"><span class="glyphicon glyphicon-search"></span></a>
@@ -26,6 +26,7 @@
 
             <!-- <a class="navbar-brand" href="#">Brand</a> -->
         </div>
+
         <div class="collapse navbar-collapse" id="menu__main">
             <ul class="nav navbar-nav">
                 <li>
@@ -117,14 +118,34 @@
                 <li><a href="#">Liising ja arve</a></li>
                 <li><a href="#">Iseteenindus</a></li>
             </ul>
+
             <ul class="nav navbar-nav navbar-right menu__main--additional">
                 <li class="hide__scroll--top">
-                    <a href="#modal-user" data-toggle="modal" data-target="#modal-user"><span class="glyphicon glyphicon-user"></span></a>
+                    <a href="#menu__personal" data-toggle="collapse" data-target="#menu__personal"><span class="glyphicon glyphicon-user"></span></a>
                 </li>
-                <li class=""><a href="#"><span class="glyphicon glyphicon-plus"></span></a></li>
-                <li class="hide__scroll--top"><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-                <li class="hide__scroll--top"><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+                <li class=""><a href="#menu__guide" data-toggle="collapse" data-target="#menu__guide"><span class="glyphicon glyphicon-plus"></span></a></li>
+                <li class="hide__scroll--top"><a href="#menu__basket" data-toggle="collapse" data-target="#menu__basket"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                <li class="hide__scroll--top"><a href="#menu__search" data-toggle="collapse" data-target="#menu__search"><span class="glyphicon glyphicon-search"></span></a></li>
             </ul>
+
         </div>
+
+        <!-- additonal menu content-->
+        <div class="menu__main--additional-content">
+            <div class="collapse" id="menu__personal">
+                <div>sisu siia personal 1</div>
+            </div>
+            <div class="collapse" id="menu__guide">
+                <div>sisu siia guide 2</div>
+            </div>
+            <div class="collapse" id="menu__basket">
+                <div>sisu siia basket 3</div>
+            </div>
+            <div class="collapse" id="menu__search">
+                <div>sisu siia search 4</div>
+            </div>
+        </div>
+        <!-- end / additonal menu content-->
+
     </div>
 </nav>

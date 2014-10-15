@@ -27,7 +27,7 @@
   }
   @else {
     &:before {
-      @include verticalLine($brand__gray, 35%, 20%, 1px);
+      @include verticalLine($brand__gray, 35%, 35%, 1px);
     }
     > a {
       color: $brand__link;
@@ -56,7 +56,7 @@
 @mixin headernavigationAnimation() {
 
   /* small screen */
-  @media (max-width: $screen-xs){
+  @media (max-width: $screen-sm-min){
     header.nav-up {
       > div {
         background-color: transparent;
@@ -66,6 +66,11 @@
       .menu__main {
         opacity: 0;
         top: -25px;
+
+        .navbar-brand .icon-elion-logo {
+          overflow: hidden;
+          width: 33px;
+        }
       }
     }
     header.nav-down {
@@ -75,18 +80,46 @@
       .menu__main {
         opacity: 1;
         top: 0px;
+
+        .navbar-brand .icon-elion-logo {
+          overflow: hidden;
+          width: 33px;
+        }
+
       }
     }
     header.nav-top {
       // show top and main navigation
 
     }
+
+    header > div {
+      .menu__main {
+        .navbar-nav {
+          li,
+          li.active {
+            > a,
+            > a:hover {
+              color: $white;
+            }
+            > a:hover {
+              background-color: red;
+            }
+          }
+
+          li:before {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+
   }
 
   /* medium and large screen */
   /*html.screen__md,
   html.screen__lg*/
-  @media (min-width: $screen-md) {
+  @media (min-width: $screen-sm) {
 
     header.nav-top {
       // show top navigation
@@ -178,7 +211,7 @@
             a {
               font-size: $font-size-base + 10 !important;
               line-height: $font-size-base + 15 !important;
-              padding: 0 15px !important;
+              padding: 10px 15px !important;
 
               &:hover {
                 &:after {
@@ -238,7 +271,7 @@
       > li {
         > a {
           font-size: $font-size-base;
-          padding: 22px 8px 40px 9px;
+          padding: 25px 8px 20px 9px;
         }
       }
     }
@@ -249,7 +282,7 @@
       > li {
         > a {
           font-size: $font-size-base + 2;
-          padding: 22px 8px 40px 9px;
+          padding: 25px 8px 20px 9px;
           line-height: 27px;
         }
       }
@@ -261,7 +294,7 @@
       > li {
         > a {
           font-size: $font-size-base + 6;
-          padding: 22px 8px 40px 9px;
+          padding: 25px 8px 20px 9px;
           line-height: 27px;
         }
       }

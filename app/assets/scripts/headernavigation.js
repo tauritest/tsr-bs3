@@ -26,17 +26,32 @@ var interval;
 
         $('#menu__main').on('hide.bs.collapse', function () {
             startCheck();
-        })
+        });
+
+        /* check main menu */
+        $('#menu__personal').on('show.bs.collapse', function (e) {
+            console.log(e);
+        });
+        $('#menu__guide').on('show.bs.collapse', function (e) {
+            console.log(e);
+        });
+        $('#menu__basket').on('show.bs.collapse', function (e) {
+            console.log(e);
+        });
+        $('#menu__search').on('show.bs.collapse', function (e) {
+            console.log(e);
+        });
+        /* end / check main menu */
 
         /* new */
-        var _el = $('#menu__main > ul');
+       /* var _el = $('#menu__main > ul');
         var _ulW = 0;
         for(var _i = 0; _i < _el.length; _i++){
             _ulW += $(_el[_i]).width();
             console.log($(_el[_i]).width());
         }
         var showMobileMenu = (_ulW > $(window).width() ? true : false);
-        console.log('showMobileMenu:', showMobileMenu , ' ', _ulW, '>', screen.width, $('#menu__main').width() );
+        console.log('showMobileMenu:', showMobileMenu , ' ', _ulW, '>', screen.width, $('#menu__main').width() );*/
         /* / new*/
     }
 
