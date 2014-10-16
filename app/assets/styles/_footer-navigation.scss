@@ -2,16 +2,15 @@ $mobile-max-with:   $screen-xs-max;
 $deskdop-min-width: $mobile-max-with + 1;
 
 footer {
-  background-color: darken($brand-primary,7.6%);
+  colo: #4e256b;
+  background-color: darken($brand-primary,8%); //7.6
   a,
   a:hover,
   a:visited{
     color: $link-color-on-dark-bg;
     text-decoration: none;
   }
-  a{
-    border-bottom: 1px solid darken($brand-primary,15%);
-  }
+
   @media(max-width: $mobile-max-with) {
     //rewrite default styles
     .container {
@@ -26,13 +25,19 @@ footer {
         }
       }
     }
+
+    h2{
+      background-color: $brand-primary;
+    }
+    a{
+      border-bottom: 1px solid darken($brand-primary,15%);
+    }
   }
 
   h2{
     font-size: $font-size-base + 3;
     font-weight: normal;
     margin: 0;
-    background-color: $brand-primary;
 
     >a{
       display: block;
@@ -86,9 +91,14 @@ footer {
     }
     h2{
       a{
+        border-bottom: 1px solid darken($brand-primary,15%);
         cursor: default;
         &:after{
           display: none;
+        }
+        &:hover,
+        &:visited{
+          background: none;
         }
       }
     }
