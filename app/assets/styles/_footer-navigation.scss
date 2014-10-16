@@ -1,8 +1,7 @@
 $mobile-max-with:   $screen-xs-max;
-$deskdop-min-width: $mobile-max-with + 1;
+$desktop-min-width: $mobile-max-with + 1;
 
 footer {
-  colo: #4e256b;
   background-color: darken($brand-primary,8%); //7.6
   a,
   a:hover,
@@ -11,28 +10,6 @@ footer {
     text-decoration: none;
   }
 
-  @media(max-width: $mobile-max-with) {
-    //rewrite default styles
-    .container {
-     padding-left: 0;
-     padding-right: 0;
-      .row{
-        margin-left: 0;
-        margin-right: 0;
-        >[class^="col"]{
-          padding-left:0;
-          padding-right:0;
-        }
-      }
-    }
-
-    h2{
-      background-color: $brand-primary;
-    }
-    a{
-      border-bottom: 1px solid darken($brand-primary,15%);
-    }
-  }
 
   h2{
     font-size: $font-size-base + 3;
@@ -45,13 +22,12 @@ footer {
       &:hover, &:active, &:focus  {
         background-color: lighten($brand-primary, 7.6%);
       }
-
       &:after{
         @include setIconFonts();
         position: relative;
-        top: 6px;
         float: right;
         content: "\e66b";
+        line-height: 1em;
       }
       &.collapsed:after{
         content: "\e669";
@@ -71,7 +47,7 @@ footer {
         display: block;
         padding: 8px 10px;
 
-          &:hover, &:active, &:focus  {
+        &:hover, &:active, &:focus  {
           background-color: lighten($brand-primary, 7.6%);
         }
       }
@@ -79,8 +55,48 @@ footer {
     }
   }
 
-  @media (min-width: $deskdop-min-width ){
-    //force collapse in open mode
+  @media(max-width: $mobile-max-with) {
+    #footerCollapse{
+      display: none;
+    }
+    #footerCollapseContent.collapse{
+      display: block;
+    }
+
+    //rewrite default styles
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      .row{
+        margin-left: 0;
+        margin-right: 0;
+        >[class^="col"]{
+          padding-left:0;
+          padding-right:0;
+        }
+      }
+    }
+
+    h2{
+      background-color: $brand-primary;
+    }
+    a{
+      border-bottom: 1px solid darken($brand-primary,15%);
+    }
+  }
+
+  @media (min-width: $desktop-min-width ){
+    #footerCollapse{
+      display: block;
+      padding: 15px;
+      text-align: center;
+
+      &:after{
+        display: block !important;
+        float: none;
+      }
+    }
+    //force menu collapse in open mode
     .list-group {
         &.collapse,
         &.collapsing
