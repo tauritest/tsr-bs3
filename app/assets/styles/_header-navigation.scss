@@ -293,7 +293,7 @@ header {
         .megamenu {
           > a {
             color:$white!important;
-            padding-bottom: 3px;
+
             &:hover {
               background-color: darken($brand__violet, 9%)!important;
             }
@@ -311,7 +311,8 @@ header {
                   > li {
                     margin-bottom: 0px;
                     position: relative;
-
+                    background-color: darken($brand__violet, 15%);
+                    
                     > table {
 
 
@@ -319,9 +320,7 @@ header {
 
                       }
                     }
-                    .has-child {
-                      background-color: darken($brand__violet, 15%);
-                    }
+
                     .has-child tr td > a,
                     > a {
                       display: block;

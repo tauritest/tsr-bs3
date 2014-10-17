@@ -104,7 +104,7 @@
               color: $white;
             }
             > a:hover {
-              background-color: red;
+              background-color: darken($brand__violet, 9%);
             }
           }
 

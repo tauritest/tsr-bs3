@@ -22,10 +22,12 @@ var interval;
         // check is main menu open
         $('#menu__main').on('show.bs.collapse', function () {
             stopCheck();
+            setPosToRelative();
         })
 
         $('#menu__main').on('hide.bs.collapse', function () {
             startCheck();
+            rvPosToRelative();
         });
 
         /* check main menu */
@@ -55,6 +57,13 @@ $(window).scroll(function(event){
 });
 
 startCheck();
+
+function setPosToRelative(){
+    $('body > header').css('position','relative');
+}
+function rvPosToRelative(){
+    $('body > header').removeAttr('style');
+}
 
 function startCheck(){
     interval = setInterval(function() {
