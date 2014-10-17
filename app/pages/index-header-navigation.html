@@ -7,18 +7,6 @@
                 <h1 class="page-header">Header navigation</h1>
                 <h3>Header navigation</h3>
 
-                <div class="bs-callout bs-callout-warning">
-                    <h4>Warning title</h4>
-                    <p>Put your text here</p>
-                    Put your text here <code>@code text</code>
-                </div>
-
-                <div class="bs-callout bs-callout-danger">
-                    <h4>Danger title</h4>
-                    <p>Put your text here</p>
-                    Put your text here <code>@code text</code>
-                </div>
-
                 <div class="bs-callout bs-callout-info">
                     <h4>Elion heade</h4>
                     <p>Elion header koosneb top ja main menyyst.</p>
@@ -34,7 +22,7 @@
                   <div class="tab-pane active" id="demo">
 
                     <div class="bs-example">
-                        rendered code here. live sample
+                        Live sample. Code sample is under code tab
                     </div>
 
                   </div>
@@ -43,8 +31,18 @@
                         <pre class="brush: html">
                          <header class="nav-top">
                              <div>
+                                <!-- top menu start here -->
+
                                 {{>_components/headernavigation/_header-top-navigation}}
+
+
+                                <!-- / top menu end here-->
+
+                                <!-- main menu start here -->
+
                                 {{>_components/headernavigation/_header-main-navigation}}
+
+                                <!-- / main menu end here-->
                              </div>
                          </header>
                         </pre>
@@ -54,8 +52,14 @@
                 <!-- Dependensies -->
                 <div class="bs-callout bs-callout-danger">
                     <h4>Dependensies</h4>
-                    <p>The component requires the <code>header-navigation.css</code> to be included (not yet generated)</p>
+                    <p>The component requires the <code>header-navigation.css</code> and <code>headernavigation.js</code> to be included (not yet generated)</p>
                 </div>
+
+                <div class="bs-callout bs-callout-warning">
+                    <h4>html components</h4>
+                    <p>find here <code>app/partials/_components/headernavigation</code></p>
+                </div>
+
                 <div class="bs-callout bs-callout-info">
                     <h4>SCSS file dependensies for developers</h4>
                     <p>Header navigation component main style file is <code>app/assets/_header-navigation.scss</code></p>
@@ -72,7 +76,6 @@
                         <li>app/assets/scripts/main.js</li>
                         <li>app/assets/scripts/headernavigation.js</li>
                     </ul>
-                    Put your text here <code>@code text</code>
                 </div>
 
             </div>

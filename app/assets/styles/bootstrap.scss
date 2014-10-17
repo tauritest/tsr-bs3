@@ -4,16 +4,17 @@
 
 /* // Core variables and mixins*/
 @import "variables";
-//@import "gridvariables";
 @import "mixins";
 
 // Core CSS
 // TODO:
 @import "general_classes";
+//@import "responsive-utilities";
 
 // BS3 Components
 // TODO: these files needs to be update
 @import "grid";
+//@import "navbar";
 //@import "navbar";
 @import "header-navigation";
 @import "footer-navigation";

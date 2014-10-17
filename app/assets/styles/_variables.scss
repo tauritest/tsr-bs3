@@ -254,44 +254,6 @@ $zindex-navbar-fixed:      1030;
 $zindex-modal-background:  1040;
 $zindex-modal:             1050;
 
-/*// Media queries breakpoints
-// --------------------------------------------------
-
-// Extra small screen / phone
-// Note: Deprecated $screen-xs and $screen-phone as of v3.0.1
-$screen-xs:                  480px;
-$screen-xs-min:              $screen-xs;
-$screen-phone:               $screen-xs-min;
-
-// Small screen / tablet
-// Note: Deprecated $screen-sm and $screen-tablet as of v3.0.1
-$screen-sm:                  768px;
-$screen-sm-min:              $screen-sm;
-$screen-tablet:              $screen-sm-min;
-
-// Medium screen / desktop
-// Note: Deprecated $screen-md and $screen-desktop as of v3.0.1
-$screen-md:                  992px;
-$screen-md-min:              $screen-md;
-$screen-desktop:             $screen-md-min;
-
-// Large screen / wide desktop
-// Note: Deprecated $screen-lg and $screen-lg-desktop as of v3.0.1
-$screen-lg:                  1200px;
-$screen-lg-min:              $screen-lg;
-$screen-lg-desktop:          $screen-lg-min;
-
-// Extra Large screen / Extra wide desktop
-// Note: Deprecated $screen-lg and $screen-lg-desktop as of v3.0.1
-$screen-extra-lg:                  1420px;
-$screen-extra-lg-min:              $screen-extra-lg;
-$screen-extra-lg-desktop:          $screen-extra-lg-min;
-
-// So media queries don't overlap when required, provide a maximum
-$screen-xs-max:              ($screen-sm-min - 1);
-$screen-sm-max:              ($screen-md-min - 1);
-$screen-md-max:              ($screen-lg-min - 1);*/
-
 //== Media queries breakpoints
 //
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
@@ -355,17 +317,13 @@ $screen-xl-max:              ($screen-xxl-min - 1);
 //== Grid system
 //
 //## Define your custom responsive grid.
-
-//** Number of columns in the grid.
-$grid-columns:              12;
-//** Padding between columns. Gets divided in half for the left and right.
 $grid-gutter-width:             20px;
 $grid-gutter-width-large:       24px;
 $grid-gutter-width-extra-large: 28px;
 
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
-$grid-float-breakpoint:    $screen-sm-min;
+$grid-float-breakpoint:     $screen-sm-min;
 //** Point at which the navbar begins collapsing.
 $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 
@@ -410,19 +368,6 @@ $container-xl:                 $container-xl-desktop;
 $container-xxl-desktop:       ((1772px + $grid-gutter-width-extra-large));//$grid-gutter-width
 //** For `$screen-xxl-min` and up.
 $container-xxl:               $container-xxl-desktop;
-
-// Grid system
-// --------------------------------------------------
-
-// Number of columns in the grid system
-$grid-columns:              12;
-// Padding, to be divided by two and applied to the left and right of all columns
-$grid-gutter-width:         30px;
-// Point at which the navbar stops collapsing
-$grid-float-breakpoint:     $screen-sm-min;
-
-
-
 
 
 // Navbar
@@ -797,17 +742,10 @@ $hr-border:                   $gray-lighter;
 $component-offset-horizontal: 180px;
 
 
+// TODO: delet deprecated styles
 // Container sizes
 // --------------------------------------------------
-
-// Small screen / tablet
-$container-tablet:             ((720px + $grid-gutter-width));
-$container-sm:                 $container-tablet;
-
-// Medium screen / desktop
-$container-desktop:            ((940px + $grid-gutter-width));
-$container-md:                 $container-desktop;
-
+/* DEPRECATED */
 // Large screen / wide desktop
 $container-large-desktop:      ((1140px + $grid-gutter-width));
 $container-lg:                 $container-large-desktop;

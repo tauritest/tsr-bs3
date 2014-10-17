@@ -56,7 +56,8 @@
 @mixin headernavigationAnimation() {
 
   /* small screen */
-  @media (max-width: $screen-sm-min){
+  // TODO: need better solution. 767 and less, collapsing headernavigation
+  @media (max-width: $screen-sm-min + 47){
     header.nav-up {
       > div {
         background-color: transparent;
@@ -187,6 +188,7 @@
           li {
             > .navbar-brand {
               height: 37px;
+              padding-top: 8px;
 
               > span {
                 //display: block;
@@ -201,7 +203,7 @@
             }
             > a {
               font-size: $font-size-base;
-              padding: 2px 8px 10px 9px;
+              padding: 8px 8px 10px 9px;
             }
           }
         }
@@ -210,8 +212,8 @@
           > li > {
             a {
               font-size: $font-size-base + 10 !important;
-              line-height: $font-size-base + 15 !important;
-              padding: 10px 15px !important;
+              line-height: $font-size-base !important;
+              padding: 10px 10px !important;
 
               &:hover {
                 &:after {
@@ -234,6 +236,19 @@
       }
     }
 
+  }
+  // TODO: Need attention! change container to fluid. This option switched off;
+  @media (min-width: $screen-sm) and (max-width: $screen-sm-max ) {
+    .menu__main {
+      /*.container {
+        border: 1px solid #ff0000;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: auto;
+      }*/
+    }
   }
 }
 
@@ -304,13 +319,13 @@
 }
 
 @mixin verticalLine($background:"#ff0000", $height:"30%", $top:"30%", $width:"1px"){
-    background-color: $background;
-    content: "";
-    display: block;
-    height: $height;
-    left: 0;
-    position: absolute;
-    right: auto;
-    top: $top;
-    width: $width;
+  background-color: $background;
+  content: "";
+  display: block;
+  height: $height;
+  left: 0;
+  position: absolute;
+  right: auto;
+  top: $top;
+  width: $width;
 }

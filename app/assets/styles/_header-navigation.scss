@@ -48,7 +48,7 @@ header {
       margin-bottom: 0px;
 
       .navbar-form {
-        margin: 5px 0 0 0;
+        margin: 5px 0 0 5px;
       }
 
       .navbar-nav {
@@ -163,10 +163,13 @@ header {
         }
 
         &.menu__main--additional {
-          margin-top: -12px;
+          margin-top: 0;//-12px;
 
           > li {
             > a {
+              padding-left: 10px;
+              padding-right: 10px;
+
               &:hover {
                 background-color: $brand__violet;
                 color: $white;
@@ -277,8 +280,8 @@ header {
 
       .menu__main--additional-content {
         clear: both;
-        position: fixed;
-        top: 53px;
+        position: absolute;
+        top: 41px;
         left: 0;
         right: 0;
         background-color: $brand__violet;
@@ -306,6 +309,7 @@ header {
 
 /* main navigation on mobile devices */
 /*[class*="screen__xs"]*/
+// TODO: Need attention!;
 @media (max-width: 767px) { //$screen-sm
   .menu__top {
     .navbar-nav {
@@ -393,7 +397,7 @@ header {
             [class*="glyphicon"] {
               font-size: $font-size-base + 5;
               color:$brand__link;
-              padding: 15px 10px 10px 10px;
+              padding: 15px 8px 10px 9px;
             }
           }
         }
@@ -430,6 +434,7 @@ header {
       border-color: $brand__violet;
       background-color: $brand__violet;
     }
+
     .navbar-nav {
       > li {
         &:first-child {
@@ -505,20 +510,20 @@ header {
   > ul {
     > li {
       > table {
-          &.has-child {
+        &.has-child {
 
-            /*-webkit-column-break-inside:avoid;
-            -moz-column-break-inside:avoid;
-            -o-column-break-inside:avoid;
-            -ms-column-break-inside:avoid;
-            column-break-inside:avoid;*/
+          /*-webkit-column-break-inside:avoid;
+          -moz-column-break-inside:avoid;
+          -o-column-break-inside:avoid;
+          -ms-column-break-inside:avoid;
+          column-break-inside:avoid;*/
 
-            overflow: hidden;
-            break-inside:avoid-column;
-            -webkit-column-break-inside:avoid;
-            page-break-inside: avoid;
+          overflow: hidden;
+          break-inside:avoid-column;
+          -webkit-column-break-inside:avoid;
+          page-break-inside: avoid;
 
-          }
+        }
 
       }
     }

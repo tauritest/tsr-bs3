@@ -43,16 +43,6 @@ var interval;
         });
         /* end / check main menu */
 
-        /* new */
-       /* var _el = $('#menu__main > ul');
-        var _ulW = 0;
-        for(var _i = 0; _i < _el.length; _i++){
-            _ulW += $(_el[_i]).width();
-            console.log($(_el[_i]).width());
-        }
-        var showMobileMenu = (_ulW > $(window).width() ? true : false);
-        console.log('showMobileMenu:', showMobileMenu , ' ', _ulW, '>', screen.width, $('#menu__main').width() );*/
-        /* / new*/
     }
 
     headernavigation();
